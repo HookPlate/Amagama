@@ -8,11 +8,16 @@
 
 import SwiftUI
 import AVKit
+import MediaPlayer
 
 
 struct EmojiMemoryGameView: View {
     
+    let slider = MPVolumeView().subviews.first(where: { $0 is UISlider }) as? UISlider
+    
     let restartableSentenceScores = [5, 15, 25, 35, 45, 55]
+    
+    @State private var isMuted = false
     
     @ObservedObject var game: EmojiMemoryGame
     
@@ -64,9 +69,10 @@ struct EmojiMemoryGameView: View {
                     
                 }
             .frame(width: geo.size.width, height: geo.size.height / 1.05)
-                .navigationTitle("Match the Words")
+              //  .navigationTitle("Match the Words")
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarItems(trailing: showScore ? MyScore(animateWholeScore: animateWholeScore, animateScore: animateScore, score: score) : nil)
+                .navigationBarItems(trailing: Button(action: {muteAudio()}, label: {isMuted ? Image(systemName: "speaker.slash").font(.title) : Image(systemName: "speaker.wave.2").font(.title)}))
                 Spacer(minLength: 0)
             }
             
@@ -91,6 +97,16 @@ struct EmojiMemoryGameView: View {
                     game.flip(card)
                 }
             }
+        }
+    }
+    
+    private func muteAudio() {
+        if !isMuted {
+            slider?.setValue(0.0, animated: false)
+            isMuted = true
+        } else {
+            slider?.setValue(0.5, animated: false)
+            isMuted = false
         }
     }
     

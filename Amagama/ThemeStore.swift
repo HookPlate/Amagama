@@ -46,6 +46,7 @@ class ThemeStore: ObservableObject{
     init() {
         restoreFromUserDefaults()
         print("Using built in palettes")
+        print(userPurchases)
         if themes.isEmpty {
             var animalIndex = 0
             
@@ -66,6 +67,22 @@ class ThemeStore: ObservableObject{
     @Published var themes: [Theme] = [] {
         didSet {
             storeInUserDefaults()
+        }
+    }
+    //keeps track of which meditations the user has purchased
+    @Published var userPurchases = ["FreeSentence": true]
+    
+    func makePurchase(theme: Theme) {
+        
+        //perform purchase
+        PurchaseService.purchase(productId: theme.productId) {
+            
+            //upon successful purchase set the purchase status of the theme
+            if theme.productId != nil {
+                self.userPurchases[theme.productId!] = true
+                self.storePurchasesInUserDefaults()
+            }
+            
         }
     }
     
@@ -105,12 +122,22 @@ class ThemeStore: ObservableObject{
     
     private func storeInUserDefaults() {
         UserDefaults.standard.set(try? JSONEncoder().encode(themes), forKey: "ThemeStore")
+        
+    }
+    
+    private func storePurchasesInUserDefaults() {
+        UserDefaults.standard.set(try? JSONEncoder().encode(userPurchases), forKey: "userPurchases")
     }
     
     private func restoreFromUserDefaults() {
         if let jsonData = UserDefaults.standard.data(forKey: "ThemeStore"),
            let decodedThemes = try? JSONDecoder().decode([Theme].self, from: jsonData) {
             themes = decodedThemes
+        }
+        
+        if let jsonData = UserDefaults.standard.data(forKey: "userPurchases"),
+           let decodedUserPurchases = try? JSONDecoder().decode([String: Bool].self, from: jsonData) {
+            userPurchases = decodedUserPurchases
         }
     }
 

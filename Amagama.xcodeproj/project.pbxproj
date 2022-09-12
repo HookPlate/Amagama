@@ -10,6 +10,8 @@
 		F106C12928A517FF0064BF6E /* We look at the children.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F106C12828A517FF0064BF6E /* We look at the children.mp3 */; };
 		F1499EFD28A6A66D00582E64 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1499EFC28A6A66D00582E64 /* StoreKit.framework */; };
 		F15649BA2892A1C20095F015 /* tick1.json in Resources */ = {isa = PBXBuildFile; fileRef = F15649B92892A1C20095F015 /* tick1.json */; };
+		F17A090928C12E8200531454 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = F17A090828C12E8200531454 /* RevenueCat */; };
+		F1A17FE828C36A2600EF81A6 /* PurchaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A17FE728C36A2600EF81A6 /* PurchaseService.swift */; };
 		F1A6637128992DAF006B772A /* Mother asked if baby sat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A662E628992DAE006B772A /* Mother asked if baby sat.mp3 */; };
 		F1A6637228992DAF006B772A /* baby.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A662E728992DAE006B772A /* baby.mp3 */; };
 		F1A6637328992DAF006B772A /* asked.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A662E828992DAE006B772A /* asked.mp3 */; };
@@ -175,6 +177,7 @@
 		F106C12828A517FF0064BF6E /* We look at the children.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "We look at the children.mp3"; sourceTree = "<group>"; };
 		F1499EFC28A6A66D00582E64 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		F15649B92892A1C20095F015 /* tick1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tick1.json; sourceTree = "<group>"; };
+		F1A17FE728C36A2600EF81A6 /* PurchaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseService.swift; sourceTree = "<group>"; };
 		F1A662E628992DAE006B772A /* Mother asked if baby sat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mother asked if baby sat.mp3"; sourceTree = "<group>"; };
 		F1A662E728992DAE006B772A /* baby.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = baby.mp3; sourceTree = "<group>"; };
 		F1A662E828992DAE006B772A /* asked.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = asked.mp3; sourceTree = "<group>"; };
@@ -328,6 +331,7 @@
 			files = (
 				F1E457AC28929F8C0085C6CB /* Lottie in Frameworks */,
 				F1499EFD28A6A66D00582E64 /* StoreKit.framework in Frameworks */,
+				F17A090928C12E8200531454 /* RevenueCat in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,6 +648,7 @@
 				F1E456FF28929B030085C6CB /* ProgressBar.swift */,
 				F1E4570128929B450085C6CB /* SuccessTickView.swift */,
 				F1E4570328929B760085C6CB /* ThemeStore.swift */,
+				F1A17FE728C36A2600EF81A6 /* PurchaseService.swift */,
 				F1E4570728929BF60085C6CB /* TopTargetSentence.swift */,
 				F1E456C12892983C0085C6CB /* ContentView.swift */,
 				F1E456E9289298A10085C6CB /* AspectVGrid.swift */,
@@ -735,6 +740,7 @@
 			name = Amagama;
 			packageProductDependencies = (
 				F1E457AB28929F8C0085C6CB /* Lottie */,
+				F17A090828C12E8200531454 /* RevenueCat */,
 			);
 			productName = Amagama;
 			productReference = F1E456BC2892983C0085C6CB /* Amagama.app */;
@@ -810,6 +816,7 @@
 			mainGroup = F1E456B32892983C0085C6CB;
 			packageReferences = (
 				F1E457AA28929F8C0085C6CB /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				F17A090728C12E8200531454 /* XCRemoteSwiftPackageReference "purchases-ios" */,
 			);
 			productRefGroup = F1E456BD2892983C0085C6CB /* Products */;
 			projectDirPath = "";
@@ -976,6 +983,7 @@
 			files = (
 				F1E456C22892983C0085C6CB /* ContentView.swift in Sources */,
 				F1E4570228929B450085C6CB /* SuccessTickView.swift in Sources */,
+				F1A17FE828C36A2600EF81A6 /* PurchaseService.swift in Sources */,
 				F1E456EC289298FE0085C6CB /* BlurView.swift in Sources */,
 				F1E456F22892998C0085C6CB /* ChooserViewCard.swift in Sources */,
 				F1E456C02892983C0085C6CB /* AmagamaApp.swift in Sources */,
@@ -1343,6 +1351,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F17A090728C12E8200531454 /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		F1E457AA28929F8C0085C6CB /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios";
@@ -1354,6 +1370,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F17A090828C12E8200531454 /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F17A090728C12E8200531454 /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = RevenueCat;
+		};
 		F1E457AB28929F8C0085C6CB /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F1E457AA28929F8C0085C6CB /* XCRemoteSwiftPackageReference "lottie-ios" */;

@@ -58,24 +58,49 @@ struct GameChooserView: View {
                     ScrollView {
                         ForEach(store.themes, id: \.self.id) { theme in
                                 if let game = game(for: theme) {
-                                    NavLinkView(game: game, geoReader: geometry, themeScore: $store.themes[store.themes.index(matching: theme) ?? 0].score , imageName: theme.imageName, sentence: theme.title)
+                                    NavLinkView(game: game, geoReader: geometry, themeScore: $store.themes[store.themes.index(matching: theme) ?? 0].score , imageName: theme.imageName, sentence: theme.title, viewOpacity: theme.productId == "19BuyableSentences" ? 0.5 : 1, productId: theme.productId)
                                      //   .animation(.spring(response: 1, dampingFraction: 0.5))
                                 }
                             }
-                         
                     }
                   //  .alignmentGuide(HorizontalAlignment.leading) { _ in 40 }
                     .padding(.top)
     
                     //The Global score
-                    Text("Total Score: \(String(store.sentencesComplete))")
-                        .foregroundColor(.black)
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .padding(.all, 10)
-                        .background(Color.white.opacity(0.7))
-                        .cornerRadius(15)
-                        .padding(.bottom, 5)
+                    HStack {
+                
+                        Text("Score: \(String(store.sentencesComplete))")
+                            .foregroundColor(.black)
+                            .font(.title)
+                            .fontWeight(.semibold)
+                            .padding(.all, 10)
+                            .background(Color.white.opacity(0.7))
+                            .cornerRadius(15)
+                            .padding(.bottom, 5)
+                        
+                        if store.userPurchases["19BuyableSentences"] ==  nil {
+                            Spacer()
+                                .frame(width: 20)
+                            Button(action: {
+                                store.makePurchase(theme: store.themes[1])
+                            } , label: {
+                                Text("Buy")
+                                    .foregroundColor(.black)
+                                    .font(.title)
+                                    .fontWeight(.semibold)
+                                    .padding(.all, 10)
+                                    .background(Color.green.opacity(0.7))
+                                    .cornerRadius(15)
+                                    .padding(.bottom, 5)
+                                   // .transition(AnyTransition.move(edge: .trailing).animation(.linear(duration: 2)))
+                                    //.transition(AnyTransition.opacity.animation(.linear(duration: 20)))
+                                    //.animation(.default, value: store.userPurchases["19BuyableSentences"] ==  nil)
+                            })
+                            
+                            
+                        }
+                    }
+                 // .transition(AnyTransition.move(edge: .trailing).animation(.linear(duration: 10)))
                 }
             }
             .navigationBarHidden(true)
