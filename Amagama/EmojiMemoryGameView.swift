@@ -13,9 +13,9 @@ import MediaPlayer
 
 struct EmojiMemoryGameView: View {
     
-    let slider = MPVolumeView().subviews.first(where: { $0 is UISlider }) as? UISlider
+    @EnvironmentObject var store: ThemeStore
     
-    let restartableSentenceScores = [5, 15, 25, 35, 45, 55]
+//    let restartableSentenceScores = [5, 15, 25, 35, 45, 55]
     
     @State private var isMuted = false
     
@@ -47,6 +47,8 @@ struct EmojiMemoryGameView: View {
     
     @State private var showScore = false
     
+  //  @State private var animationAmount: CGFloat = 1
+    
     var body: some View {
         ZStack(alignment: .center) {
 //            Color(red: 228/255, green: 195/255, blue: 76/255)
@@ -57,7 +59,7 @@ struct EmojiMemoryGameView: View {
                     
                     gameBody
                     .blur(radius: CGFloat(blurAmount))
-               // }
+                
                     //shows either progress bar or deck of cards
                   if showTitle {
                     ProgressBar(
@@ -69,10 +71,10 @@ struct EmojiMemoryGameView: View {
                     
                 }
             .frame(width: geo.size.width, height: geo.size.height / 1.05)
-              //  .navigationTitle("Match the Words")
+                .navigationTitle("Match the pairs")
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarItems(trailing: showScore ? MyScore(animateWholeScore: animateWholeScore, animateScore: animateScore, score: score) : nil)
-                .navigationBarItems(trailing: Button(action: {muteAudio()}, label: {isMuted ? Image(systemName: "speaker.slash").font(.title) : Image(systemName: "speaker.wave.2").font(.title)}))
+                .navigationBarItems(trailing: Button(action: {isMuted.toggle()}, label: {isMuted ? Image(systemName: "speaker.slash").font(.title) : Image(systemName: "speaker.wave.2").font(.title)}))
                 Spacer(minLength: 0)
             }
             
@@ -81,33 +83,24 @@ struct EmojiMemoryGameView: View {
                 SuccessTickView()
             }
         }
-        .onAppear(perform: flip )
+      //  .onAppear(perform: flip )
         .onAppear(perform: autoDeal)
         .onDisappear(perform: game.restart)
         .onDisappear(perform: stopSound)
         .onDisappear(perform: game.gameCompleted)
+        .onDisappear(perform: toggleReturningFromDetail)
         .padding()
     }
     
 
     private func flip () {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.2) {
-            for card in game.cards {
-                withAnimation {
-                    game.flip(card)
-                }
-            }
-        }
-    }
-    
-    private func muteAudio() {
-        if !isMuted {
-            slider?.setValue(0.0, animated: false)
-            isMuted = true
-        } else {
-            slider?.setValue(0.5, animated: false)
-            isMuted = false
-        }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2.2) {
+//            for card in game.cards {
+//                withAnimation {
+//                    game.flip(card)
+//                }
+//            }
+//        }
     }
     
     
@@ -119,7 +112,7 @@ struct EmojiMemoryGameView: View {
         //clean this code up so it uses a timer and one completion (of in this case the above code) triggers another
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
             withAnimation {
-                game.shuffle()
+             //   game.shuffle()
             }
         }
     }
@@ -155,11 +148,17 @@ struct EmojiMemoryGameView: View {
                     .onTapGesture {
                         withAnimation(){
                             game.choose(card)
-                            wordScaleAndSoundTrigger(card: card)
+                            if game.alreadyMatchedWordJustTapped {
+                                alreadyMatched()
+                            } else {
+                                wordScaleAndSoundTrigger(card: card)
+                            }
+                            
                         }
                     }
             }
         }
+        
         .foregroundColor(CardConstants.color)
     }
     
@@ -183,6 +182,11 @@ struct EmojiMemoryGameView: View {
 //            }
 //        }
     }
+    
+//    func cardForView(card: EmojiMemoryGame.Card) -> CardView {
+//        var i = 0
+//        return CardView(card: card, animalForCard: store.animals[i])
+//    }
     //run this if there's been a succesful match:
     func wordScaleAndSoundTrigger(card: EmojiMemoryGame.Card) {
         let celebrationAudio = Bundle.main.path(forResource: "CarlaYeahs", ofType: "mp3")
@@ -197,7 +201,7 @@ struct EmojiMemoryGameView: View {
                 
                 score += 1
             }
-            //makes sound for the word and scales the word in and out
+            //makes sound for the word and scale the word in and out
             makeSound(for: card.content)
             wordscaleAmount = 1.5
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -238,16 +242,23 @@ struct EmojiMemoryGameView: View {
                             
                             print(score)
                             
-                            if restartableSentenceScores.contains(score) {
+                            if game.cards.allSatisfy({ $0.isMatched == true }) {
+                               // showTitle = false
                                 restart()
                             }
+                            
                     }
                         
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
                         
                         withAnimation {
                             animateWholeScore = true
-                            game.shuffle()
+                            if game.cards.allSatisfy({ $0.isMatched == true }) {
+                                
+                            } else {
+                                game.shuffle()
+                            }
+                            
                         }
                     }
                     DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
@@ -262,11 +273,18 @@ struct EmojiMemoryGameView: View {
         }
     }
     
+    
     func makeSound(for sound: String) {
-        if let path = Bundle.main.path(forResource: sound, ofType: "mp3") {
-            self.audioPlayer = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
-            self.audioPlayer.play()
+        if !isMuted {
+            if let path = Bundle.main.path(forResource: sound, ofType: "mp3") {
+                self.audioPlayer = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
+                self.audioPlayer.play()
+            }
         }
+    }
+    
+    func toggleReturningFromDetail() {
+        store.returningFromDetail = true
     }
     
     func stopSound() {
@@ -294,6 +312,11 @@ struct EmojiMemoryGameView: View {
             }
         }
         showTheTitle()
+    }
+    
+    func alreadyMatched() {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
     }
     
     func showTheTitle() {
@@ -332,11 +355,8 @@ struct EmojiMemoryGameView: View {
 }
 
 struct Animals {
-    var animalImageNames = ["bear", "buffalo", "chick", "chicken", "cow", "crocodile", "duck", "dog", "elephant", "frog", "giraffe", "goat", "gorilla", "hippo", "horse", "monkey", "moose", "narwhal", "owl", "panda", "parrot", "penguin", "pig", "rabbit", "rhino", "sloth", "snake", "walrus", "whale", "zebra"]
-    
-//    init() {
-//        //animalImageNames.shuffle()
-//    }
+    var animalImageNames = ["panda", "bear", "chick", "bear","chicken", "crocodile", "cow", "elephant", "duck", "giraffe", "hippo", "gorilla", "sloth", "goat", "narwhal", "parrot", "owl", "penguin", "moose", "pig", "snake", "rhino", "walrus", "penguin", "whale", "rabbit", "zebra", "sloth", "snake", "walrus", "whale", "zebra"]
+//   these are the sentences she wants: var animalImageNames = ["buffalo", "chick", "chicken", "cow", "crocodile", "elephant", "giraffe", "gorilla", "hippo", "horse", "narwhal", "owl", "parrot", "penguin", "pig", "rhino", "snake", "walrus", "whale", "zebra"]
 }
     
 

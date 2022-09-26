@@ -27,7 +27,7 @@ struct AspectVGrid<Item, ItemView>: View where ItemView: View, Item: Identifiabl
                     ForEach(items) { item in
                         content(item).aspectRatio(aspectRatio, contentMode: .fit)
                     }
-                    //.shadow()
+
                 }
                 Spacer(minLength: 0)
             }

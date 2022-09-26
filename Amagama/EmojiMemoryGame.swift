@@ -68,6 +68,10 @@ class EmojiMemoryGame: ObservableObject {
         return model.wordJustMatched
     }
     
+    var alreadyMatchedWordJustTapped: Bool {
+        return model.alreadyMatchedWordJustMatched
+    }
+    
     
     // MARK: - Intent(s)
     //all these functions in the model must be labelled @mutating

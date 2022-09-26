@@ -20,28 +20,28 @@ struct Theme: Hashable, Codable, Identifiable {
 }
 
 class ThemeStore: ObservableObject{
-    let sentences = ["We look at the children",
-                     "Make them out of this",
-                     "I like to see people",
+    let sentences = ["I like to see people",
+                     "We look at the children",
                      "They saw him and her",
-                     "His car is with me",
-                     "Can you go for help?",
-                     "Could she put that back?",
-                     "It looked so very old",
                      "Mum said just get up",
-                     "He was not in time",
-                     "Dad called about their house",
-                     "Mother asked if baby sat",
-                     "Don't come down from there",
+                     "Could she put that back?",
+                     "Can you go for help?",
+                     "He was not on time",
+                     "His car is with me",
+                     "It looked so very old",
+                     "Make them out of this",
+                     "One day when I'm big",
                      "My little cat came by",
                      "Some say let's have fun",
-                     "Your friends went into school",
                      "All animals are in place",
                      "Mr and Mrs made food",
-                     "One day when I'm big",
-                     "It's here now what then?"]
+                     "Mother asked if baby cried",
+                     "It's here now what then?",
+                     "Dad called about their house",
+                     "Your friends went into school",
+                     "Don't come down from there"]
     
-    let animals =  ["bear", "buffalo", "chick", "chicken", "cow", "crocodile", "duck", "dog", "elephant", "frog", "giraffe", "goat", "gorilla", "hippo", "horse", "monkey", "moose", "narwhal", "owl", "panda", "parrot", "penguin", "pig", "rabbit", "rhino", "sloth", "snake", "walrus", "whale", "zebra"]
+    let animals =  ["buffalo", "chick", "chicken", "cow", "crocodile", "elephant", "giraffe", "gorilla", "hippo", "horse", "narwhal", "owl", "parrot", "penguin", "pig", "rhino", "snake", "walrus", "whale", "zebra"]
     
     init() {
         restoreFromUserDefaults()
@@ -51,7 +51,7 @@ class ThemeStore: ObservableObject{
             var animalIndex = 0
             
             for i in sentences {
-                if i != "We look at the children" {
+                if i != "I like to see people" {
                     animalIndex += 1
                     themes.append(Theme(title: i, emojis: i.components(separatedBy: " "), imageName: animals[animalIndex], score: 0, restartable: false, productId: "19BuyableSentences"))
                 } else {
@@ -69,6 +69,12 @@ class ThemeStore: ObservableObject{
             storeInUserDefaults()
         }
     }
+    
+    //var isMuted = false
+    
+    @Published var isSoundtrackPlaying = false
+    @Published var returningFromDetail = false
+    
     //keeps track of which meditations the user has purchased
     @Published var userPurchases = ["FreeSentence": true]
     
@@ -86,9 +92,11 @@ class ThemeStore: ObservableObject{
         }
     }
     
-//    func themeScore (_ theme: Theme) {
-//
-//    }
+    func resetThemeScores() {
+        for index in themes.indices {
+            themes[index].score = 0
+        }
+    }
     
     
     

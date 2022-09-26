@@ -21,6 +21,8 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
     
     private(set) var wordJustMatched: Bool
     
+    private(set) var alreadyMatchedWordJustMatched: Bool
+    
    // private(set)  var score : Int
     
    // private(set) var sentenceNumber : Int
@@ -41,6 +43,7 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
 //    }
     
     mutating func choose(_ card: Card) {
+        alreadyMatchedWordJustMatched = false
         wordJustMatched = false
         if let chosenIndex =
             cards.firstIndex(where: {$0.id == card.id}),
@@ -69,6 +72,10 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
                             matchCardCount += 1
                         }
                     }
+                } else {
+                    if cards[chosenIndex].content == cards[potentialMatchIndex].content {
+                        alreadyMatchedWordJustMatched = true
+                    }
                 }
                 
                 //so if it skips the above it'll flip but with no match, I had the if statement using matchCardCount before.
@@ -93,6 +100,8 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
     
     
     
+    
+    
 //don't forget that this is what runs whenever someone creates a MemoryGame, CardContent is the generic in the declaration.
     init(numberOfPairsOfCards: Int, createCardContent: (Int) -> CardContent) {
             cards = []
@@ -100,6 +109,7 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
             matchedCards = []
             matchCardCount = 0
             wordJustMatched = false
+            alreadyMatchedWordJustMatched = false
         //    score = 10
           //  gameNumber = sentenceNumber
         for pairIndex in 0..<numberOfPairsOfCards {
@@ -123,19 +133,21 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
             cards.append(Card(content: content, id: pairIndex*5+4, backOfCardIndex: pairIndex+magicNumber+3))
         
         }
-        //cards.shuffle()
+        
         let wordIndices = [0, 4, 8, 12, 16]
         
         for i in wordIndices {
             mainTitle.append(cards[i].content)
          
         }
+        
+        cards.shuffle()
 
         print(mainTitle)
     }
     
     struct Card: Identifiable {
-        var isFaceUp = true
+        var isFaceUp = false
         var isMatched = false
         let content: CardContent
         let id: Int

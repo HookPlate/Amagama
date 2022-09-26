@@ -10,11 +10,14 @@ import SwiftUI
 struct Cardify: AnimatableModifier {
     
     var animal = String()
+    @State private var animationAmount: CGFloat = 1
 
     init(isFaceUp: Bool, animal: String) {
         rotation = isFaceUp ? 0 : 180
         self.animal = animal
+      // self.isPastFirstSentence = isPastFirstSentence
     }
+   var isPastFirstSentence = false 
     
     var animatableData: Double {
         get { rotation }
@@ -33,8 +36,15 @@ struct Cardify: AnimatableModifier {
                 Image(animal)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    .animation(isPastFirstSentence ? nil : Animation.easeInOut(duration: 3).repeatForever(autoreverses: true))
                     .clipShape(shape)
-                    .shadow(color: Color.gray.opacity(0.7), radius: 2, x: -2, y: 2)
+                
+                   // .shadow(color: Color.gray.opacity(0.7), radius: 2, x: -2, y: 2)
+   //                 .scaleEffect(animationAmount, anchor: .center)
+                   
+//                    .onAppear {
+//                        self.animationAmount = 1
+//                    }
             }
             
             content.opacity(rotation < 90 ? 1 : 0)

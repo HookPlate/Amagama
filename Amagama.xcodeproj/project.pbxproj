@@ -7,128 +7,132 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F106C12928A517FF0064BF6E /* We look at the children.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F106C12828A517FF0064BF6E /* We look at the children.mp3 */; };
 		F1499EFD28A6A66D00582E64 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1499EFC28A6A66D00582E64 /* StoreKit.framework */; };
 		F15649BA2892A1C20095F015 /* tick1.json in Resources */ = {isa = PBXBuildFile; fileRef = F15649B92892A1C20095F015 /* tick1.json */; };
+		F1598C1128D328610056C708 /* Antigua couple1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1598C1028D328610056C708 /* Antigua couple1.mp3 */; };
 		F17A090928C12E8200531454 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = F17A090828C12E8200531454 /* RevenueCat */; };
+		F18B078328CF96FB00F58C15 /* out.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B077D28CF96FB00F58C15 /* out.mp3 */; };
+		F18B078428CF96FB00F58C15 /* them.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B077E28CF96FB00F58C15 /* them.mp3 */; };
+		F18B078528CF96FB00F58C15 /* of.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B077F28CF96FB00F58C15 /* of.mp3 */; };
+		F18B078628CF96FB00F58C15 /* this.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B078028CF96FB00F58C15 /* this.mp3 */; };
+		F18B078728CF96FB00F58C15 /* Make.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B078128CF96FB00F58C15 /* Make.mp3 */; };
+		F18B078E28CFA24300F58C15 /* Can.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B078828CFA24200F58C15 /* Can.mp3 */; };
+		F18B078F28CFA24300F58C15 /* you.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B078928CFA24200F58C15 /* you.mp3 */; };
+		F18B079028CFA24300F58C15 /* for.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B078A28CFA24200F58C15 /* for.mp3 */; };
+		F18B079128CFA24300F58C15 /* go.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B078B28CFA24300F58C15 /* go.mp3 */; };
+		F18B079228CFA24300F58C15 /* Can you go for help?.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B078C28CFA24300F58C15 /* Can you go for help?.mp3 */; };
+		F18B079328CFA24300F58C15 /* help?.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B078D28CFA24300F58C15 /* help?.mp3 */; };
+		F18B079A28CFA32100F58C15 /* I.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B079428CFA32100F58C15 /* I.mp3 */; };
+		F18B079B28CFA32100F58C15 /* I like to see people.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B079528CFA32100F58C15 /* I like to see people.mp3 */; };
+		F18B079C28CFA32100F58C15 /* people.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B079628CFA32100F58C15 /* people.mp3 */; };
+		F18B079D28CFA32100F58C15 /* like.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B079728CFA32100F58C15 /* like.mp3 */; };
+		F18B079E28CFA32100F58C15 /* see.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B079828CFA32100F58C15 /* see.mp3 */; };
+		F18B079F28CFA32100F58C15 /* to.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B079928CFA32100F58C15 /* to.mp3 */; };
+		F18B07B228CFA3ED00F58C15 /* on.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07AC28CFA3ED00F58C15 /* on.mp3 */; };
+		F18B07B328CFA3ED00F58C15 /* time.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07AD28CFA3ED00F58C15 /* time.mp3 */; };
+		F18B07B428CFA3ED00F58C15 /* not.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07AE28CFA3ED00F58C15 /* not.mp3 */; };
+		F18B07B528CFA3ED00F58C15 /* He was not on time.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07AF28CFA3ED00F58C15 /* He was not on time.mp3 */; };
+		F18B07B628CFA3ED00F58C15 /* was.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07B028CFA3ED00F58C15 /* was.mp3 */; };
+		F18B07B728CFA3ED00F58C15 /* He.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07B128CFA3ED00F58C15 /* He.mp3 */; };
+		F18B07BE28CFA43300F58C15 /* Could.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07B828CFA43300F58C15 /* Could.mp3 */; };
+		F18B07BF28CFA43300F58C15 /* she.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07B928CFA43300F58C15 /* she.mp3 */; };
+		F18B07C028CFA43300F58C15 /* that.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07BA28CFA43300F58C15 /* that.mp3 */; };
+		F18B07C128CFA43300F58C15 /* Could she put that back?.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07BB28CFA43300F58C15 /* Could she put that back?.mp3 */; };
+		F18B07C228CFA43300F58C15 /* back?.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07BC28CFA43300F58C15 /* back?.mp3 */; };
+		F18B07C328CFA43300F58C15 /* put.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07BD28CFA43300F58C15 /* put.mp3 */; };
+		F18B07CA28CFB13500F58C15 /* His.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07C428CFB13500F58C15 /* His.mp3 */; };
+		F18B07CB28CFB13500F58C15 /* His car is with me.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07C528CFB13500F58C15 /* His car is with me.mp3 */; };
+		F18B07CC28CFB13500F58C15 /* is.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07C628CFB13500F58C15 /* is.mp3 */; };
+		F18B07CD28CFB13500F58C15 /* me.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07C728CFB13500F58C15 /* me.mp3 */; };
+		F18B07CE28CFB13500F58C15 /* with.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07C828CFB13500F58C15 /* with.mp3 */; };
+		F18B07CF28CFB13500F58C15 /* car.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07C928CFB13500F58C15 /* car.mp3 */; };
+		F18B07D628CFB16D00F58C15 /* It looked so very old.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07D028CFB16D00F58C15 /* It looked so very old.mp3 */; };
+		F18B07D728CFB16D00F58C15 /* It.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07D128CFB16D00F58C15 /* It.mp3 */; };
+		F18B07D828CFB16D00F58C15 /* so.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07D228CFB16D00F58C15 /* so.mp3 */; };
+		F18B07D928CFB16D00F58C15 /* very.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07D328CFB16D00F58C15 /* very.mp3 */; };
+		F18B07DA28CFB16D00F58C15 /* old.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07D428CFB16D00F58C15 /* old.mp3 */; };
+		F18B07DB28CFB16D00F58C15 /* looked.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07D528CFB16D00F58C15 /* looked.mp3 */; };
+		F18B07E228CFB1A800F58C15 /* just.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07DC28CFB1A800F58C15 /* just.mp3 */; };
+		F18B07E328CFB1A800F58C15 /* up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07DD28CFB1A800F58C15 /* up.mp3 */; };
+		F18B07E428CFB1A800F58C15 /* Mum said just get up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07DE28CFB1A800F58C15 /* Mum said just get up.mp3 */; };
+		F18B07E528CFB1A800F58C15 /* Mum.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07DF28CFB1A800F58C15 /* Mum.mp3 */; };
+		F18B07E628CFB1A800F58C15 /* said.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07E028CFB1A800F58C15 /* said.mp3 */; };
+		F18B07E728CFB1A800F58C15 /* get.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07E128CFB1A800F58C15 /* get.mp3 */; };
+		F18B07EE28CFB1CC00F58C15 /* and.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07E828CFB1CC00F58C15 /* and.mp3 */; };
+		F18B07EF28CFB1CC00F58C15 /* They.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07E928CFB1CC00F58C15 /* They.mp3 */; };
+		F18B07F128CFB1CC00F58C15 /* saw.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07EB28CFB1CC00F58C15 /* saw.mp3 */; };
+		F18B07F228CFB1CC00F58C15 /* him.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07EC28CFB1CC00F58C15 /* him.mp3 */; };
+		F18B07F328CFB1CC00F58C15 /* They saw him and her.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07ED28CFB1CC00F58C15 /* They saw him and her.mp3 */; };
+		F18B07FB28CFB1EF00F58C15 /* look.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07F528CFB1EF00F58C15 /* look.mp3 */; };
+		F18B07FC28CFB1EF00F58C15 /* We look at the children.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07F628CFB1EF00F58C15 /* We look at the children.mp3 */; };
+		F18B07FD28CFB1EF00F58C15 /* We.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07F728CFB1EF00F58C15 /* We.mp3 */; };
+		F18B07FF28CFB1EF00F58C15 /* at.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B07F928CFB1EF00F58C15 /* at.mp3 */; };
+		F18B080228CFB27400F58C15 /* the.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B080028CFB27400F58C15 /* the.mp3 */; };
+		F18B080328CFB27400F58C15 /* children.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B080128CFB27400F58C15 /* children.mp3 */; };
+		F18B080528CFB33800F58C15 /* her.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F18B080428CFB33800F58C15 /* her.mp3 */; };
+		F1A156C028D9D39800743998 /* Amagama track.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A156BF28D9D39800743998 /* Amagama track.mp3 */; };
+		F1A156C228D9DA7800743998 /* Amagama track longer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A156C128D9DA7800743998 /* Amagama track longer.mp3 */; };
 		F1A17FE828C36A2600EF81A6 /* PurchaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A17FE728C36A2600EF81A6 /* PurchaseService.swift */; };
-		F1A6637128992DAF006B772A /* Mother asked if baby sat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A662E628992DAE006B772A /* Mother asked if baby sat.mp3 */; };
-		F1A6637228992DAF006B772A /* baby.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A662E728992DAE006B772A /* baby.mp3 */; };
-		F1A6637328992DAF006B772A /* asked.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A662E828992DAE006B772A /* asked.mp3 */; };
-		F1A6637428992DAF006B772A /* if.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A662E928992DAE006B772A /* if.mp3 */; };
-		F1A6637528992DAF006B772A /* Mother.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A662EA28992DAE006B772A /* Mother.mp3 */; };
-		F1A6637628992DAF006B772A /* sat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A662EB28992DAE006B772A /* sat.mp3 */; };
-		F1A6637728992DAF006B772A /* One day when I'm big.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A662ED28992DAE006B772A /* One day when I'm big.mp3 */; };
-		F1A6637828992DAF006B772A /* when.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A662EE28992DAE006B772A /* when.mp3 */; };
-		F1A6637928992DAF006B772A /* One.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A662EF28992DAE006B772A /* One.mp3 */; };
-		F1A6637B28992DAF006B772A /* day.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A662F128992DAE006B772A /* day.mp3 */; };
-		F1A6637C28992DAF006B772A /* I'm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A662F228992DAE006B772A /* I'm.mp3 */; };
-		F1A6637D28992DAF006B772A /* the.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A662F428992DAE006B772A /* the.mp3 */; };
-		F1A6637E28992DAF006B772A /* We.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A662F528992DAE006B772A /* We.mp3 */; };
-		F1A6638028992DAF006B772A /* children.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A662F728992DAE006B772A /* children.mp3 */; };
-		F1A6638128992DAF006B772A /* at.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A662F828992DAE006B772A /* at.mp3 */; };
-		F1A6638228992DAF006B772A /* look.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A662F928992DAE006B772A /* look.mp3 */; };
-		F1A6638328992DAF006B772A /* about.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A662FB28992DAE006B772A /* about.mp3 */; };
-		F1A6638428992DAF006B772A /* their.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A662FC28992DAE006B772A /* their.mp3 */; };
-		F1A6638528992DAF006B772A /* Dad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A662FD28992DAE006B772A /* Dad.mp3 */; };
-		F1A6638628992DAF006B772A /* Dad called about their house.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A662FE28992DAE006B772A /* Dad called about their house.mp3 */; };
-		F1A6638728992DAF006B772A /* house.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A662FF28992DAE006B772A /* house.mp3 */; };
-		F1A6638828992DAF006B772A /* called.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6630028992DAE006B772A /* called.mp3 */; };
-		F1A6638928992DAF006B772A /* are.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6630228992DAE006B772A /* are.mp3 */; };
-		F1A6638A28992DAF006B772A /* All animals are in place.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6630328992DAE006B772A /* All animals are in place.mp3 */; };
-		F1A6638B28992DAF006B772A /* All.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6630428992DAE006B772A /* All.mp3 */; };
-		F1A6638E28992DAF006B772A /* animals.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6630728992DAE006B772A /* animals.mp3 */; };
-		F1A6638F28992DAF006B772A /* Some say let's have fun.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6630928992DAE006B772A /* Some say let's have fun.mp3 */; };
-		F1A6639028992DAF006B772A /* let's.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6630A28992DAE006B772A /* let's.mp3 */; };
-		F1A6639128992DAF006B772A /* Some.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6630B28992DAE006B772A /* Some.mp3 */; };
-		F1A6639228992DAF006B772A /* say.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6630C28992DAE006B772A /* say.mp3 */; };
-		F1A6639328992DAF006B772A /* have.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6630D28992DAE006B772A /* have.mp3 */; };
-		F1A6639428992DAF006B772A /* fun.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6630E28992DAE006B772A /* fun.mp3 */; };
-		F1A6639528992DAF006B772A /* made.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6631028992DAE006B772A /* made.mp3 */; };
-		F1A6639628992DAF006B772A /* food.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6631128992DAE006B772A /* food.mp3 */; };
-		F1A6639728992DAF006B772A /* and.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6631228992DAE006B772A /* and.mp3 */; };
-		F1A6639828992DAF006B772A /* Mr and Mrs made food.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6631328992DAE006B772A /* Mr and Mrs made food.mp3 */; };
-		F1A6639D28992DAF006B772A /* see.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6631928992DAE006B772A /* see.mp3 */; };
-		F1A6639E28992DAF006B772A /* like.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6631A28992DAE006B772A /* like.mp3 */; };
-		F1A6639F28992DAF006B772A /* I.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6631B28992DAE006B772A /* I.mp3 */; };
-		F1A663A028992DAF006B772A /* I like to see people.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6631C28992DAE006B772A /* I like to see people.mp3 */; };
-		F1A663A128992DAF006B772A /* back.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6631E28992DAE006B772A /* back.mp3 */; };
-		F1A663A228992DAF006B772A /* she.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6631F28992DAE006B772A /* she.mp3 */; };
-		F1A663A328992DAF006B772A /* Could.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6632028992DAE006B772A /* Could.mp3 */; };
-		F1A663A428992DAF006B772A /* that.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6632128992DAE006B772A /* that.mp3 */; };
-		F1A663A528992DAF006B772A /* Could she put that back?.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6632228992DAE006B772A /* Could she put that back?.mp3 */; };
-		F1A663A628992DAF006B772A /* put.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6632328992DAE006B772A /* put.mp3 */; };
-		F1A663A728992DAF006B772A /* of.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6632528992DAE006B772A /* of.mp3 */; };
-		F1A663A828992DAF006B772A /* Make them out of this.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6632628992DAE006B772A /* Make them out of this.mp3 */; };
-		F1A663A928992DAF006B772A /* this.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6632728992DAE006B772A /* this.mp3 */; };
-		F1A663AA28992DAF006B772A /* out.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6632828992DAE006B772A /* out.mp3 */; };
-		F1A663AB28992DAF006B772A /* them.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6632928992DAE006B772A /* them.mp3 */; };
-		F1A663AD28992DAF006B772A /* It's here now what then?.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6632C28992DAE006B772A /* It's here now what then?.mp3 */; };
-		F1A663AF28992DAF006B772A /* now.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6632E28992DAE006B772A /* now.mp3 */; };
-		F1A663B128992DAF006B772A /* It's.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6633028992DAE006B772A /* It's.mp3 */; };
-		F1A663B228992DAF006B772A /* then?.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6633128992DAE006B772A /* then?.mp3 */; };
-		F1A663B328992DAF006B772A /* come.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6633328992DAE006B772A /* come.mp3 */; };
-		F1A663B428992DAF006B772A /* down.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6633428992DAE006B772A /* down.mp3 */; };
-		F1A663B528992DAF006B772A /* Don't.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6633528992DAE006B772A /* Don't.mp3 */; };
-		F1A663B728992DAF006B772A /* Don't come down from there.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6633728992DAE006B772A /* Don't come down from there.mp3 */; };
-		F1A663B828992DAF006B772A /* there.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6633828992DAE006B772A /* there.mp3 */; };
-		F1A663B928992DAF006B772A /* They saw him and her.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6633A28992DAF006B772A /* They saw him and her.mp3 */; };
-		F1A663BA28992DAF006B772A /* her.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6633B28992DAF006B772A /* her.mp3 */; };
-		F1A663BD28992DAF006B772A /* saw.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6633E28992DAF006B772A /* saw.mp3 */; };
-		F1A663BF28992DAF006B772A /* not.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6634128992DAF006B772A /* not.mp3 */; };
-		F1A663C128992DAF006B772A /* in.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6634328992DAF006B772A /* in.mp3 */; };
-		F1A663C228992DAF006B772A /* He was not in time.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6634428992DAF006B772A /* He was not in time.mp3 */; };
-		F1A663C328992DAF006B772A /* was.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6634528992DAF006B772A /* was.mp3 */; };
-		F1A663C428992DAF006B772A /* time.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6634628992DAF006B772A /* time.mp3 */; };
-		F1A663C528992DAF006B772A /* go.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6634828992DAF006B772A /* go.mp3 */; };
-		F1A663C628992DAF006B772A /* Can you go for help?.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6634928992DAF006B772A /* Can you go for help?.mp3 */; };
-		F1A663C728992DAF006B772A /* Can.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6634A28992DAF006B772A /* Can.mp3 */; };
-		F1A663C828992DAF006B772A /* you.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6634B28992DAF006B772A /* you.mp3 */; };
-		F1A663C928992DAF006B772A /* for.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6634C28992DAF006B772A /* for.mp3 */; };
-		F1A663CB28992DAF006B772A /* said.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6634F28992DAF006B772A /* said.mp3 */; };
-		F1A663CC28992DAF006B772A /* Mum.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6635028992DAF006B772A /* Mum.mp3 */; };
-		F1A663CE28992DAF006B772A /* get.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6635228992DAF006B772A /* get.mp3 */; };
-		F1A663CF28992DAF006B772A /* up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6635328992DAF006B772A /* up.mp3 */; };
-		F1A663D028992DAF006B772A /* Mum said just get up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6635428992DAF006B772A /* Mum said just get up.mp3 */; };
-		F1A663D128992DAF006B772A /* My.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6635628992DAF006B772A /* My.mp3 */; };
-		F1A663D228992DAF006B772A /* cat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6635728992DAF006B772A /* cat.mp3 */; };
-		F1A663D328992DAF006B772A /* came.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6635828992DAF006B772A /* came.mp3 */; };
-		F1A663D428992DAF006B772A /* little.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6635928992DAF006B772A /* little.mp3 */; };
-		F1A663D528992DAF006B772A /* My little cat came by.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6635A28992DAF006B772A /* My little cat came by.mp3 */; };
-		F1A663D628992DAF006B772A /* by.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6635B28992DAF006B772A /* by.mp3 */; };
-		F1A663D728992DAF006B772A /* Your friends went into school.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6635D28992DAF006B772A /* Your friends went into school.mp3 */; };
-		F1A663D828992DAF006B772A /* friends.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6635E28992DAF006B772A /* friends.mp3 */; };
-		F1A663D928992DAF006B772A /* Your.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6635F28992DAF006B772A /* Your.mp3 */; };
-		F1A663DA28992DAF006B772A /* went.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6636028992DAF006B772A /* went.mp3 */; };
-		F1A663DB28992DAF006B772A /* into.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6636128992DAF006B772A /* into.mp3 */; };
-		F1A663DD28992DAF006B772A /* looked.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6636428992DAF006B772A /* looked.mp3 */; };
-		F1A663DE28992DAF006B772A /* It.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6636528992DAF006B772A /* It.mp3 */; };
-		F1A663DF28992DAF006B772A /* so.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6636628992DAF006B772A /* so.mp3 */; };
-		F1A663E028992DAF006B772A /* very.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6636728992DAF006B772A /* very.mp3 */; };
-		F1A663E128992DAF006B772A /* old.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6636828992DAF006B772A /* old.mp3 */; };
-		F1A663E228992DAF006B772A /* It looked so very old.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6636928992DAF006B772A /* It looked so very old.mp3 */; };
-		F1A663E328992DAF006B772A /* His car is with me.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6636B28992DAF006B772A /* His car is with me.mp3 */; };
-		F1A663E428992DAF006B772A /* is.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6636C28992DAF006B772A /* is.mp3 */; };
-		F1A663E528992DAF006B772A /* car.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6636D28992DAF006B772A /* car.mp3 */; };
-		F1A663E628992DAF006B772A /* His.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6636E28992DAF006B772A /* His.mp3 */; };
-		F1A663E728992DAF006B772A /* with.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6636F28992DAF006B772A /* with.mp3 */; };
-		F1A663E828992DAF006B772A /* me.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A6637028992DAF006B772A /* me.mp3 */; };
-		F1DCEEF428A2AEC600073EB4 /* people.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1DCEEF328A2AEC500073EB4 /* people.mp3 */; };
-		F1DCEEF628A2AECF00073EB4 /* to.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1DCEEF528A2AECF00073EB4 /* to.mp3 */; };
-		F1DCEEF828A2AF3900073EB4 /* Make.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1DCEEF728A2AF3900073EB4 /* Make.mp3 */; };
-		F1DCEEFA28A2AFA800073EB4 /* school.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1DCEEF928A2AFA800073EB4 /* school.mp3 */; };
-		F1DCEEFC28A2AFCD00073EB4 /* They.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1DCEEFB28A2AFCD00073EB4 /* They.mp3 */; };
-		F1DCEEFE28A2AFF400073EB4 /* what.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1DCEEFD28A2AFF400073EB4 /* what.mp3 */; };
-		F1DCEF0028A2B00F00073EB4 /* place.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1DCEEFF28A2B00F00073EB4 /* place.mp3 */; };
-		F1DCEF0328A2B03200073EB4 /* Mr.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1DCEF0128A2B03200073EB4 /* Mr.mp3 */; };
-		F1DCEF0428A2B03200073EB4 /* Mrs.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1DCEF0228A2B03200073EB4 /* Mrs.mp3 */; };
-		F1DCEF0628A2B04F00073EB4 /* just.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1DCEF0528A2B04F00073EB4 /* just.mp3 */; };
-		F1DCEF0828A2B06B00073EB4 /* him.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1DCEF0728A2B06B00073EB4 /* him.mp3 */; };
-		F1DCEF0A28A2B0BB00073EB4 /* here.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1DCEF0928A2B0BB00073EB4 /* here.mp3 */; };
-		F1DCEF0C28A2B0D000073EB4 /* help?.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1DCEF0B28A2B0D000073EB4 /* help?.mp3 */; };
-		F1DCEF0E28A2B10100073EB4 /* He.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1DCEF0D28A2B10100073EB4 /* He.mp3 */; };
-		F1DCEF1028A2B11900073EB4 /* from.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1DCEF0F28A2B11900073EB4 /* from.mp3 */; };
-		F1DCEF1228A2B15700073EB4 /* big.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1DCEF1128A2B15700073EB4 /* big.mp3 */; };
+		F1C347B328D25CB2001EACD7 /* Mr and Mrs made food.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347AE28D25CB2001EACD7 /* Mr and Mrs made food.mp3 */; };
+		F1C347B428D25CB2001EACD7 /* food.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347AF28D25CB2001EACD7 /* food.mp3 */; };
+		F1C347B528D25CB2001EACD7 /* Mr.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347B028D25CB2001EACD7 /* Mr.mp3 */; };
+		F1C347B628D25CB2001EACD7 /* made.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347B128D25CB2001EACD7 /* made.mp3 */; };
+		F1C347B728D25CB2001EACD7 /* Mrs.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347B228D25CB2001EACD7 /* Mrs.mp3 */; };
+		F1C347BE28D25CF8001EACD7 /* are.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347B828D25CF8001EACD7 /* are.mp3 */; };
+		F1C347BF28D25CF8001EACD7 /* in.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347B928D25CF8001EACD7 /* in.mp3 */; };
+		F1C347C028D25CF8001EACD7 /* All animals are in place.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347BA28D25CF8001EACD7 /* All animals are in place.mp3 */; };
+		F1C347C128D25CF8001EACD7 /* animals.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347BB28D25CF8001EACD7 /* animals.mp3 */; };
+		F1C347C228D25CF8001EACD7 /* All.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347BC28D25CF8001EACD7 /* All.mp3 */; };
+		F1C347C328D25CF8001EACD7 /* place.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347BD28D25CF8001EACD7 /* place.mp3 */; };
+		F1C347CA28D25D31001EACD7 /* It's here now what then?.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347C428D25D31001EACD7 /* It's here now what then?.mp3 */; };
+		F1C347CB28D25D31001EACD7 /* here.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347C528D25D31001EACD7 /* here.mp3 */; };
+		F1C347CC28D25D31001EACD7 /* It's.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347C628D25D31001EACD7 /* It's.mp3 */; };
+		F1C347CD28D25D31001EACD7 /* then?.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347C728D25D31001EACD7 /* then?.mp3 */; };
+		F1C347CE28D25D31001EACD7 /* now.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347C828D25D31001EACD7 /* now.mp3 */; };
+		F1C347CF28D25D31001EACD7 /* what.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347C928D25D31001EACD7 /* what.mp3 */; };
+		F1C347D628D25D6F001EACD7 /* have.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347D028D25D6E001EACD7 /* have.mp3 */; };
+		F1C347D728D25D6F001EACD7 /* fun.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347D128D25D6E001EACD7 /* fun.mp3 */; };
+		F1C347D828D25D6F001EACD7 /* let's.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347D228D25D6E001EACD7 /* let's.mp3 */; };
+		F1C347D928D25D6F001EACD7 /* say.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347D328D25D6E001EACD7 /* say.mp3 */; };
+		F1C347DA28D25D6F001EACD7 /* Some.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347D428D25D6F001EACD7 /* Some.mp3 */; };
+		F1C347DB28D25D6F001EACD7 /* Some say let's have fun.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347D528D25D6F001EACD7 /* Some say let's have fun.mp3 */; };
+		F1C347E228D25DAF001EACD7 /* Dad called about their house.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347DC28D25DAF001EACD7 /* Dad called about their house.mp3 */; };
+		F1C347E328D25DAF001EACD7 /* about.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347DD28D25DAF001EACD7 /* about.mp3 */; };
+		F1C347E428D25DAF001EACD7 /* house.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347DE28D25DAF001EACD7 /* house.mp3 */; };
+		F1C347E528D25DAF001EACD7 /* called.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347DF28D25DAF001EACD7 /* called.mp3 */; };
+		F1C347E628D25DAF001EACD7 /* their.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347E028D25DAF001EACD7 /* their.mp3 */; };
+		F1C347E728D25DAF001EACD7 /* Dad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347E128D25DAF001EACD7 /* Dad.mp3 */; };
+		F1C347EE28D25DDC001EACD7 /* from.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347E828D25DDC001EACD7 /* from.mp3 */; };
+		F1C347EF28D25DDC001EACD7 /* there.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347E928D25DDC001EACD7 /* there.mp3 */; };
+		F1C347F028D25DDC001EACD7 /* come.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347EA28D25DDC001EACD7 /* come.mp3 */; };
+		F1C347F128D25DDC001EACD7 /* Don't.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347EB28D25DDC001EACD7 /* Don't.mp3 */; };
+		F1C347F228D25DDC001EACD7 /* Don't come down from there.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347EC28D25DDC001EACD7 /* Don't come down from there.mp3 */; };
+		F1C347F328D25DDC001EACD7 /* down.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347ED28D25DDC001EACD7 /* down.mp3 */; };
+		F1C347FA28D25E0A001EACD7 /* baby.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347F428D25E0A001EACD7 /* baby.mp3 */; };
+		F1C347FB28D25E0A001EACD7 /* cried.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347F528D25E0A001EACD7 /* cried.mp3 */; };
+		F1C347FC28D25E0A001EACD7 /* asked.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347F628D25E0A001EACD7 /* asked.mp3 */; };
+		F1C347FD28D25E0A001EACD7 /* if.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347F728D25E0A001EACD7 /* if.mp3 */; };
+		F1C347FE28D25E0A001EACD7 /* Mother asked if baby cried.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347F828D25E0A001EACD7 /* Mother asked if baby cried.mp3 */; };
+		F1C347FF28D25E0A001EACD7 /* Mother.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347F928D25E0A001EACD7 /* Mother.mp3 */; };
+		F1C3480628D25E40001EACD7 /* My little cat came by.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3480028D25E40001EACD7 /* My little cat came by.mp3 */; };
+		F1C3480728D25E40001EACD7 /* came.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3480128D25E40001EACD7 /* came.mp3 */; };
+		F1C3480828D25E40001EACD7 /* by.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3480228D25E40001EACD7 /* by.mp3 */; };
+		F1C3480928D25E40001EACD7 /* cat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3480328D25E40001EACD7 /* cat.mp3 */; };
+		F1C3480A28D25E40001EACD7 /* little.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3480428D25E40001EACD7 /* little.mp3 */; };
+		F1C3480B28D25E40001EACD7 /* My.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3480528D25E40001EACD7 /* My.mp3 */; };
+		F1C3481E28D261AF001EACD7 /* day.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3481828D261AF001EACD7 /* day.mp3 */; };
+		F1C3481F28D261AF001EACD7 /* I'm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3481928D261AF001EACD7 /* I'm.mp3 */; };
+		F1C3482028D261AF001EACD7 /* One day when I'm big.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3481A28D261AF001EACD7 /* One day when I'm big.mp3 */; };
+		F1C3482128D261AF001EACD7 /* when.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3481B28D261AF001EACD7 /* when.mp3 */; };
+		F1C3482228D261AF001EACD7 /* One.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3481C28D261AF001EACD7 /* One.mp3 */; };
+		F1C3482328D261AF001EACD7 /* big.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3481D28D261AF001EACD7 /* big.mp3 */; };
+		F1C3482A28D2622B001EACD7 /* Your friends went into school.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3482428D2622B001EACD7 /* Your friends went into school.mp3 */; };
+		F1C3482B28D2622B001EACD7 /* Your.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3482528D2622B001EACD7 /* Your.mp3 */; };
+		F1C3482C28D2622B001EACD7 /* into.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3482628D2622B001EACD7 /* into.mp3 */; };
+		F1C3482D28D2622B001EACD7 /* school.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3482728D2622B001EACD7 /* school.mp3 */; };
+		F1C3482E28D2622B001EACD7 /* friends.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3482828D2622B001EACD7 /* friends.mp3 */; };
+		F1C3482F28D2622B001EACD7 /* went.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3482928D2622B001EACD7 /* went.mp3 */; };
+		F1C3483128D2635D001EACD7 /* Make them out of this.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3483028D2635D001EACD7 /* Make them out of this.mp3 */; };
 		F1E456C02892983C0085C6CB /* AmagamaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E456BF2892983C0085C6CB /* AmagamaApp.swift */; };
 		F1E456C22892983C0085C6CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E456C12892983C0085C6CB /* ContentView.swift */; };
 		F1E456C42892983C0085C6CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1E456C32892983C0085C6CB /* Assets.xcassets */; };
@@ -174,127 +178,131 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F106C12828A517FF0064BF6E /* We look at the children.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "We look at the children.mp3"; sourceTree = "<group>"; };
 		F1499EFC28A6A66D00582E64 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		F15649B92892A1C20095F015 /* tick1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tick1.json; sourceTree = "<group>"; };
+		F1598C1028D328610056C708 /* Antigua couple1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Antigua couple1.mp3"; sourceTree = "<group>"; };
+		F18B077D28CF96FB00F58C15 /* out.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = out.mp3; sourceTree = "<group>"; };
+		F18B077E28CF96FB00F58C15 /* them.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = them.mp3; sourceTree = "<group>"; };
+		F18B077F28CF96FB00F58C15 /* of.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = of.mp3; sourceTree = "<group>"; };
+		F18B078028CF96FB00F58C15 /* this.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = this.mp3; sourceTree = "<group>"; };
+		F18B078128CF96FB00F58C15 /* Make.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Make.mp3; sourceTree = "<group>"; };
+		F18B078828CFA24200F58C15 /* Can.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Can.mp3; sourceTree = "<group>"; };
+		F18B078928CFA24200F58C15 /* you.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = you.mp3; sourceTree = "<group>"; };
+		F18B078A28CFA24200F58C15 /* for.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = for.mp3; sourceTree = "<group>"; };
+		F18B078B28CFA24300F58C15 /* go.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = go.mp3; sourceTree = "<group>"; };
+		F18B078C28CFA24300F58C15 /* Can you go for help?.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Can you go for help?.mp3"; sourceTree = "<group>"; };
+		F18B078D28CFA24300F58C15 /* help?.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "help?.mp3"; sourceTree = "<group>"; };
+		F18B079428CFA32100F58C15 /* I.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = I.mp3; sourceTree = "<group>"; };
+		F18B079528CFA32100F58C15 /* I like to see people.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "I like to see people.mp3"; sourceTree = "<group>"; };
+		F18B079628CFA32100F58C15 /* people.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = people.mp3; sourceTree = "<group>"; };
+		F18B079728CFA32100F58C15 /* like.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = like.mp3; sourceTree = "<group>"; };
+		F18B079828CFA32100F58C15 /* see.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = see.mp3; sourceTree = "<group>"; };
+		F18B079928CFA32100F58C15 /* to.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = to.mp3; sourceTree = "<group>"; };
+		F18B07AC28CFA3ED00F58C15 /* on.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = on.mp3; sourceTree = "<group>"; };
+		F18B07AD28CFA3ED00F58C15 /* time.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = time.mp3; sourceTree = "<group>"; };
+		F18B07AE28CFA3ED00F58C15 /* not.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = not.mp3; sourceTree = "<group>"; };
+		F18B07AF28CFA3ED00F58C15 /* He was not on time.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "He was not on time.mp3"; sourceTree = "<group>"; };
+		F18B07B028CFA3ED00F58C15 /* was.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = was.mp3; sourceTree = "<group>"; };
+		F18B07B128CFA3ED00F58C15 /* He.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = He.mp3; sourceTree = "<group>"; };
+		F18B07B828CFA43300F58C15 /* Could.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Could.mp3; path = "../../../../Sound for Amagama/New 1/Could she put that back?./Could.mp3"; sourceTree = "<group>"; };
+		F18B07B928CFA43300F58C15 /* she.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = she.mp3; path = "../../../../Sound for Amagama/New 1/Could she put that back?./she.mp3"; sourceTree = "<group>"; };
+		F18B07BA28CFA43300F58C15 /* that.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = that.mp3; path = "../../../../Sound for Amagama/New 1/Could she put that back?./that.mp3"; sourceTree = "<group>"; };
+		F18B07BB28CFA43300F58C15 /* Could she put that back?.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Could she put that back?.mp3"; path = "../../../../Sound for Amagama/New 1/Could she put that back?./Could she put that back?.mp3"; sourceTree = "<group>"; };
+		F18B07BC28CFA43300F58C15 /* back?.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "back?.mp3"; path = "../../../../Sound for Amagama/New 1/Could she put that back?./back?.mp3"; sourceTree = "<group>"; };
+		F18B07BD28CFA43300F58C15 /* put.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = put.mp3; path = "../../../../Sound for Amagama/New 1/Could she put that back?./put.mp3"; sourceTree = "<group>"; };
+		F18B07C428CFB13500F58C15 /* His.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = His.mp3; sourceTree = "<group>"; };
+		F18B07C528CFB13500F58C15 /* His car is with me.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "His car is with me.mp3"; sourceTree = "<group>"; };
+		F18B07C628CFB13500F58C15 /* is.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = is.mp3; sourceTree = "<group>"; };
+		F18B07C728CFB13500F58C15 /* me.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = me.mp3; sourceTree = "<group>"; };
+		F18B07C828CFB13500F58C15 /* with.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = with.mp3; sourceTree = "<group>"; };
+		F18B07C928CFB13500F58C15 /* car.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = car.mp3; sourceTree = "<group>"; };
+		F18B07D028CFB16D00F58C15 /* It looked so very old.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "It looked so very old.mp3"; sourceTree = "<group>"; };
+		F18B07D128CFB16D00F58C15 /* It.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = It.mp3; sourceTree = "<group>"; };
+		F18B07D228CFB16D00F58C15 /* so.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = so.mp3; sourceTree = "<group>"; };
+		F18B07D328CFB16D00F58C15 /* very.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = very.mp3; sourceTree = "<group>"; };
+		F18B07D428CFB16D00F58C15 /* old.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = old.mp3; sourceTree = "<group>"; };
+		F18B07D528CFB16D00F58C15 /* looked.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = looked.mp3; sourceTree = "<group>"; };
+		F18B07DC28CFB1A800F58C15 /* just.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = just.mp3; sourceTree = "<group>"; };
+		F18B07DD28CFB1A800F58C15 /* up.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = up.mp3; sourceTree = "<group>"; };
+		F18B07DE28CFB1A800F58C15 /* Mum said just get up.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mum said just get up.mp3"; sourceTree = "<group>"; };
+		F18B07DF28CFB1A800F58C15 /* Mum.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mum.mp3; sourceTree = "<group>"; };
+		F18B07E028CFB1A800F58C15 /* said.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = said.mp3; sourceTree = "<group>"; };
+		F18B07E128CFB1A800F58C15 /* get.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = get.mp3; sourceTree = "<group>"; };
+		F18B07E828CFB1CC00F58C15 /* and.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = and.mp3; sourceTree = "<group>"; };
+		F18B07E928CFB1CC00F58C15 /* They.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = They.mp3; sourceTree = "<group>"; };
+		F18B07EB28CFB1CC00F58C15 /* saw.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = saw.mp3; sourceTree = "<group>"; };
+		F18B07EC28CFB1CC00F58C15 /* him.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = him.mp3; sourceTree = "<group>"; };
+		F18B07ED28CFB1CC00F58C15 /* They saw him and her.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "They saw him and her.mp3"; sourceTree = "<group>"; };
+		F18B07F528CFB1EF00F58C15 /* look.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = look.mp3; sourceTree = "<group>"; };
+		F18B07F628CFB1EF00F58C15 /* We look at the children.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "We look at the children.mp3"; sourceTree = "<group>"; };
+		F18B07F728CFB1EF00F58C15 /* We.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = We.mp3; sourceTree = "<group>"; };
+		F18B07F928CFB1EF00F58C15 /* at.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = at.mp3; sourceTree = "<group>"; };
+		F18B080028CFB27400F58C15 /* the.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = the.mp3; sourceTree = "<group>"; };
+		F18B080128CFB27400F58C15 /* children.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = children.mp3; sourceTree = "<group>"; };
+		F18B080428CFB33800F58C15 /* her.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = her.mp3; sourceTree = "<group>"; };
+		F1A156BF28D9D39800743998 /* Amagama track.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Amagama track.mp3"; sourceTree = "<group>"; };
+		F1A156C128D9DA7800743998 /* Amagama track longer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Amagama track longer.mp3"; sourceTree = "<group>"; };
 		F1A17FE728C36A2600EF81A6 /* PurchaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseService.swift; sourceTree = "<group>"; };
-		F1A662E628992DAE006B772A /* Mother asked if baby sat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mother asked if baby sat.mp3"; sourceTree = "<group>"; };
-		F1A662E728992DAE006B772A /* baby.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = baby.mp3; sourceTree = "<group>"; };
-		F1A662E828992DAE006B772A /* asked.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = asked.mp3; sourceTree = "<group>"; };
-		F1A662E928992DAE006B772A /* if.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = if.mp3; sourceTree = "<group>"; };
-		F1A662EA28992DAE006B772A /* Mother.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mother.mp3; sourceTree = "<group>"; };
-		F1A662EB28992DAE006B772A /* sat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sat.mp3; sourceTree = "<group>"; };
-		F1A662ED28992DAE006B772A /* One day when I'm big.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "One day when I'm big.mp3"; sourceTree = "<group>"; };
-		F1A662EE28992DAE006B772A /* when.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = when.mp3; sourceTree = "<group>"; };
-		F1A662EF28992DAE006B772A /* One.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = One.mp3; sourceTree = "<group>"; };
-		F1A662F128992DAE006B772A /* day.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = day.mp3; sourceTree = "<group>"; };
-		F1A662F228992DAE006B772A /* I'm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "I'm.mp3"; sourceTree = "<group>"; };
-		F1A662F428992DAE006B772A /* the.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = the.mp3; sourceTree = "<group>"; };
-		F1A662F528992DAE006B772A /* We.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = We.mp3; sourceTree = "<group>"; };
-		F1A662F728992DAE006B772A /* children.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = children.mp3; sourceTree = "<group>"; };
-		F1A662F828992DAE006B772A /* at.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = at.mp3; sourceTree = "<group>"; };
-		F1A662F928992DAE006B772A /* look.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = look.mp3; sourceTree = "<group>"; };
-		F1A662FB28992DAE006B772A /* about.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = about.mp3; sourceTree = "<group>"; };
-		F1A662FC28992DAE006B772A /* their.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = their.mp3; sourceTree = "<group>"; };
-		F1A662FD28992DAE006B772A /* Dad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Dad.mp3; sourceTree = "<group>"; };
-		F1A662FE28992DAE006B772A /* Dad called about their house.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Dad called about their house.mp3"; sourceTree = "<group>"; };
-		F1A662FF28992DAE006B772A /* house.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = house.mp3; sourceTree = "<group>"; };
-		F1A6630028992DAE006B772A /* called.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = called.mp3; sourceTree = "<group>"; };
-		F1A6630228992DAE006B772A /* are.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = are.mp3; sourceTree = "<group>"; };
-		F1A6630328992DAE006B772A /* All animals are in place.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "All animals are in place.mp3"; sourceTree = "<group>"; };
-		F1A6630428992DAE006B772A /* All.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = All.mp3; sourceTree = "<group>"; };
-		F1A6630728992DAE006B772A /* animals.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animals.mp3; sourceTree = "<group>"; };
-		F1A6630928992DAE006B772A /* Some say let's have fun.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Some say let's have fun.mp3"; sourceTree = "<group>"; };
-		F1A6630A28992DAE006B772A /* let's.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "let's.mp3"; sourceTree = "<group>"; };
-		F1A6630B28992DAE006B772A /* Some.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Some.mp3; sourceTree = "<group>"; };
-		F1A6630C28992DAE006B772A /* say.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = say.mp3; sourceTree = "<group>"; };
-		F1A6630D28992DAE006B772A /* have.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = have.mp3; sourceTree = "<group>"; };
-		F1A6630E28992DAE006B772A /* fun.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fun.mp3; sourceTree = "<group>"; };
-		F1A6631028992DAE006B772A /* made.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = made.mp3; sourceTree = "<group>"; };
-		F1A6631128992DAE006B772A /* food.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = food.mp3; sourceTree = "<group>"; };
-		F1A6631228992DAE006B772A /* and.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = and.mp3; sourceTree = "<group>"; };
-		F1A6631328992DAE006B772A /* Mr and Mrs made food.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mr and Mrs made food.mp3"; sourceTree = "<group>"; };
-		F1A6631928992DAE006B772A /* see.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = see.mp3; sourceTree = "<group>"; };
-		F1A6631A28992DAE006B772A /* like.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = like.mp3; sourceTree = "<group>"; };
-		F1A6631B28992DAE006B772A /* I.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = I.mp3; sourceTree = "<group>"; };
-		F1A6631C28992DAE006B772A /* I like to see people.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "I like to see people.mp3"; sourceTree = "<group>"; };
-		F1A6631E28992DAE006B772A /* back.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = back.mp3; sourceTree = "<group>"; };
-		F1A6631F28992DAE006B772A /* she.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = she.mp3; sourceTree = "<group>"; };
-		F1A6632028992DAE006B772A /* Could.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Could.mp3; sourceTree = "<group>"; };
-		F1A6632128992DAE006B772A /* that.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = that.mp3; sourceTree = "<group>"; };
-		F1A6632228992DAE006B772A /* Could she put that back?.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Could she put that back?.mp3"; sourceTree = "<group>"; };
-		F1A6632328992DAE006B772A /* put.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = put.mp3; sourceTree = "<group>"; };
-		F1A6632528992DAE006B772A /* of.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = of.mp3; sourceTree = "<group>"; };
-		F1A6632628992DAE006B772A /* Make them out of this.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Make them out of this.mp3"; sourceTree = "<group>"; };
-		F1A6632728992DAE006B772A /* this.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = this.mp3; sourceTree = "<group>"; };
-		F1A6632828992DAE006B772A /* out.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = out.mp3; sourceTree = "<group>"; };
-		F1A6632928992DAE006B772A /* them.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = them.mp3; sourceTree = "<group>"; };
-		F1A6632C28992DAE006B772A /* It's here now what then?.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "It's here now what then?.mp3"; sourceTree = "<group>"; };
-		F1A6632E28992DAE006B772A /* now.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = now.mp3; sourceTree = "<group>"; };
-		F1A6633028992DAE006B772A /* It's.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "It's.mp3"; sourceTree = "<group>"; };
-		F1A6633128992DAE006B772A /* then?.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "then?.mp3"; sourceTree = "<group>"; };
-		F1A6633328992DAE006B772A /* come.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = come.mp3; sourceTree = "<group>"; };
-		F1A6633428992DAE006B772A /* down.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = down.mp3; sourceTree = "<group>"; };
-		F1A6633528992DAE006B772A /* Don't.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Don't.mp3"; sourceTree = "<group>"; };
-		F1A6633728992DAE006B772A /* Don't come down from there.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Don't come down from there.mp3"; sourceTree = "<group>"; };
-		F1A6633828992DAE006B772A /* there.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = there.mp3; sourceTree = "<group>"; };
-		F1A6633A28992DAF006B772A /* They saw him and her.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "They saw him and her.mp3"; sourceTree = "<group>"; };
-		F1A6633B28992DAF006B772A /* her.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = her.mp3; sourceTree = "<group>"; };
-		F1A6633E28992DAF006B772A /* saw.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = saw.mp3; sourceTree = "<group>"; };
-		F1A6634128992DAF006B772A /* not.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = not.mp3; sourceTree = "<group>"; };
-		F1A6634328992DAF006B772A /* in.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = in.mp3; sourceTree = "<group>"; };
-		F1A6634428992DAF006B772A /* He was not in time.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "He was not in time.mp3"; sourceTree = "<group>"; };
-		F1A6634528992DAF006B772A /* was.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = was.mp3; sourceTree = "<group>"; };
-		F1A6634628992DAF006B772A /* time.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = time.mp3; sourceTree = "<group>"; };
-		F1A6634828992DAF006B772A /* go.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = go.mp3; sourceTree = "<group>"; };
-		F1A6634928992DAF006B772A /* Can you go for help?.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Can you go for help?.mp3"; sourceTree = "<group>"; };
-		F1A6634A28992DAF006B772A /* Can.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Can.mp3; sourceTree = "<group>"; };
-		F1A6634B28992DAF006B772A /* you.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = you.mp3; sourceTree = "<group>"; };
-		F1A6634C28992DAF006B772A /* for.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = for.mp3; sourceTree = "<group>"; };
-		F1A6634F28992DAF006B772A /* said.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = said.mp3; sourceTree = "<group>"; };
-		F1A6635028992DAF006B772A /* Mum.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mum.mp3; sourceTree = "<group>"; };
-		F1A6635228992DAF006B772A /* get.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = get.mp3; sourceTree = "<group>"; };
-		F1A6635328992DAF006B772A /* up.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = up.mp3; sourceTree = "<group>"; };
-		F1A6635428992DAF006B772A /* Mum said just get up.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mum said just get up.mp3"; sourceTree = "<group>"; };
-		F1A6635628992DAF006B772A /* My.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = My.mp3; sourceTree = "<group>"; };
-		F1A6635728992DAF006B772A /* cat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cat.mp3; sourceTree = "<group>"; };
-		F1A6635828992DAF006B772A /* came.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = came.mp3; sourceTree = "<group>"; };
-		F1A6635928992DAF006B772A /* little.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = little.mp3; sourceTree = "<group>"; };
-		F1A6635A28992DAF006B772A /* My little cat came by.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "My little cat came by.mp3"; sourceTree = "<group>"; };
-		F1A6635B28992DAF006B772A /* by.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = by.mp3; sourceTree = "<group>"; };
-		F1A6635D28992DAF006B772A /* Your friends went into school.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Your friends went into school.mp3"; sourceTree = "<group>"; };
-		F1A6635E28992DAF006B772A /* friends.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = friends.mp3; sourceTree = "<group>"; };
-		F1A6635F28992DAF006B772A /* Your.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Your.mp3; sourceTree = "<group>"; };
-		F1A6636028992DAF006B772A /* went.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = went.mp3; sourceTree = "<group>"; };
-		F1A6636128992DAF006B772A /* into.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = into.mp3; sourceTree = "<group>"; };
-		F1A6636428992DAF006B772A /* looked.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = looked.mp3; sourceTree = "<group>"; };
-		F1A6636528992DAF006B772A /* It.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = It.mp3; sourceTree = "<group>"; };
-		F1A6636628992DAF006B772A /* so.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = so.mp3; sourceTree = "<group>"; };
-		F1A6636728992DAF006B772A /* very.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = very.mp3; sourceTree = "<group>"; };
-		F1A6636828992DAF006B772A /* old.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = old.mp3; sourceTree = "<group>"; };
-		F1A6636928992DAF006B772A /* It looked so very old.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "It looked so very old.mp3"; sourceTree = "<group>"; };
-		F1A6636B28992DAF006B772A /* His car is with me.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "His car is with me.mp3"; sourceTree = "<group>"; };
-		F1A6636C28992DAF006B772A /* is.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = is.mp3; sourceTree = "<group>"; };
-		F1A6636D28992DAF006B772A /* car.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = car.mp3; sourceTree = "<group>"; };
-		F1A6636E28992DAF006B772A /* His.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = His.mp3; sourceTree = "<group>"; };
-		F1A6636F28992DAF006B772A /* with.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = with.mp3; sourceTree = "<group>"; };
-		F1A6637028992DAF006B772A /* me.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = me.mp3; sourceTree = "<group>"; };
-		F1DCEEF328A2AEC500073EB4 /* people.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = people.mp3; sourceTree = "<group>"; };
-		F1DCEEF528A2AECF00073EB4 /* to.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = to.mp3; sourceTree = "<group>"; };
-		F1DCEEF728A2AF3900073EB4 /* Make.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Make.mp3; sourceTree = "<group>"; };
-		F1DCEEF928A2AFA800073EB4 /* school.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = school.mp3; sourceTree = "<group>"; };
-		F1DCEEFB28A2AFCD00073EB4 /* They.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = They.mp3; sourceTree = "<group>"; };
-		F1DCEEFD28A2AFF400073EB4 /* what.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = what.mp3; sourceTree = "<group>"; };
-		F1DCEEFF28A2B00F00073EB4 /* place.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = place.mp3; sourceTree = "<group>"; };
-		F1DCEF0128A2B03200073EB4 /* Mr.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mr.mp3; sourceTree = "<group>"; };
-		F1DCEF0228A2B03200073EB4 /* Mrs.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mrs.mp3; sourceTree = "<group>"; };
-		F1DCEF0528A2B04F00073EB4 /* just.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = just.mp3; sourceTree = "<group>"; };
-		F1DCEF0728A2B06B00073EB4 /* him.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = him.mp3; sourceTree = "<group>"; };
-		F1DCEF0928A2B0BB00073EB4 /* here.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = here.mp3; sourceTree = "<group>"; };
-		F1DCEF0B28A2B0D000073EB4 /* help?.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "help?.mp3"; sourceTree = "<group>"; };
-		F1DCEF0D28A2B10100073EB4 /* He.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = He.mp3; sourceTree = "<group>"; };
-		F1DCEF0F28A2B11900073EB4 /* from.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = from.mp3; sourceTree = "<group>"; };
-		F1DCEF1128A2B15700073EB4 /* big.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = big.mp3; sourceTree = "<group>"; };
+		F1C347AE28D25CB2001EACD7 /* Mr and Mrs made food.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mr and Mrs made food.mp3"; sourceTree = "<group>"; };
+		F1C347AF28D25CB2001EACD7 /* food.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = food.mp3; sourceTree = "<group>"; };
+		F1C347B028D25CB2001EACD7 /* Mr.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mr.mp3; sourceTree = "<group>"; };
+		F1C347B128D25CB2001EACD7 /* made.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = made.mp3; sourceTree = "<group>"; };
+		F1C347B228D25CB2001EACD7 /* Mrs.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mrs.mp3; sourceTree = "<group>"; };
+		F1C347B828D25CF8001EACD7 /* are.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = are.mp3; sourceTree = "<group>"; };
+		F1C347B928D25CF8001EACD7 /* in.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = in.mp3; sourceTree = "<group>"; };
+		F1C347BA28D25CF8001EACD7 /* All animals are in place.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "All animals are in place.mp3"; sourceTree = "<group>"; };
+		F1C347BB28D25CF8001EACD7 /* animals.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animals.mp3; sourceTree = "<group>"; };
+		F1C347BC28D25CF8001EACD7 /* All.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = All.mp3; sourceTree = "<group>"; };
+		F1C347BD28D25CF8001EACD7 /* place.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = place.mp3; sourceTree = "<group>"; };
+		F1C347C428D25D31001EACD7 /* It's here now what then?.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "It's here now what then?.mp3"; sourceTree = "<group>"; };
+		F1C347C528D25D31001EACD7 /* here.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = here.mp3; sourceTree = "<group>"; };
+		F1C347C628D25D31001EACD7 /* It's.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "It's.mp3"; sourceTree = "<group>"; };
+		F1C347C728D25D31001EACD7 /* then?.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "then?.mp3"; sourceTree = "<group>"; };
+		F1C347C828D25D31001EACD7 /* now.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = now.mp3; sourceTree = "<group>"; };
+		F1C347C928D25D31001EACD7 /* what.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = what.mp3; sourceTree = "<group>"; };
+		F1C347D028D25D6E001EACD7 /* have.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = have.mp3; sourceTree = "<group>"; };
+		F1C347D128D25D6E001EACD7 /* fun.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fun.mp3; sourceTree = "<group>"; };
+		F1C347D228D25D6E001EACD7 /* let's.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "let's.mp3"; sourceTree = "<group>"; };
+		F1C347D328D25D6E001EACD7 /* say.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = say.mp3; sourceTree = "<group>"; };
+		F1C347D428D25D6F001EACD7 /* Some.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Some.mp3; sourceTree = "<group>"; };
+		F1C347D528D25D6F001EACD7 /* Some say let's have fun.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Some say let's have fun.mp3"; sourceTree = "<group>"; };
+		F1C347DC28D25DAF001EACD7 /* Dad called about their house.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Dad called about their house.mp3"; sourceTree = "<group>"; };
+		F1C347DD28D25DAF001EACD7 /* about.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = about.mp3; sourceTree = "<group>"; };
+		F1C347DE28D25DAF001EACD7 /* house.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = house.mp3; sourceTree = "<group>"; };
+		F1C347DF28D25DAF001EACD7 /* called.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = called.mp3; sourceTree = "<group>"; };
+		F1C347E028D25DAF001EACD7 /* their.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = their.mp3; sourceTree = "<group>"; };
+		F1C347E128D25DAF001EACD7 /* Dad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Dad.mp3; sourceTree = "<group>"; };
+		F1C347E828D25DDC001EACD7 /* from.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = from.mp3; sourceTree = "<group>"; };
+		F1C347E928D25DDC001EACD7 /* there.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = there.mp3; sourceTree = "<group>"; };
+		F1C347EA28D25DDC001EACD7 /* come.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = come.mp3; sourceTree = "<group>"; };
+		F1C347EB28D25DDC001EACD7 /* Don't.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Don't.mp3"; sourceTree = "<group>"; };
+		F1C347EC28D25DDC001EACD7 /* Don't come down from there.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Don't come down from there.mp3"; sourceTree = "<group>"; };
+		F1C347ED28D25DDC001EACD7 /* down.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = down.mp3; sourceTree = "<group>"; };
+		F1C347F428D25E0A001EACD7 /* baby.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = baby.mp3; sourceTree = "<group>"; };
+		F1C347F528D25E0A001EACD7 /* cried.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cried.mp3; sourceTree = "<group>"; };
+		F1C347F628D25E0A001EACD7 /* asked.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = asked.mp3; sourceTree = "<group>"; };
+		F1C347F728D25E0A001EACD7 /* if.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = if.mp3; sourceTree = "<group>"; };
+		F1C347F828D25E0A001EACD7 /* Mother asked if baby cried.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mother asked if baby cried.mp3"; sourceTree = "<group>"; };
+		F1C347F928D25E0A001EACD7 /* Mother.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mother.mp3; sourceTree = "<group>"; };
+		F1C3480028D25E40001EACD7 /* My little cat came by.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "My little cat came by.mp3"; sourceTree = "<group>"; };
+		F1C3480128D25E40001EACD7 /* came.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = came.mp3; sourceTree = "<group>"; };
+		F1C3480228D25E40001EACD7 /* by.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = by.mp3; sourceTree = "<group>"; };
+		F1C3480328D25E40001EACD7 /* cat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cat.mp3; sourceTree = "<group>"; };
+		F1C3480428D25E40001EACD7 /* little.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = little.mp3; sourceTree = "<group>"; };
+		F1C3480528D25E40001EACD7 /* My.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = My.mp3; sourceTree = "<group>"; };
+		F1C3481828D261AF001EACD7 /* day.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = day.mp3; sourceTree = "<group>"; };
+		F1C3481928D261AF001EACD7 /* I'm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "I'm.mp3"; sourceTree = "<group>"; };
+		F1C3481A28D261AF001EACD7 /* One day when I'm big.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "One day when I'm big.mp3"; sourceTree = "<group>"; };
+		F1C3481B28D261AF001EACD7 /* when.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = when.mp3; sourceTree = "<group>"; };
+		F1C3481C28D261AF001EACD7 /* One.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = One.mp3; sourceTree = "<group>"; };
+		F1C3481D28D261AF001EACD7 /* big.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = big.mp3; sourceTree = "<group>"; };
+		F1C3482428D2622B001EACD7 /* Your friends went into school.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Your friends went into school.mp3"; path = "../../../../Sound for Amagama/New 1/Your friends went into school./Your friends went into school.mp3"; sourceTree = "<group>"; };
+		F1C3482528D2622B001EACD7 /* Your.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Your.mp3; path = "../../../../Sound for Amagama/New 1/Your friends went into school./Your.mp3"; sourceTree = "<group>"; };
+		F1C3482628D2622B001EACD7 /* into.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = into.mp3; path = "../../../../Sound for Amagama/New 1/Your friends went into school./into.mp3"; sourceTree = "<group>"; };
+		F1C3482728D2622B001EACD7 /* school.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = school.mp3; path = "../../../../Sound for Amagama/New 1/Your friends went into school./school.mp3"; sourceTree = "<group>"; };
+		F1C3482828D2622B001EACD7 /* friends.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = friends.mp3; path = "../../../../Sound for Amagama/New 1/Your friends went into school./friends.mp3"; sourceTree = "<group>"; };
+		F1C3482928D2622B001EACD7 /* went.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = went.mp3; path = "../../../../Sound for Amagama/New 1/Your friends went into school./went.mp3"; sourceTree = "<group>"; };
+		F1C3483028D2635D001EACD7 /* Make them out of this.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Make them out of this.mp3"; sourceTree = "<group>"; };
 		F1E456BC2892983C0085C6CB /* Amagama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amagama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E456BF2892983C0085C6CB /* AmagamaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmagamaApp.swift; sourceTree = "<group>"; };
 		F1E456C12892983C0085C6CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -360,262 +368,273 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F1A662E528992DAE006B772A /* Mother asked if baby sat. */ = {
+		F1598C0F28D328530056C708 /* Soundtrack */ = {
 			isa = PBXGroup;
 			children = (
-				F1A662E628992DAE006B772A /* Mother asked if baby sat.mp3 */,
-				F1A662E728992DAE006B772A /* baby.mp3 */,
-				F1A662E828992DAE006B772A /* asked.mp3 */,
-				F1A662E928992DAE006B772A /* if.mp3 */,
-				F1A662EA28992DAE006B772A /* Mother.mp3 */,
-				F1A662EB28992DAE006B772A /* sat.mp3 */,
+				F1A156BF28D9D39800743998 /* Amagama track.mp3 */,
+				F1598C1028D328610056C708 /* Antigua couple1.mp3 */,
+				F1A156C128D9DA7800743998 /* Amagama track longer.mp3 */,
 			);
-			path = "Mother asked if baby sat.";
+			path = Soundtrack;
 			sourceTree = "<group>";
 		};
-		F1A662EC28992DAE006B772A /* One day when I'm big. */ = {
+		F1A662E528992DAE006B772A /* Mother asked if baby cried.. */ = {
 			isa = PBXGroup;
 			children = (
-				F1A662ED28992DAE006B772A /* One day when I'm big.mp3 */,
-				F1A662EE28992DAE006B772A /* when.mp3 */,
-				F1A662EF28992DAE006B772A /* One.mp3 */,
-				F1A662F128992DAE006B772A /* day.mp3 */,
-				F1A662F228992DAE006B772A /* I'm.mp3 */,
-				F1DCEF1128A2B15700073EB4 /* big.mp3 */,
+				F1C347F628D25E0A001EACD7 /* asked.mp3 */,
+				F1C347F428D25E0A001EACD7 /* baby.mp3 */,
+				F1C347F528D25E0A001EACD7 /* cried.mp3 */,
+				F1C347F728D25E0A001EACD7 /* if.mp3 */,
+				F1C347F828D25E0A001EACD7 /* Mother asked if baby cried.mp3 */,
+				F1C347F928D25E0A001EACD7 /* Mother.mp3 */,
 			);
-			path = "One day when I'm big.";
+			path = "Mother asked if baby cried..";
 			sourceTree = "<group>";
 		};
-		F1A662F328992DAE006B772A /* We look at the children. */ = {
+		F1A662EC28992DAE006B772A /* One day when I'm big.. */ = {
 			isa = PBXGroup;
 			children = (
-				F106C12828A517FF0064BF6E /* We look at the children.mp3 */,
-				F1A662F428992DAE006B772A /* the.mp3 */,
-				F1A662F528992DAE006B772A /* We.mp3 */,
-				F1A662F728992DAE006B772A /* children.mp3 */,
-				F1A662F828992DAE006B772A /* at.mp3 */,
-				F1A662F928992DAE006B772A /* look.mp3 */,
+				F1C3481D28D261AF001EACD7 /* big.mp3 */,
+				F1C3481828D261AF001EACD7 /* day.mp3 */,
+				F1C3481928D261AF001EACD7 /* I'm.mp3 */,
+				F1C3481A28D261AF001EACD7 /* One day when I'm big.mp3 */,
+				F1C3481C28D261AF001EACD7 /* One.mp3 */,
+				F1C3481B28D261AF001EACD7 /* when.mp3 */,
 			);
-			path = "We look at the children.";
+			path = "One day when I'm big..";
 			sourceTree = "<group>";
 		};
-		F1A662FA28992DAE006B772A /* Dad called about their house. */ = {
+		F1A662F328992DAE006B772A /* We look at the children.. */ = {
 			isa = PBXGroup;
 			children = (
-				F1A662FB28992DAE006B772A /* about.mp3 */,
-				F1A662FC28992DAE006B772A /* their.mp3 */,
-				F1A662FD28992DAE006B772A /* Dad.mp3 */,
-				F1A662FE28992DAE006B772A /* Dad called about their house.mp3 */,
-				F1A662FF28992DAE006B772A /* house.mp3 */,
-				F1A6630028992DAE006B772A /* called.mp3 */,
+				F18B080128CFB27400F58C15 /* children.mp3 */,
+				F18B080028CFB27400F58C15 /* the.mp3 */,
+				F18B07F928CFB1EF00F58C15 /* at.mp3 */,
+				F18B07F528CFB1EF00F58C15 /* look.mp3 */,
+				F18B07F628CFB1EF00F58C15 /* We look at the children.mp3 */,
+				F18B07F728CFB1EF00F58C15 /* We.mp3 */,
 			);
-			path = "Dad called about their house.";
+			path = "We look at the children..";
 			sourceTree = "<group>";
 		};
-		F1A6630128992DAE006B772A /* All animals are in place. */ = {
+		F1A662FA28992DAE006B772A /* Dad called about their house.. */ = {
 			isa = PBXGroup;
 			children = (
-				F1A6630228992DAE006B772A /* are.mp3 */,
-				F1A6630328992DAE006B772A /* All animals are in place.mp3 */,
-				F1A6630428992DAE006B772A /* All.mp3 */,
-				F1A6630728992DAE006B772A /* animals.mp3 */,
-				F1DCEEFF28A2B00F00073EB4 /* place.mp3 */,
+				F1C347DD28D25DAF001EACD7 /* about.mp3 */,
+				F1C347DF28D25DAF001EACD7 /* called.mp3 */,
+				F1C347DC28D25DAF001EACD7 /* Dad called about their house.mp3 */,
+				F1C347E128D25DAF001EACD7 /* Dad.mp3 */,
+				F1C347DE28D25DAF001EACD7 /* house.mp3 */,
+				F1C347E028D25DAF001EACD7 /* their.mp3 */,
 			);
-			path = "All animals are in place.";
+			path = "Dad called about their house..";
 			sourceTree = "<group>";
 		};
-		F1A6630828992DAE006B772A /* Some say lets have fun. */ = {
+		F1A6630128992DAE006B772A /* All animals are in place.. */ = {
 			isa = PBXGroup;
 			children = (
-				F1A6630928992DAE006B772A /* Some say let's have fun.mp3 */,
-				F1A6630A28992DAE006B772A /* let's.mp3 */,
-				F1A6630B28992DAE006B772A /* Some.mp3 */,
-				F1A6630C28992DAE006B772A /* say.mp3 */,
-				F1A6630D28992DAE006B772A /* have.mp3 */,
-				F1A6630E28992DAE006B772A /* fun.mp3 */,
+				F1C347BA28D25CF8001EACD7 /* All animals are in place.mp3 */,
+				F1C347BC28D25CF8001EACD7 /* All.mp3 */,
+				F1C347BB28D25CF8001EACD7 /* animals.mp3 */,
+				F1C347B828D25CF8001EACD7 /* are.mp3 */,
+				F1C347B928D25CF8001EACD7 /* in.mp3 */,
+				F1C347BD28D25CF8001EACD7 /* place.mp3 */,
 			);
-			path = "Some say lets have fun.";
+			path = "All animals are in place..";
 			sourceTree = "<group>";
 		};
-		F1A6630F28992DAE006B772A /* Mr and Mrs made food. */ = {
+		F1A6630828992DAE006B772A /* Some say lets have fun.. */ = {
 			isa = PBXGroup;
 			children = (
-				F1A6631028992DAE006B772A /* made.mp3 */,
-				F1A6631128992DAE006B772A /* food.mp3 */,
-				F1A6631228992DAE006B772A /* and.mp3 */,
-				F1DCEF0128A2B03200073EB4 /* Mr.mp3 */,
-				F1DCEF0228A2B03200073EB4 /* Mrs.mp3 */,
-				F1A6631328992DAE006B772A /* Mr and Mrs made food.mp3 */,
+				F1C347D128D25D6E001EACD7 /* fun.mp3 */,
+				F1C347D028D25D6E001EACD7 /* have.mp3 */,
+				F1C347D228D25D6E001EACD7 /* let's.mp3 */,
+				F1C347D328D25D6E001EACD7 /* say.mp3 */,
+				F1C347D528D25D6F001EACD7 /* Some say let's have fun.mp3 */,
+				F1C347D428D25D6F001EACD7 /* Some.mp3 */,
 			);
-			path = "Mr and Mrs made food.";
+			path = "Some say lets have fun..";
 			sourceTree = "<group>";
 		};
-		F1A6631628992DAE006B772A /* I like to see people. */ = {
+		F1A6630F28992DAE006B772A /* Mr and Mrs made food.. */ = {
 			isa = PBXGroup;
 			children = (
-				F1A6631928992DAE006B772A /* see.mp3 */,
-				F1A6631A28992DAE006B772A /* like.mp3 */,
-				F1A6631B28992DAE006B772A /* I.mp3 */,
-				F1DCEEF328A2AEC500073EB4 /* people.mp3 */,
-				F1DCEEF528A2AECF00073EB4 /* to.mp3 */,
-				F1A6631C28992DAE006B772A /* I like to see people.mp3 */,
+				F1C347AF28D25CB2001EACD7 /* food.mp3 */,
+				F1C347B128D25CB2001EACD7 /* made.mp3 */,
+				F1C347AE28D25CB2001EACD7 /* Mr and Mrs made food.mp3 */,
+				F1C347B028D25CB2001EACD7 /* Mr.mp3 */,
+				F1C347B228D25CB2001EACD7 /* Mrs.mp3 */,
 			);
-			path = "I like to see people.";
+			path = "Mr and Mrs made food..";
 			sourceTree = "<group>";
 		};
-		F1A6631D28992DAE006B772A /* Could she put that back?. */ = {
+		F1A6631628992DAE006B772A /* I like to see people.. */ = {
 			isa = PBXGroup;
 			children = (
-				F1A6631E28992DAE006B772A /* back.mp3 */,
-				F1A6631F28992DAE006B772A /* she.mp3 */,
-				F1A6632028992DAE006B772A /* Could.mp3 */,
-				F1A6632128992DAE006B772A /* that.mp3 */,
-				F1A6632228992DAE006B772A /* Could she put that back?.mp3 */,
-				F1A6632328992DAE006B772A /* put.mp3 */,
+				F18B079528CFA32100F58C15 /* I like to see people.mp3 */,
+				F18B079428CFA32100F58C15 /* I.mp3 */,
+				F18B079728CFA32100F58C15 /* like.mp3 */,
+				F18B079628CFA32100F58C15 /* people.mp3 */,
+				F18B079828CFA32100F58C15 /* see.mp3 */,
+				F18B079928CFA32100F58C15 /* to.mp3 */,
 			);
-			path = "Could she put that back?.";
+			path = "I like to see people..";
 			sourceTree = "<group>";
 		};
-		F1A6632428992DAE006B772A /* Make them out of this. */ = {
+		F1A6631D28992DAE006B772A /* Could she put that back?.. */ = {
 			isa = PBXGroup;
 			children = (
-				F1A6632528992DAE006B772A /* of.mp3 */,
-				F1A6632628992DAE006B772A /* Make them out of this.mp3 */,
-				F1A6632728992DAE006B772A /* this.mp3 */,
-				F1A6632828992DAE006B772A /* out.mp3 */,
-				F1A6632928992DAE006B772A /* them.mp3 */,
-				F1DCEEF728A2AF3900073EB4 /* Make.mp3 */,
+				F18B07BC28CFA43300F58C15 /* back?.mp3 */,
+				F18B07BB28CFA43300F58C15 /* Could she put that back?.mp3 */,
+				F18B07B828CFA43300F58C15 /* Could.mp3 */,
+				F18B07BD28CFA43300F58C15 /* put.mp3 */,
+				F18B07B928CFA43300F58C15 /* she.mp3 */,
+				F18B07BA28CFA43300F58C15 /* that.mp3 */,
 			);
-			path = "Make them out of this.";
+			path = "Could she put that back?..";
 			sourceTree = "<group>";
 		};
-		F1A6632B28992DAE006B772A /* It's here now what then?. */ = {
+		F1A6632428992DAE006B772A /* Make them out of this.. */ = {
 			isa = PBXGroup;
 			children = (
-				F1A6632C28992DAE006B772A /* It's here now what then?.mp3 */,
-				F1DCEEFD28A2AFF400073EB4 /* what.mp3 */,
-				F1A6632E28992DAE006B772A /* now.mp3 */,
-				F1A6633028992DAE006B772A /* It's.mp3 */,
-				F1DCEF0928A2B0BB00073EB4 /* here.mp3 */,
-				F1A6633128992DAE006B772A /* then?.mp3 */,
+				F1C3483028D2635D001EACD7 /* Make them out of this.mp3 */,
+				F18B078128CF96FB00F58C15 /* Make.mp3 */,
+				F18B077F28CF96FB00F58C15 /* of.mp3 */,
+				F18B077D28CF96FB00F58C15 /* out.mp3 */,
+				F18B077E28CF96FB00F58C15 /* them.mp3 */,
+				F18B078028CF96FB00F58C15 /* this.mp3 */,
 			);
-			path = "It's here now what then?.";
+			path = "Make them out of this..";
+			sourceTree = "<group>";
+		};
+		F1A6632B28992DAE006B772A /* It's here now what then?.. */ = {
+			isa = PBXGroup;
+			children = (
+				F1C347C528D25D31001EACD7 /* here.mp3 */,
+				F1C347C428D25D31001EACD7 /* It's here now what then?.mp3 */,
+				F1C347C628D25D31001EACD7 /* It's.mp3 */,
+				F1C347C828D25D31001EACD7 /* now.mp3 */,
+				F1C347C728D25D31001EACD7 /* then?.mp3 */,
+				F1C347C928D25D31001EACD7 /* what.mp3 */,
+			);
+			path = "It's here now what then?..";
 			sourceTree = "<group>";
 		};
 		F1A6633228992DAE006B772A /* Don't come down from there. */ = {
 			isa = PBXGroup;
 			children = (
-				F1A6633328992DAE006B772A /* come.mp3 */,
-				F1A6633428992DAE006B772A /* down.mp3 */,
-				F1A6633528992DAE006B772A /* Don't.mp3 */,
-				F1DCEF0F28A2B11900073EB4 /* from.mp3 */,
-				F1A6633728992DAE006B772A /* Don't come down from there.mp3 */,
-				F1A6633828992DAE006B772A /* there.mp3 */,
+				F1C347EA28D25DDC001EACD7 /* come.mp3 */,
+				F1C347EC28D25DDC001EACD7 /* Don't come down from there.mp3 */,
+				F1C347EB28D25DDC001EACD7 /* Don't.mp3 */,
+				F1C347ED28D25DDC001EACD7 /* down.mp3 */,
+				F1C347E828D25DDC001EACD7 /* from.mp3 */,
+				F1C347E928D25DDC001EACD7 /* there.mp3 */,
 			);
 			path = "Don't come down from there.";
 			sourceTree = "<group>";
 		};
-		F1A6633928992DAF006B772A /* They saw him and her. */ = {
+		F1A6633928992DAF006B772A /* They saw him and her.. */ = {
 			isa = PBXGroup;
 			children = (
-				F1A6633A28992DAF006B772A /* They saw him and her.mp3 */,
-				F1A6633B28992DAF006B772A /* her.mp3 */,
-				F1A6633E28992DAF006B772A /* saw.mp3 */,
-				F1DCEF0728A2B06B00073EB4 /* him.mp3 */,
-				F1DCEEFB28A2AFCD00073EB4 /* They.mp3 */,
+				F18B07E828CFB1CC00F58C15 /* and.mp3 */,
+				F18B080428CFB33800F58C15 /* her.mp3 */,
+				F18B07EC28CFB1CC00F58C15 /* him.mp3 */,
+				F18B07EB28CFB1CC00F58C15 /* saw.mp3 */,
+				F18B07ED28CFB1CC00F58C15 /* They saw him and her.mp3 */,
+				F18B07E928CFB1CC00F58C15 /* They.mp3 */,
 			);
-			path = "They saw him and her.";
+			path = "They saw him and her..";
 			sourceTree = "<group>";
 		};
-		F1A6634028992DAF006B772A /* He was not in time. */ = {
+		F1A6634028992DAF006B772A /* He was not on time.. */ = {
 			isa = PBXGroup;
 			children = (
-				F1A6634128992DAF006B772A /* not.mp3 */,
-				F1A6634328992DAF006B772A /* in.mp3 */,
-				F1A6634428992DAF006B772A /* He was not in time.mp3 */,
-				F1DCEF0D28A2B10100073EB4 /* He.mp3 */,
-				F1A6634528992DAF006B772A /* was.mp3 */,
-				F1A6634628992DAF006B772A /* time.mp3 */,
+				F18B07AF28CFA3ED00F58C15 /* He was not on time.mp3 */,
+				F18B07B128CFA3ED00F58C15 /* He.mp3 */,
+				F18B07AE28CFA3ED00F58C15 /* not.mp3 */,
+				F18B07AC28CFA3ED00F58C15 /* on.mp3 */,
+				F18B07AD28CFA3ED00F58C15 /* time.mp3 */,
+				F18B07B028CFA3ED00F58C15 /* was.mp3 */,
 			);
-			path = "He was not in time.";
+			path = "He was not on time..";
 			sourceTree = "<group>";
 		};
-		F1A6634728992DAF006B772A /* Can you go for help?. */ = {
+		F1A6634728992DAF006B772A /* Can you go for help?.. */ = {
 			isa = PBXGroup;
 			children = (
-				F1A6634828992DAF006B772A /* go.mp3 */,
-				F1A6634928992DAF006B772A /* Can you go for help?.mp3 */,
-				F1A6634A28992DAF006B772A /* Can.mp3 */,
-				F1A6634B28992DAF006B772A /* you.mp3 */,
-				F1A6634C28992DAF006B772A /* for.mp3 */,
-				F1DCEF0B28A2B0D000073EB4 /* help?.mp3 */,
+				F18B078C28CFA24300F58C15 /* Can you go for help?.mp3 */,
+				F18B078828CFA24200F58C15 /* Can.mp3 */,
+				F18B078A28CFA24200F58C15 /* for.mp3 */,
+				F18B078B28CFA24300F58C15 /* go.mp3 */,
+				F18B078D28CFA24300F58C15 /* help?.mp3 */,
+				F18B078928CFA24200F58C15 /* you.mp3 */,
 			);
-			path = "Can you go for help?.";
+			path = "Can you go for help?..";
 			sourceTree = "<group>";
 		};
-		F1A6634E28992DAF006B772A /* Mum said just get up. */ = {
+		F1A6634E28992DAF006B772A /* Mum said just get up.. */ = {
 			isa = PBXGroup;
 			children = (
-				F1A6634F28992DAF006B772A /* said.mp3 */,
-				F1A6635028992DAF006B772A /* Mum.mp3 */,
-				F1A6635228992DAF006B772A /* get.mp3 */,
-				F1DCEF0528A2B04F00073EB4 /* just.mp3 */,
-				F1A6635328992DAF006B772A /* up.mp3 */,
-				F1A6635428992DAF006B772A /* Mum said just get up.mp3 */,
+				F18B07E128CFB1A800F58C15 /* get.mp3 */,
+				F18B07DC28CFB1A800F58C15 /* just.mp3 */,
+				F18B07DE28CFB1A800F58C15 /* Mum said just get up.mp3 */,
+				F18B07DF28CFB1A800F58C15 /* Mum.mp3 */,
+				F18B07E028CFB1A800F58C15 /* said.mp3 */,
+				F18B07DD28CFB1A800F58C15 /* up.mp3 */,
 			);
-			path = "Mum said just get up.";
+			path = "Mum said just get up..";
 			sourceTree = "<group>";
 		};
-		F1A6635528992DAF006B772A /* My little cat came by. */ = {
+		F1A6635528992DAF006B772A /* My little cat came by.. */ = {
 			isa = PBXGroup;
 			children = (
-				F1A6635628992DAF006B772A /* My.mp3 */,
-				F1A6635728992DAF006B772A /* cat.mp3 */,
-				F1A6635828992DAF006B772A /* came.mp3 */,
-				F1A6635928992DAF006B772A /* little.mp3 */,
-				F1A6635A28992DAF006B772A /* My little cat came by.mp3 */,
-				F1A6635B28992DAF006B772A /* by.mp3 */,
+				F1C3480228D25E40001EACD7 /* by.mp3 */,
+				F1C3480128D25E40001EACD7 /* came.mp3 */,
+				F1C3480328D25E40001EACD7 /* cat.mp3 */,
+				F1C3480428D25E40001EACD7 /* little.mp3 */,
+				F1C3480028D25E40001EACD7 /* My little cat came by.mp3 */,
+				F1C3480528D25E40001EACD7 /* My.mp3 */,
 			);
-			path = "My little cat came by.";
+			path = "My little cat came by..";
 			sourceTree = "<group>";
 		};
-		F1A6635C28992DAF006B772A /* Your friends went into school. */ = {
+		F1A6635C28992DAF006B772A /* Your friends went into school.. */ = {
 			isa = PBXGroup;
 			children = (
-				F1A6635D28992DAF006B772A /* Your friends went into school.mp3 */,
-				F1A6635E28992DAF006B772A /* friends.mp3 */,
-				F1A6635F28992DAF006B772A /* Your.mp3 */,
-				F1A6636028992DAF006B772A /* went.mp3 */,
-				F1A6636128992DAF006B772A /* into.mp3 */,
-				F1DCEEF928A2AFA800073EB4 /* school.mp3 */,
+				F1C3482828D2622B001EACD7 /* friends.mp3 */,
+				F1C3482628D2622B001EACD7 /* into.mp3 */,
+				F1C3482728D2622B001EACD7 /* school.mp3 */,
+				F1C3482928D2622B001EACD7 /* went.mp3 */,
+				F1C3482428D2622B001EACD7 /* Your friends went into school.mp3 */,
+				F1C3482528D2622B001EACD7 /* Your.mp3 */,
 			);
-			path = "Your friends went into school.";
+			path = "Your friends went into school..";
 			sourceTree = "<group>";
 		};
-		F1A6636328992DAF006B772A /* It looked so very old. */ = {
+		F1A6636328992DAF006B772A /* It looked so very old.. */ = {
 			isa = PBXGroup;
 			children = (
-				F1A6636428992DAF006B772A /* looked.mp3 */,
-				F1A6636528992DAF006B772A /* It.mp3 */,
-				F1A6636628992DAF006B772A /* so.mp3 */,
-				F1A6636728992DAF006B772A /* very.mp3 */,
-				F1A6636828992DAF006B772A /* old.mp3 */,
-				F1A6636928992DAF006B772A /* It looked so very old.mp3 */,
+				F18B07D028CFB16D00F58C15 /* It looked so very old.mp3 */,
+				F18B07D128CFB16D00F58C15 /* It.mp3 */,
+				F18B07D528CFB16D00F58C15 /* looked.mp3 */,
+				F18B07D428CFB16D00F58C15 /* old.mp3 */,
+				F18B07D228CFB16D00F58C15 /* so.mp3 */,
+				F18B07D328CFB16D00F58C15 /* very.mp3 */,
 			);
-			path = "It looked so very old.";
+			path = "It looked so very old..";
 			sourceTree = "<group>";
 		};
-		F1A6636A28992DAF006B772A /* His car is with me. */ = {
+		F1A6636A28992DAF006B772A /* His car is with me.. */ = {
 			isa = PBXGroup;
 			children = (
-				F1A6636B28992DAF006B772A /* His car is with me.mp3 */,
-				F1A6636C28992DAF006B772A /* is.mp3 */,
-				F1A6636D28992DAF006B772A /* car.mp3 */,
-				F1A6636E28992DAF006B772A /* His.mp3 */,
-				F1A6636F28992DAF006B772A /* with.mp3 */,
-				F1A6637028992DAF006B772A /* me.mp3 */,
+				F18B07C928CFB13500F58C15 /* car.mp3 */,
+				F18B07C528CFB13500F58C15 /* His car is with me.mp3 */,
+				F18B07C428CFB13500F58C15 /* His.mp3 */,
+				F18B07C628CFB13500F58C15 /* is.mp3 */,
+				F18B07C728CFB13500F58C15 /* me.mp3 */,
+				F18B07C828CFB13500F58C15 /* with.mp3 */,
 			);
-			path = "His car is with me.";
+			path = "His car is with me..";
 			sourceTree = "<group>";
 		};
 		F1E456B32892983C0085C6CB = {
@@ -696,26 +715,27 @@
 		F1E4570928929CE10085C6CB /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				F1A6630128992DAE006B772A /* All animals are in place. */,
-				F1A6634728992DAF006B772A /* Can you go for help?. */,
-				F1A6631D28992DAE006B772A /* Could she put that back?. */,
-				F1A662FA28992DAE006B772A /* Dad called about their house. */,
+				F1598C0F28D328530056C708 /* Soundtrack */,
+				F1A6630128992DAE006B772A /* All animals are in place.. */,
+				F1A6634728992DAF006B772A /* Can you go for help?.. */,
+				F1A6631D28992DAE006B772A /* Could she put that back?.. */,
+				F1A662FA28992DAE006B772A /* Dad called about their house.. */,
 				F1A6633228992DAE006B772A /* Don't come down from there. */,
-				F1A6634028992DAF006B772A /* He was not in time. */,
-				F1A6636A28992DAF006B772A /* His car is with me. */,
-				F1A6631628992DAE006B772A /* I like to see people. */,
-				F1A6636328992DAF006B772A /* It looked so very old. */,
-				F1A6632B28992DAE006B772A /* It's here now what then?. */,
-				F1A6632428992DAE006B772A /* Make them out of this. */,
-				F1A662E528992DAE006B772A /* Mother asked if baby sat. */,
-				F1A6630F28992DAE006B772A /* Mr and Mrs made food. */,
-				F1A6634E28992DAF006B772A /* Mum said just get up. */,
-				F1A6635528992DAF006B772A /* My little cat came by. */,
-				F1A662EC28992DAE006B772A /* One day when I'm big. */,
-				F1A6630828992DAE006B772A /* Some say lets have fun. */,
-				F1A6633928992DAF006B772A /* They saw him and her. */,
-				F1A662F328992DAE006B772A /* We look at the children. */,
-				F1A6635C28992DAF006B772A /* Your friends went into school. */,
+				F1A6634028992DAF006B772A /* He was not on time.. */,
+				F1A6636A28992DAF006B772A /* His car is with me.. */,
+				F1A6631628992DAE006B772A /* I like to see people.. */,
+				F1A6636328992DAF006B772A /* It looked so very old.. */,
+				F1A6632B28992DAE006B772A /* It's here now what then?.. */,
+				F1A6632428992DAE006B772A /* Make them out of this.. */,
+				F1A662E528992DAE006B772A /* Mother asked if baby cried.. */,
+				F1A6630F28992DAE006B772A /* Mr and Mrs made food.. */,
+				F1A6634E28992DAF006B772A /* Mum said just get up.. */,
+				F1A6635528992DAF006B772A /* My little cat came by.. */,
+				F1A662EC28992DAE006B772A /* One day when I'm big.. */,
+				F1A6630828992DAE006B772A /* Some say lets have fun.. */,
+				F1A6633928992DAF006B772A /* They saw him and her.. */,
+				F1A662F328992DAE006B772A /* We look at the children.. */,
+				F1A6635C28992DAF006B772A /* Your friends went into school.. */,
 				F1E4578C28929E470085C6CB /* successTickSound.mp3 */,
 				F1E4578E28929E4D0085C6CB /* SuccessTickSound1.mp3 */,
 			);
@@ -834,129 +854,133 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1A6637E28992DAF006B772A /* We.mp3 in Resources */,
+				F1C347C228D25CF8001EACD7 /* All.mp3 in Resources */,
+				F18B07CC28CFB13500F58C15 /* is.mp3 in Resources */,
+				F18B079228CFA24300F58C15 /* Can you go for help?.mp3 in Resources */,
+				F1C347CE28D25D31001EACD7 /* now.mp3 in Resources */,
+				F1C3482A28D2622B001EACD7 /* Your friends went into school.mp3 in Resources */,
 				F1E456C72892983C0085C6CB /* Preview Assets.xcassets in Resources */,
-				F1A663E728992DAF006B772A /* with.mp3 in Resources */,
-				F1A663B328992DAF006B772A /* come.mp3 in Resources */,
-				F1A663A928992DAF006B772A /* this.mp3 in Resources */,
-				F1A663BA28992DAF006B772A /* her.mp3 in Resources */,
-				F1A663AA28992DAF006B772A /* out.mp3 in Resources */,
-				F1DCEF0028A2B00F00073EB4 /* place.mp3 in Resources */,
-				F1A663E328992DAF006B772A /* His car is with me.mp3 in Resources */,
-				F1A6638328992DAF006B772A /* about.mp3 in Resources */,
-				F1A6638428992DAF006B772A /* their.mp3 in Resources */,
-				F1A6637C28992DAF006B772A /* I'm.mp3 in Resources */,
-				F1A6638E28992DAF006B772A /* animals.mp3 in Resources */,
-				F1A663B528992DAF006B772A /* Don't.mp3 in Resources */,
-				F1A6638828992DAF006B772A /* called.mp3 in Resources */,
-				F1A6639D28992DAF006B772A /* see.mp3 in Resources */,
-				F1A663E228992DAF006B772A /* It looked so very old.mp3 in Resources */,
-				F1DCEEF628A2AECF00073EB4 /* to.mp3 in Resources */,
-				F1A6637828992DAF006B772A /* when.mp3 in Resources */,
-				F1A6637228992DAF006B772A /* baby.mp3 in Resources */,
-				F1A663E528992DAF006B772A /* car.mp3 in Resources */,
-				F1A6638228992DAF006B772A /* look.mp3 in Resources */,
-				F1A663E628992DAF006B772A /* His.mp3 in Resources */,
-				F1A663B828992DAF006B772A /* there.mp3 in Resources */,
-				F1A663A228992DAF006B772A /* she.mp3 in Resources */,
-				F1A663C728992DAF006B772A /* Can.mp3 in Resources */,
-				F1A663D028992DAF006B772A /* Mum said just get up.mp3 in Resources */,
-				F1A663C128992DAF006B772A /* in.mp3 in Resources */,
-				F1DCEF0A28A2B0BB00073EB4 /* here.mp3 in Resources */,
-				F1A663CF28992DAF006B772A /* up.mp3 in Resources */,
-				F1A663C328992DAF006B772A /* was.mp3 in Resources */,
-				F1A663B928992DAF006B772A /* They saw him and her.mp3 in Resources */,
-				F1A6638928992DAF006B772A /* are.mp3 in Resources */,
-				F1A663DE28992DAF006B772A /* It.mp3 in Resources */,
-				F1A663A328992DAF006B772A /* Could.mp3 in Resources */,
-				F1A663D728992DAF006B772A /* Your friends went into school.mp3 in Resources */,
-				F1A663DB28992DAF006B772A /* into.mp3 in Resources */,
-				F1A663A628992DAF006B772A /* put.mp3 in Resources */,
-				F1A663A828992DAF006B772A /* Make them out of this.mp3 in Resources */,
-				F1A6638528992DAF006B772A /* Dad.mp3 in Resources */,
-				F1A663A428992DAF006B772A /* that.mp3 in Resources */,
-				F1A663BF28992DAF006B772A /* not.mp3 in Resources */,
-				F1A6637B28992DAF006B772A /* day.mp3 in Resources */,
-				F1A663A028992DAF006B772A /* I like to see people.mp3 in Resources */,
-				F1A663DA28992DAF006B772A /* went.mp3 in Resources */,
-				F1A663B428992DAF006B772A /* down.mp3 in Resources */,
-				F1A663D128992DAF006B772A /* My.mp3 in Resources */,
-				F1DCEEFA28A2AFA800073EB4 /* school.mp3 in Resources */,
-				F1A6639228992DAF006B772A /* say.mp3 in Resources */,
-				F1A663B728992DAF006B772A /* Don't come down from there.mp3 in Resources */,
-				F1DCEEFE28A2AFF400073EB4 /* what.mp3 in Resources */,
+				F1C347C028D25CF8001EACD7 /* All animals are in place.mp3 in Resources */,
+				F18B07B628CFA3ED00F58C15 /* was.mp3 in Resources */,
+				F1C347EE28D25DDC001EACD7 /* from.mp3 in Resources */,
+				F18B07CB28CFB13500F58C15 /* His car is with me.mp3 in Resources */,
+				F18B07DA28CFB16D00F58C15 /* old.mp3 in Resources */,
+				F18B07B528CFA3ED00F58C15 /* He was not on time.mp3 in Resources */,
+				F18B07FB28CFB1EF00F58C15 /* look.mp3 in Resources */,
+				F18B078628CF96FB00F58C15 /* this.mp3 in Resources */,
+				F18B07E628CFB1A800F58C15 /* said.mp3 in Resources */,
+				F18B079028CFA24300F58C15 /* for.mp3 in Resources */,
+				F18B080228CFB27400F58C15 /* the.mp3 in Resources */,
+				F1C347CD28D25D31001EACD7 /* then?.mp3 in Resources */,
+				F18B079D28CFA32100F58C15 /* like.mp3 in Resources */,
+				F18B07CD28CFB13500F58C15 /* me.mp3 in Resources */,
+				F18B07FD28CFB1EF00F58C15 /* We.mp3 in Resources */,
+				F18B080528CFB33800F58C15 /* her.mp3 in Resources */,
+				F1C347F028D25DDC001EACD7 /* come.mp3 in Resources */,
+				F18B07E228CFB1A800F58C15 /* just.mp3 in Resources */,
+				F1C3480828D25E40001EACD7 /* by.mp3 in Resources */,
+				F1C347CB28D25D31001EACD7 /* here.mp3 in Resources */,
+				F18B07C128CFA43300F58C15 /* Could she put that back?.mp3 in Resources */,
+				F1C347DA28D25D6F001EACD7 /* Some.mp3 in Resources */,
+				F18B07D728CFB16D00F58C15 /* It.mp3 in Resources */,
+				F18B079F28CFA32100F58C15 /* to.mp3 in Resources */,
+				F1C347FB28D25E0A001EACD7 /* cried.mp3 in Resources */,
+				F18B07E528CFB1A800F58C15 /* Mum.mp3 in Resources */,
+				F1C3482128D261AF001EACD7 /* when.mp3 in Resources */,
+				F18B07BF28CFA43300F58C15 /* she.mp3 in Resources */,
+				F18B079E28CFA32100F58C15 /* see.mp3 in Resources */,
+				F1C347FE28D25E0A001EACD7 /* Mother asked if baby cried.mp3 in Resources */,
+				F1A156C228D9DA7800743998 /* Amagama track longer.mp3 in Resources */,
+				F1C347D928D25D6F001EACD7 /* say.mp3 in Resources */,
+				F1C347D628D25D6F001EACD7 /* have.mp3 in Resources */,
+				F1C347E428D25DAF001EACD7 /* house.mp3 in Resources */,
+				F1C347CF28D25D31001EACD7 /* what.mp3 in Resources */,
+				F18B07D628CFB16D00F58C15 /* It looked so very old.mp3 in Resources */,
+				F18B07E428CFB1A800F58C15 /* Mum said just get up.mp3 in Resources */,
+				F1598C1128D328610056C708 /* Antigua couple1.mp3 in Resources */,
+				F1C347F228D25DDC001EACD7 /* Don't come down from there.mp3 in Resources */,
+				F1C3481F28D261AF001EACD7 /* I'm.mp3 in Resources */,
+				F1C3483128D2635D001EACD7 /* Make them out of this.mp3 in Resources */,
+				F1C347BF28D25CF8001EACD7 /* in.mp3 in Resources */,
+				F18B078E28CFA24300F58C15 /* Can.mp3 in Resources */,
+				F1C347B628D25CB2001EACD7 /* made.mp3 in Resources */,
+				F18B07CF28CFB13500F58C15 /* car.mp3 in Resources */,
+				F18B07EE28CFB1CC00F58C15 /* and.mp3 in Resources */,
+				F18B079128CFA24300F58C15 /* go.mp3 in Resources */,
+				F1C3480A28D25E40001EACD7 /* little.mp3 in Resources */,
+				F1C347B528D25CB2001EACD7 /* Mr.mp3 in Resources */,
+				F1C347E328D25DAF001EACD7 /* about.mp3 in Resources */,
+				F1C347D728D25D6F001EACD7 /* fun.mp3 in Resources */,
+				F1C3482228D261AF001EACD7 /* One.mp3 in Resources */,
+				F18B07D928CFB16D00F58C15 /* very.mp3 in Resources */,
 				F1E456C42892983C0085C6CB /* Assets.xcassets in Resources */,
-				F1A663A728992DAF006B772A /* of.mp3 in Resources */,
-				F1A6638028992DAF006B772A /* children.mp3 in Resources */,
+				F18B07E328CFB1A800F58C15 /* up.mp3 in Resources */,
+				F1C3480628D25E40001EACD7 /* My little cat came by.mp3 in Resources */,
+				F1C3482F28D2622B001EACD7 /* went.mp3 in Resources */,
 				F1E4578D28929E470085C6CB /* successTickSound.mp3 in Resources */,
-				F1DCEF0C28A2B0D000073EB4 /* help?.mp3 in Resources */,
-				F1A663E028992DAF006B772A /* very.mp3 in Resources */,
-				F1A6638628992DAF006B772A /* Dad called about their house.mp3 in Resources */,
-				F1A6639E28992DAF006B772A /* like.mp3 in Resources */,
-				F1A663BD28992DAF006B772A /* saw.mp3 in Resources */,
-				F1A663C528992DAF006B772A /* go.mp3 in Resources */,
-				F1A6637428992DAF006B772A /* if.mp3 in Resources */,
-				F1DCEEFC28A2AFCD00073EB4 /* They.mp3 in Resources */,
-				F1A6639628992DAF006B772A /* food.mp3 in Resources */,
-				F1DCEF0828A2B06B00073EB4 /* him.mp3 in Resources */,
-				F1A663CC28992DAF006B772A /* Mum.mp3 in Resources */,
-				F1DCEF0428A2B03200073EB4 /* Mrs.mp3 in Resources */,
-				F1A663D528992DAF006B772A /* My little cat came by.mp3 in Resources */,
-				F1A663B228992DAF006B772A /* then?.mp3 in Resources */,
-				F1A6637528992DAF006B772A /* Mother.mp3 in Resources */,
+				F18B07FF28CFB1EF00F58C15 /* at.mp3 in Resources */,
+				F18B079A28CFA32100F58C15 /* I.mp3 in Resources */,
+				F1C3480B28D25E40001EACD7 /* My.mp3 in Resources */,
+				F18B07B328CFA3ED00F58C15 /* time.mp3 in Resources */,
+				F18B07C328CFA43300F58C15 /* put.mp3 in Resources */,
+				F1C3482D28D2622B001EACD7 /* school.mp3 in Resources */,
+				F18B07F228CFB1CC00F58C15 /* him.mp3 in Resources */,
+				F1C347B728D25CB2001EACD7 /* Mrs.mp3 in Resources */,
+				F18B079328CFA24300F58C15 /* help?.mp3 in Resources */,
+				F18B07FC28CFB1EF00F58C15 /* We look at the children.mp3 in Resources */,
+				F1C347B328D25CB2001EACD7 /* Mr and Mrs made food.mp3 in Resources */,
+				F1C347D828D25D6F001EACD7 /* let's.mp3 in Resources */,
 				F15649BA2892A1C20095F015 /* tick1.json in Resources */,
-				F1A663D228992DAF006B772A /* cat.mp3 in Resources */,
-				F1A663C928992DAF006B772A /* for.mp3 in Resources */,
-				F1A663CE28992DAF006B772A /* get.mp3 in Resources */,
-				F1A663AF28992DAF006B772A /* now.mp3 in Resources */,
-				F1A6638728992DAF006B772A /* house.mp3 in Resources */,
-				F1A6638A28992DAF006B772A /* All animals are in place.mp3 in Resources */,
-				F1A663C228992DAF006B772A /* He was not in time.mp3 in Resources */,
-				F1A6639328992DAF006B772A /* have.mp3 in Resources */,
-				F1A6639828992DAF006B772A /* Mr and Mrs made food.mp3 in Resources */,
-				F1A6637728992DAF006B772A /* One day when I'm big.mp3 in Resources */,
-				F1A6639028992DAF006B772A /* let's.mp3 in Resources */,
-				F1A663D328992DAF006B772A /* came.mp3 in Resources */,
-				F1A6639528992DAF006B772A /* made.mp3 in Resources */,
-				F1A663A528992DAF006B772A /* Could she put that back?.mp3 in Resources */,
-				F1A663CB28992DAF006B772A /* said.mp3 in Resources */,
-				F1DCEF1228A2B15700073EB4 /* big.mp3 in Resources */,
-				F1A6637D28992DAF006B772A /* the.mp3 in Resources */,
-				F1A663DD28992DAF006B772A /* looked.mp3 in Resources */,
-				F1A663E428992DAF006B772A /* is.mp3 in Resources */,
-				F1A663E828992DAF006B772A /* me.mp3 in Resources */,
-				F1A663C428992DAF006B772A /* time.mp3 in Resources */,
-				F1A663DF28992DAF006B772A /* so.mp3 in Resources */,
-				F1A663D828992DAF006B772A /* friends.mp3 in Resources */,
-				F1A663D928992DAF006B772A /* Your.mp3 in Resources */,
-				F1DCEF0628A2B04F00073EB4 /* just.mp3 in Resources */,
-				F1A6639728992DAF006B772A /* and.mp3 in Resources */,
-				F1DCEF0328A2B03200073EB4 /* Mr.mp3 in Resources */,
-				F1A6637128992DAF006B772A /* Mother asked if baby sat.mp3 in Resources */,
-				F1A6637628992DAF006B772A /* sat.mp3 in Resources */,
+				F1C3481E28D261AF001EACD7 /* day.mp3 in Resources */,
+				F18B079C28CFA32100F58C15 /* people.mp3 in Resources */,
+				F18B07C028CFA43300F58C15 /* that.mp3 in Resources */,
+				F1C347E228D25DAF001EACD7 /* Dad called about their house.mp3 in Resources */,
+				F18B07EF28CFB1CC00F58C15 /* They.mp3 in Resources */,
+				F18B07F328CFB1CC00F58C15 /* They saw him and her.mp3 in Resources */,
+				F1C347CA28D25D31001EACD7 /* It's here now what then?.mp3 in Resources */,
+				F1C3480928D25E40001EACD7 /* cat.mp3 in Resources */,
+				F1C3482328D261AF001EACD7 /* big.mp3 in Resources */,
+				F1C347FC28D25E0A001EACD7 /* asked.mp3 in Resources */,
+				F18B07B428CFA3ED00F58C15 /* not.mp3 in Resources */,
+				F1A156C028D9D39800743998 /* Amagama track.mp3 in Resources */,
+				F18B07DB28CFB16D00F58C15 /* looked.mp3 in Resources */,
+				F1C347F328D25DDC001EACD7 /* down.mp3 in Resources */,
+				F1C347F128D25DDC001EACD7 /* Don't.mp3 in Resources */,
+				F1C347B428D25CB2001EACD7 /* food.mp3 in Resources */,
+				F18B07E728CFB1A800F58C15 /* get.mp3 in Resources */,
+				F18B07C228CFA43300F58C15 /* back?.mp3 in Resources */,
+				F1C347CC28D25D31001EACD7 /* It's.mp3 in Resources */,
+				F1C347E728D25DAF001EACD7 /* Dad.mp3 in Resources */,
+				F1C347DB28D25D6F001EACD7 /* Some say let's have fun.mp3 in Resources */,
+				F18B07B228CFA3ED00F58C15 /* on.mp3 in Resources */,
+				F1C347C128D25CF8001EACD7 /* animals.mp3 in Resources */,
+				F18B080328CFB27400F58C15 /* children.mp3 in Resources */,
+				F18B07CE28CFB13500F58C15 /* with.mp3 in Resources */,
+				F18B07CA28CFB13500F58C15 /* His.mp3 in Resources */,
 				F1E4578F28929E4D0085C6CB /* SuccessTickSound1.mp3 in Resources */,
-				F1A663AB28992DAF006B772A /* them.mp3 in Resources */,
-				F1A663B128992DAF006B772A /* It's.mp3 in Resources */,
-				F1A6639428992DAF006B772A /* fun.mp3 in Resources */,
-				F1A6639F28992DAF006B772A /* I.mp3 in Resources */,
-				F1A6638128992DAF006B772A /* at.mp3 in Resources */,
-				F1A663E128992DAF006B772A /* old.mp3 in Resources */,
-				F1A663A128992DAF006B772A /* back.mp3 in Resources */,
-				F1A663C828992DAF006B772A /* you.mp3 in Resources */,
-				F1DCEF1028A2B11900073EB4 /* from.mp3 in Resources */,
-				F1A663C628992DAF006B772A /* Can you go for help?.mp3 in Resources */,
-				F1A6637328992DAF006B772A /* asked.mp3 in Resources */,
-				F106C12928A517FF0064BF6E /* We look at the children.mp3 in Resources */,
-				F1DCEF0E28A2B10100073EB4 /* He.mp3 in Resources */,
-				F1A6639128992DAF006B772A /* Some.mp3 in Resources */,
-				F1A663D428992DAF006B772A /* little.mp3 in Resources */,
-				F1A6638B28992DAF006B772A /* All.mp3 in Resources */,
-				F1DCEEF428A2AEC600073EB4 /* people.mp3 in Resources */,
-				F1A663AD28992DAF006B772A /* It's here now what then?.mp3 in Resources */,
-				F1A6638F28992DAF006B772A /* Some say let's have fun.mp3 in Resources */,
-				F1DCEEF828A2AF3900073EB4 /* Make.mp3 in Resources */,
-				F1A663D628992DAF006B772A /* by.mp3 in Resources */,
-				F1A6637928992DAF006B772A /* One.mp3 in Resources */,
+				F1C3482028D261AF001EACD7 /* One day when I'm big.mp3 in Resources */,
+				F18B07BE28CFA43300F58C15 /* Could.mp3 in Resources */,
+				F1C347FD28D25E0A001EACD7 /* if.mp3 in Resources */,
+				F18B07F128CFB1CC00F58C15 /* saw.mp3 in Resources */,
+				F18B078F28CFA24300F58C15 /* you.mp3 in Resources */,
+				F1C3482C28D2622B001EACD7 /* into.mp3 in Resources */,
+				F1C347FF28D25E0A001EACD7 /* Mother.mp3 in Resources */,
+				F1C347BE28D25CF8001EACD7 /* are.mp3 in Resources */,
+				F18B079B28CFA32100F58C15 /* I like to see people.mp3 in Resources */,
+				F18B078528CF96FB00F58C15 /* of.mp3 in Resources */,
+				F1C347FA28D25E0A001EACD7 /* baby.mp3 in Resources */,
+				F18B07B728CFA3ED00F58C15 /* He.mp3 in Resources */,
+				F1C3482E28D2622B001EACD7 /* friends.mp3 in Resources */,
+				F1C347E628D25DAF001EACD7 /* their.mp3 in Resources */,
+				F18B07D828CFB16D00F58C15 /* so.mp3 in Resources */,
+				F1C347C328D25CF8001EACD7 /* place.mp3 in Resources */,
+				F18B078328CF96FB00F58C15 /* out.mp3 in Resources */,
+				F1C347E528D25DAF001EACD7 /* called.mp3 in Resources */,
+				F18B078428CF96FB00F58C15 /* them.mp3 in Resources */,
+				F1C3480728D25E40001EACD7 /* came.mp3 in Resources */,
+				F1C3482B28D2622B001EACD7 /* Your.mp3 in Resources */,
+				F18B078728CF96FB00F58C15 /* Make.mp3 in Resources */,
+				F1C347EF28D25DDC001EACD7 /* there.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1157,7 +1181,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Amagama/Preview Content\"";
 				DEVELOPMENT_TEAM = N8FYB826GQ;
 				ENABLE_PREVIEWS = YES;
@@ -1166,16 +1190,18 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yoli.developer.Amagama;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1188,7 +1214,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Amagama/Preview Content\"";
 				DEVELOPMENT_TEAM = N8FYB826GQ;
 				ENABLE_PREVIEWS = YES;
@@ -1197,16 +1223,18 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yoli.developer.Amagama;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

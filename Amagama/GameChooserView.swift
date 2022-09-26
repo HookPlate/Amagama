@@ -6,13 +6,17 @@
 //
 
 import SwiftUI
+import MediaPlayer
 
 struct GameChooserView: View {
     
+    @State private var audioPlayer: AVAudioPlayer!
     
     @EnvironmentObject var store: ThemeStore
     
     @State var games: [UUID: EmojiMemoryGame] = [:]
+    
+    @State var isSoundtrackPlaying = true
     
     
    // @Binding var sentencesDone : Int
@@ -68,7 +72,14 @@ struct GameChooserView: View {
     
                     //The Global score
                     HStack {
+//                        Button(action: {$store.isMuted}, label: {store.isMuted ? Image(systemName: "speaker.slash").font(.title) : Image(systemName: "speaker.wave.2").font(.title)})
                 
+                      //  VStack(alignment: .leading) {
+                        Button(action: {toggleSoundTrack()}, label: {store.isSoundtrackPlaying ? Image(systemName: "speaker.wave.2").font(.title) : Image(systemName: "speaker.slash").font(.title)})
+                            .padding(.leading, 55)
+                            .offset(x: -20, y: 0)
+            
+                     Spacer()
                         Text("Score: \(String(store.sentencesComplete))")
                             .foregroundColor(.black)
                             .font(.title)
@@ -78,9 +89,10 @@ struct GameChooserView: View {
                             .cornerRadius(15)
                             .padding(.bottom, 5)
                         
+                        Spacer()
                         if store.userPurchases["19BuyableSentences"] ==  nil {
-                            Spacer()
-                                .frame(width: 20)
+//                            Spacer()
+//                                .frame(width: 20)
                             Button(action: {
                                 store.makePurchase(theme: store.themes[1])
                             } , label: {
@@ -96,10 +108,21 @@ struct GameChooserView: View {
                                     //.transition(AnyTransition.opacity.animation(.linear(duration: 20)))
                                     //.animation(.default, value: store.userPurchases["19BuyableSentences"] ==  nil)
                             })
-                            
+                            .padding(.trailing, 20)
+                        } else {
+                            //put code for reset button here that calls a reset score function.
+                            Button(action: {
+                                store.resetThemeScores()
+                            } , label: {
+                                Image(systemName: "arrow.clockwise.circle")
+                                    .font(.title)
+                            })
+                            .offset(x: 20, y: 0)
+                            .padding(.trailing, 55)
                             
                         }
                     }
+                    .onAppear{ playFromBeginning()}
                  // .transition(AnyTransition.move(edge: .trailing).animation(.linear(duration: 10)))
                 }
             }
@@ -112,6 +135,40 @@ struct GameChooserView: View {
             games[theme.id] = EmojiMemoryGame(theme: theme)
         }
         return games[theme.id]
+    }
+    
+    func playFromBeginning() {
+        if !store.isSoundtrackPlaying && !store.returningFromDetail {
+            let soundTrack = "Amagama track longer"
+            if let path = Bundle.main.path(forResource: soundTrack, ofType: "mp3") {
+                self.audioPlayer = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
+                self.audioPlayer.play()
+                self.audioPlayer.volume = 0.1
+                self.audioPlayer.numberOfLoops = 10
+            }
+            store.isSoundtrackPlaying.toggle()
+        } else {
+            return
+        }
+        
+    }
+    
+    
+    func toggleSoundTrack() {
+        if store.isSoundtrackPlaying {
+            //print("we're muting")
+            self.audioPlayer.stop()
+            store.isSoundtrackPlaying.toggle()
+        } else {
+            let soundTrack = "Amagama track longer"
+            if let path = Bundle.main.path(forResource: soundTrack, ofType: "mp3") {
+                self.audioPlayer = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
+                self.audioPlayer.play()
+                self.audioPlayer.volume = 0.1
+                self.audioPlayer.numberOfLoops = 10
+                store.isSoundtrackPlaying.toggle()
+            }
+        }
     }
 }
 
