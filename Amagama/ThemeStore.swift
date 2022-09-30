@@ -99,35 +99,6 @@ class ThemeStore: ObservableObject{
     }
     
     
-    
-//    @Published var themes = [
-//        Theme(title:  "I like to see people", emojis:  ["I", "like", "to", "see", "people"], imageName: "zebra"),
-//        Theme(title: "We look at the children", emojis: ["We", "look", "at", "the", "children"], imageName: "buffalo"),
-//        Theme(title: "Can you go for help?", emojis: ["can", "you", "go", "for", "help?"], imageName: "whale"),
-//        Theme(title:  "Dad called about their house", emojis:  ["Dad", "called", "about", "their", "house"], imageName: "chick"),
-//        Theme(title: "Don't come down from there", emojis: ["Don't", "come", "down", "from", "there"], imageName: "chicken"),
-//        Theme(title: "Can you go for help?", emojis: ["can", "you", "go", "for", "help?"], imageName: "crocodile"),
-//        Theme(title:  "I like to see people", emojis:  ["I", "like", "to", "see", "people"], imageName: "owl"),
-//        Theme(title: "We look at the children", emojis: ["We", "look", "at", "the", "children"], imageName: "dog"),
-//        Theme(title: "Can you go for help?", emojis: ["can", "you", "go", "for", "help?"], imageName: "duck"),
-//        Theme(title:  "I like to see people", emojis:  ["I", "like", "to", "see", "people"], imageName: "elephant"),
-//        Theme(title: "We look at the children", emojis: ["We", "look", "at", "the", "children"], imageName: "frog"),
-//        Theme(title: "Can you go for help?", emojis: ["can", "you", "go", "for", "help?"], imageName: "cow"),
-//        Theme(title:  "I like to see people", emojis:  ["I", "like", "to", "see", "people"], imageName: "giraffe"),
-//        Theme(title: "We look at the children", emojis: ["We", "look", "at", "the", "children"], imageName: "goat"),
-//        Theme(title: "Can you go for help?", emojis: ["can", "you", "go", "for", "help?"], imageName: "gorilla"),
-//        Theme(title:  "I like to see people", emojis:  ["I", "like", "to", "see", "people"], imageName: "hippo"),
-//        Theme(title: "We look at the children", emojis: ["We", "look", "at", "the", "children"], imageName: "horse"),
-//        Theme(title: "Can you go for help?", emojis: ["can", "you", "go", "for", "help?"], imageName: "monkey"),
-//        Theme(title:  "I like to see people", emojis:  ["I", "like", "to", "see", "people"], imageName: "moose"),
-//        Theme(title: "We look at the children", emojis: ["We", "look", "at", "the", "children"], imageName: "narwhal"),
-//        Theme(title: "Can you go for help?", emojis: ["can", "you", "go", "for", "help?"], imageName: "panda"),
-//        Theme(title:  "I like to see people", emojis:  ["I", "like", "to", "see", "people"], imageName: "parrot"),
-//        Theme(title: "We look at the children", emojis: ["We", "look", "at", "the", "children"], imageName: "penguin"),
-//        Theme(title: "Can you go for help?", emojis: ["can", "you", "go", "for", "help?"], imageName: "pig")
-//    ]
-    
-    
     private func storeInUserDefaults() {
         UserDefaults.standard.set(try? JSONEncoder().encode(themes), forKey: "ThemeStore")
         

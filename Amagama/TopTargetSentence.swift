@@ -9,8 +9,7 @@ import SwiftUI
 
 struct TopTargetSentence: View {
     
-    var sentenceComplete : Bool
-    var wordscaleAmount: CGFloat
+    var wordscaleAmount = 1.4
     var showTitle : Bool
     var geo : GeometryProxy
     var game: EmojiMemoryGame
@@ -29,10 +28,11 @@ struct TopTargetSentence: View {
                             .font(.title)
                             .fontWeight(.semibold)
                             .scaledToFit()
-                            .foregroundColor(game.matchedCards.contains(word) ? Color(#colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)) : Color.black)
+                            
                             .scaleEffect(game.matchedCards.last == word ? wordscaleAmount : 1)
-                            .scaleEffect(sentenceComplete ? wordscaleAmount : 1)
-                            .animation(Animation.easeInOut(duration: 1))
+                           // .scaleEffect(sentenceComplete ? wordscaleAmount : 0.7)
+                            .animation(.spring(response: 1, dampingFraction: 0.3), value: game.wordJustMatched)
+                            .foregroundColor(game.matchedCards.contains(word) ? Color(#colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)) : Color.black)
                             .minimumScaleFactor(0.5)
                     }
                 }

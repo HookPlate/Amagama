@@ -16,6 +16,7 @@ struct EmojiMemoryGameView: View {
     @EnvironmentObject var store: ThemeStore
     
 //    let restartableSentenceScores = [5, 15, 25, 35, 45, 55]
+    @State private var showBlurAndTick = false
     
     @State private var isMuted = false
     
@@ -25,9 +26,9 @@ struct EmojiMemoryGameView: View {
     
     @State private var audioPlayer1: AVAudioPlayer!
     
-    @State private var sentenceComplete = false
+    @State private var wordJustMatched = false
     
-    @State private var wordscaleAmount: CGFloat = 1
+   // @State private var wordscaleAmount: CGFloat = 1
     
     @Namespace private var dealingNamespace
     
@@ -45,7 +46,7 @@ struct EmojiMemoryGameView: View {
     
     @State private var blurAmount = 0
     
-    @State private var showScore = false
+    @State private var showMyScore = false
     
   //  @State private var animationAmount: CGFloat = 1
     
@@ -55,7 +56,7 @@ struct EmojiMemoryGameView: View {
 //                .ignoresSafeArea()
             GeometryReader { geo in
             VStack(spacing: 15) {
-                    TopTargetSentence(sentenceComplete: sentenceComplete, wordscaleAmount: wordscaleAmount, showTitle: showTitle, geo: geo, game: game)
+                    TopTargetSentence(showTitle: showTitle, geo: geo, game: game)
                     
                     gameBody
                     .blur(radius: CGFloat(blurAmount))
@@ -73,14 +74,17 @@ struct EmojiMemoryGameView: View {
             .frame(width: geo.size.width, height: geo.size.height / 1.05)
                 .navigationTitle("Match the pairs")
                 .navigationBarTitleDisplayMode(.inline)
-                .navigationBarItems(trailing: showScore ? MyScore(animateWholeScore: animateWholeScore, animateScore: animateScore, score: score) : nil)
+                .navigationBarItems(trailing: MyScore(animateWholeScore: animateWholeScore, animateScore: animateScore, score: score))
                 .navigationBarItems(trailing: Button(action: {isMuted.toggle()}, label: {isMuted ? Image(systemName: "speaker.slash").font(.title) : Image(systemName: "speaker.wave.2").font(.title)}))
                 Spacer(minLength: 0)
             }
             
-            if sentenceComplete {
-               // BlurView(style: .systemMaterialLight)
-                SuccessTickView()
+            if showBlurAndTick {
+              //  BlurView(style: .systemMaterialLight)
+                
+                    SuccessTickView()
+               
+                
             }
         }
       //  .onAppear(perform: flip )
@@ -133,6 +137,22 @@ struct EmojiMemoryGameView: View {
         -Double(game.cards.firstIndex(where: { $0.id == card.id }) ?? 0)
     }
     
+    private func showBlurView() {
+       
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            makeAnotherSound(for: "SuccessTickSound1")
+            showBlurAndTick = true
+            blurAmount = 8
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            withAnimation {
+                blurAmount = 0
+                showBlurAndTick = false
+            }
+        }
+    }
+    
     
     var gameBody: some View {//the below passes each card into its arg with { card in, it's the content arg of
         AspectVGrid(items:game.cards, aspectRatio: 2.5/3) { card in
@@ -149,7 +169,7 @@ struct EmojiMemoryGameView: View {
                         withAnimation(){
                             game.choose(card)
                             if game.alreadyMatchedWordJustTapped {
-                                alreadyMatched()
+                                alreadyMatchedVibration()
                             } else {
                                 wordScaleAndSoundTrigger(card: card)
                             }
@@ -189,84 +209,73 @@ struct EmojiMemoryGameView: View {
 //    }
     //run this if there's been a succesful match:
     func wordScaleAndSoundTrigger(card: EmojiMemoryGame.Card) {
-        let celebrationAudio = Bundle.main.path(forResource: "CarlaYeahs", ofType: "mp3")
-        let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-
+  //      showScore = true
+     //   showMyScore = true
         if game.wordJustMatched {
-            //makes the score pop out if the user has succesfully completed the sentence once
+            //makes the score (number) pop out if the user has succesfully completed the sentence once
             if sentencesDone >= 1 {
-                withAnimation {
-                    animateScore = true
-                }
+//                withAnimation {
+//                    animateScore = true
+//                }
                 
-                score += 1
+                score = game.viewScore
             }
             //makes sound for the word and scale the word in and out
-            makeSound(for: card.content)
-            wordscaleAmount = 1.5
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                wordscaleAmount = 1
-                withAnimation {
-                    animateScore = false
-                }
-            }
+            makeSound(for: card.content, afterDelay: 0)
+          //  wordscaleAmount = 1.4
+ //           DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+               // wordscaleAmount = 1
+//                withAnimation {
+//                    animateScore = false
+//                }
+ //           }
             //run this if the game has been completed.
             if game.matchedCards.count == game.mainTitle.count {
                     sentencesDone += 1
-               
+                    showBlurView()
 
                 //animate the whole sentence
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                    sentenceComplete = true
-                    makeAnotherSound(for: "SuccessTickSound1")
-                    withAnimation {
-                        blurAmount = 8
-                    }
+         //       DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     
-                    wordscaleAmount = 1.3
                     
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                        wordscaleAmount = 1
+                //    wordscaleAmount = 1.3
+                    
+             //       DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                     //   wordscaleAmount = 1
                         
-                    }
+                //    }
                     //read the whole sentence
-                    makeSound(for: game.mainTitle.joined(separator: " "))
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                            withAnimation {
-                                showScore = true
-                                sentenceComplete = false
-                                blurAmount = 0
-                            }
-                            
-                            game.gameCompleted()
+                   // animateWholeScore = true
+                   
+                        game.gameCompleted()
                             
                             print(score)
                             
-                            if game.cards.allSatisfy({ $0.isMatched == true }) {
+                            //if game.cards.allSatisfy({ $0.isMatched == true }) {
                                // showTitle = false
-                                restart()
-                            }
+                           //     restart()
+                        //    }
                             
-                    }
-                        
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                //    }
+                makeSound(for: game.mainTitle.joined(separator: " "), afterDelay: 1.5)
+                //    DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
                         
                         withAnimation {
-                            animateWholeScore = true
-                            if game.cards.allSatisfy({ $0.isMatched == true }) {
+                          //  animateWholeScore = true
+                         //   if game.cards.allSatisfy({ $0.isMatched == true }) {
                                 
-                            } else {
-                                game.shuffle()
-                            }
+                         //   } else {
+                         //       game.shuffle()
+                         //   }
                             
                         }
-                    }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                        withAnimation {
-                            animateWholeScore = false
-                        }
-                    }
-                }
+                  //  }
+             //       DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//                        withAnimation {
+//                            animateWholeScore = false
+//                        }
+                  //  }
+               // }
             }
         } else {
             print("No Sound Here")
@@ -274,12 +283,15 @@ struct EmojiMemoryGameView: View {
     }
     
     
-    func makeSound(for sound: String) {
+    func makeSound(for sound: String, afterDelay: Double) {
         if !isMuted {
-            if let path = Bundle.main.path(forResource: sound, ofType: "mp3") {
-                self.audioPlayer = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
-                self.audioPlayer.play()
+            DispatchQueue.main.asyncAfter(deadline: .now() + afterDelay) {
+                if let path = Bundle.main.path(forResource: sound, ofType: "mp3") {
+                    self.audioPlayer = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
+                    self.audioPlayer.play()
+                }
             }
+            
         }
     }
     
@@ -294,10 +306,14 @@ struct EmojiMemoryGameView: View {
     }
     
     func makeAnotherSound(for sound: String) {
-        if let path = Bundle.main.path(forResource: sound, ofType: "mp3") {
-            self.audioPlayer1 = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
-            self.audioPlayer1.play()
-        }
+        
+      //  DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            if let path = Bundle.main.path(forResource: sound, ofType: "mp3") {
+                self.audioPlayer1 = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
+                self.audioPlayer1.play()
+            }
+      //  }
+       
 
     }
     
@@ -314,7 +330,7 @@ struct EmojiMemoryGameView: View {
         showTheTitle()
     }
     
-    func alreadyMatched() {
+    func alreadyMatchedVibration() {
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.success)
     }
@@ -379,6 +395,7 @@ struct MyScore: View {
     var animateWholeScore: Bool
     var animateScore: Bool
     var score: Int
+    @State private var change = false
     var body: some View {
         HStack {
             Text("Score:")
@@ -391,6 +408,10 @@ struct MyScore: View {
         .clipShape(RoundedRectangle(cornerRadius: 5))
         .shadow(color: Color.gray.opacity(0.5), radius: 2, x: CGFloat(3),y: CGFloat(4))
         .scaleEffect(animateWholeScore ? 1.3 : 1 )
+        .animation(.easeInOut(duration: 3))
+//        .onAppear {
+//            change = true
+//        }
     }
 }
 

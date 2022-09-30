@@ -95,7 +95,8 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
     }
     
     mutating func gameCompleted() {
-        matchedCards = []
+            matchedCards = []
+        
     }
     
     
@@ -141,7 +142,7 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
          
         }
         
-        cards.shuffle()
+     //   cards.shuffle()
 
         print(mainTitle)
     }

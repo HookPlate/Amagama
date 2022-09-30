@@ -63,6 +63,10 @@ class EmojiMemoryGame: ObservableObject {
         return model.matchCardCount
     }
     
+    var viewScore: Int {
+        return model.matchCardCount - 5
+    }
+    
     
     var wordJustMatched: Bool {
         return model.wordJustMatched
@@ -89,7 +93,9 @@ class EmojiMemoryGame: ObservableObject {
         }
     
     func gameCompleted() {
-        model.gameCompleted()
+        withAnimation(Animation.easeInOut.delay(3)) {
+                    self.model.gameCompleted()
+                }
     }
     
     func flip(_ card: Card) {
