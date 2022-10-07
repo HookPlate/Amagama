@@ -26,10 +26,6 @@ struct EmojiMemoryGameView: View {
     
     @State private var audioPlayer1: AVAudioPlayer!
     
-    @State private var wordJustMatched = false
-    
-   // @State private var wordscaleAmount: CGFloat = 1
-    
     @Namespace private var dealingNamespace
     
     @State private var showTitle = false
@@ -38,17 +34,10 @@ struct EmojiMemoryGameView: View {
     
     @Binding var score: Int
     
-    @State private var animateScore = false
-    
-    @State private var animateWholeScore = false
-    
     @State private var sentencesDone = 0
     
     @State private var blurAmount = 0
-    
-    @State private var showMyScore = false
-    
-  //  @State private var animationAmount: CGFloat = 1
+
     
     var body: some View {
         ZStack(alignment: .center) {
@@ -72,17 +61,17 @@ struct EmojiMemoryGameView: View {
                     
                 }
             .frame(width: geo.size.width, height: geo.size.height / 1.05)
-                .navigationTitle("Match the pairs")
+            .navigationTitle("Match the words")
                 .navigationBarTitleDisplayMode(.inline)
-                .navigationBarItems(trailing: MyScore(animateWholeScore: animateWholeScore, animateScore: animateScore, score: score))
-                .navigationBarItems(trailing: Button(action: {isMuted.toggle()}, label: {isMuted ? Image(systemName: "speaker.slash").font(.title) : Image(systemName: "speaker.wave.2").font(.title)}))
+                .navigationBarItems(trailing: MyScore(score: score))
+                .navigationBarItems(trailing: Button(action: {isMuted.toggle()}, label: {isMuted ? Image(systemName: "speaker.slash").font(.footnote) : Image(systemName: "speaker.wave.2").font(.callout)}))
                 Spacer(minLength: 0)
             }
             
             if showBlurAndTick {
-              //  BlurView(style: .systemMaterialLight)
+                BlurView(style: .systemMaterialLight)
                 
-                    SuccessTickView()
+                SuccessTickView()
                
                 
             }
@@ -96,29 +85,11 @@ struct EmojiMemoryGameView: View {
         .padding()
     }
     
-
-    private func flip () {
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 2.2) {
-//            for card in game.cards {
-//                withAnimation {
-//                    game.flip(card)
-//                }
-//            }
-//        }
-    }
-    
     
     @State private var dealt = Set<Int>()
     
     private func deal(_ card: EmojiMemoryGame.Card) {
-       // score = 0
         dealt.insert(card.id)
-        //clean this code up so it uses a timer and one completion (of in this case the above code) triggers another
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-            withAnimation {
-             //   game.shuffle()
-            }
-        }
     }
     
     private func isUnDealt (_ card: EmojiMemoryGame.Card) -> Bool {
@@ -140,9 +111,13 @@ struct EmojiMemoryGameView: View {
     private func showBlurView() {
        
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            print("This is just before the tick")
             makeAnotherSound(for: "SuccessTickSound1")
-            showBlurAndTick = true
-            blurAmount = 8
+            withAnimation {
+                showBlurAndTick = true
+                blurAmount = 8
+            }
+        
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
@@ -150,6 +125,8 @@ struct EmojiMemoryGameView: View {
                 blurAmount = 0
                 showBlurAndTick = false
             }
+                
+  
         }
     }
     
@@ -193,89 +170,49 @@ struct EmojiMemoryGameView: View {
         }
         .frame(width: CardConstants.undealtWidth, height: CardConstants.undealtHeight)
         .foregroundColor(CardConstants.color)
-//        .onTapGesture {
-//            //deal cards
-//            for card in game.cards {
-//                withAnimation(dealAnimation(for: card)) {
-//                    deal(card)
-//                }
-//            }
-//        }
     }
     
 //    func cardForView(card: EmojiMemoryGame.Card) -> CardView {
 //        var i = 0
 //        return CardView(card: card, animalForCard: store.animals[i])
 //    }
+    
     //run this if there's been a succesful match:
     func wordScaleAndSoundTrigger(card: EmojiMemoryGame.Card) {
-  //      showScore = true
-     //   showMyScore = true
+        
         if game.wordJustMatched {
-            //makes the score (number) pop out if the user has succesfully completed the sentence once
             if sentencesDone >= 1 {
-//                withAnimation {
-//                    animateScore = true
-//                }
-                
-                score = game.viewScore
+                score += 1
             }
             //makes sound for the word and scale the word in and out
             makeSound(for: card.content, afterDelay: 0)
-          //  wordscaleAmount = 1.4
- //           DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-               // wordscaleAmount = 1
-//                withAnimation {
-//                    animateScore = false
-//                }
- //           }
-            //run this if the game has been completed.
+            
+            //run this if the sentence has been completed.
             if game.matchedCards.count == game.mainTitle.count {
-                    sentencesDone += 1
-                    showBlurView()
-
-                //animate the whole sentence
-         //       DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                    
-                    
-                //    wordscaleAmount = 1.3
-                    
-             //       DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                     //   wordscaleAmount = 1
-                        
-                //    }
-                    //read the whole sentence
-                   // animateWholeScore = true
-                   
-                        game.gameCompleted()
-                            
-                            print(score)
-                            
-                            //if game.cards.allSatisfy({ $0.isMatched == true }) {
-                               // showTitle = false
-                           //     restart()
-                        //    }
-                            
-                //    }
+                sentencesDone += 1
+                showBlurView()
+                
+            //read the whole sentence
                 makeSound(for: game.mainTitle.joined(separator: " "), afterDelay: 1.5)
-                //    DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-                        
-                        withAnimation {
-                          //  animateWholeScore = true
-                         //   if game.cards.allSatisfy({ $0.isMatched == true }) {
-                                
-                         //   } else {
-                         //       game.shuffle()
-                         //   }
-                            
-                        }
-                  //  }
-             //       DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-//                        withAnimation {
-//                            animateWholeScore = false
-//                        }
-                  //  }
-               // }
+                game.gameCompleted()
+                
+            // after the first sentence shuffle the cards
+                withAnimation {
+                    if game.cards.allSatisfy({ $0.isMatched == true }) {
+                    } else {
+                        game.shuffle()
+                    }
+                }
+                
+            //if all the cards in the game restart the game
+                if game.cards.allSatisfy({ $0.isMatched == true }) {
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                        dealt = Set<Int>()
+                        showTheTitle()
+                    }
+                    restart()
+                }
             }
         } else {
             print("No Sound Here")
@@ -283,7 +220,7 @@ struct EmojiMemoryGameView: View {
     }
     
     
-    func makeSound(for sound: String, afterDelay: Double) {
+     func makeSound(for sound: String, afterDelay: Double) {
         if !isMuted {
             DispatchQueue.main.asyncAfter(deadline: .now() + afterDelay) {
                 if let path = Bundle.main.path(forResource: sound, ofType: "mp3") {
@@ -291,7 +228,6 @@ struct EmojiMemoryGameView: View {
                     self.audioPlayer.play()
                 }
             }
-            
         }
     }
     
@@ -306,28 +242,21 @@ struct EmojiMemoryGameView: View {
     }
     
     func makeAnotherSound(for sound: String) {
-        
-      //  DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             if let path = Bundle.main.path(forResource: sound, ofType: "mp3") {
                 self.audioPlayer1 = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
                 self.audioPlayer1.play()
             }
-      //  }
-       
-
     }
     
     func autoDeal() {
         for card in game.cards {
             withAnimation(dealAnimation(for: card)) {
                 deal(card)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-                    flip()
-                }
-
             }
         }
-        showTheTitle()
+        if sentencesDone < 1 {
+            showTheTitle()
+        }
     }
     
     func alreadyMatchedVibration() {
@@ -353,11 +282,15 @@ struct EmojiMemoryGameView: View {
     }
     
     func restart() {
-                game.restart()
-                game.gameCompleted()
-                flip()
-                autoDeal()
-                showTheTitle()
+       
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            withAnimation {
+                showTitle = false
+            }
+            game.restart()
+            autoDeal()
+            game.gameCompleted()
+        }
     }
     
     private struct CardConstants {
@@ -392,26 +325,19 @@ struct DrawingConstants {
 //}
 
 struct MyScore: View {
-    var animateWholeScore: Bool
-    var animateScore: Bool
     var score: Int
     @State private var change = false
     var body: some View {
         HStack {
             Text("Score:")
             Text("\(score)")
-                .scaleEffect(animateScore ? 1.5 : 1 )
         }
         .padding(.horizontal, 3)
         .foregroundColor(.black)
         .background(Color.green)
         .clipShape(RoundedRectangle(cornerRadius: 5))
         .shadow(color: Color.gray.opacity(0.5), radius: 2, x: CGFloat(3),y: CGFloat(4))
-        .scaleEffect(animateWholeScore ? 1.3 : 1 )
-        .animation(.easeInOut(duration: 3))
-//        .onAppear {
-//            change = true
-//        }
+      //  .animation(.easeInOut(duration: 3))
     }
 }
 

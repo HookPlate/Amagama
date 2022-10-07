@@ -21,9 +21,9 @@ struct CardView: View {
             ZStack {
                 //Color.green
                 Text(card.content)
-//                    .scaleEffect(animationAmount)
+                   // .scaleEffect(1)
                     .rotationEffect(Angle.degrees(card.isMatched ? 360 : 0))
-                    .animation(Animation.interpolatingSpring(stiffness: 10, damping: 4, initialVelocity: 8))
+                  //  .animation(Animation.interpolatingSpring(stiffness: 10, damping: 4, initialVelocity: 8))
                     .font(.custom("MarkerFelt", size: DrawingConstants.fontSize))
                     .scaleEffect(scale(thatFits: geometry.size))
                     .lineLimit(1)

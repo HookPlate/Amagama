@@ -35,16 +35,10 @@ struct Cardify: AnimatableModifier {
             } else {
                 Image(animal)
                     .resizable()
+                    
                     .aspectRatio(contentMode: .fit)
-                    .animation(isPastFirstSentence ? nil : Animation.easeInOut(duration: 3).repeatForever(autoreverses: true))
+                    .animation(Animation.easeInOut(duration: 3).repeatForever(autoreverses: true))
                     .clipShape(shape)
-                
-                   // .shadow(color: Color.gray.opacity(0.7), radius: 2, x: -2, y: 2)
-   //                 .scaleEffect(animationAmount, anchor: .center)
-                   
-//                    .onAppear {
-//                        self.animationAmount = 1
-//                    }
             }
             
             content.opacity(rotation < 90 ? 1 : 0)

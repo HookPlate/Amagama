@@ -16,8 +16,8 @@ struct SuccessTickView: View {
     }
 }
 
-struct SuccessTickView_Previews: PreviewProvider {
-    static var previews: some View {
-        SuccessTickView()
-    }
-}
+//struct SuccessTickView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SuccessTickView()
+//    }
+//}

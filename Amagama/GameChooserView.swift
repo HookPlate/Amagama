@@ -123,6 +123,7 @@ struct GameChooserView: View {
                         }
                     }
                     .onAppear{ playFromBeginning()}
+                    .animation(.default, value: store.isSoundtrackPlaying)
                  // .transition(AnyTransition.move(edge: .trailing).animation(.linear(duration: 10)))
                 }
             }

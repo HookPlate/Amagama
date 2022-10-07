@@ -11,19 +11,12 @@ import SwiftUI
 
 class EmojiMemoryGame: ObservableObject {
     
-//    init(sentenceNum: Int) {
-//        self.sentenceNum = sentenceNum
-//    }
-    
     
     init(theme: Theme) {
         self.currentTheme = theme
         model = EmojiMemoryGame.createMemoryGame(theme)
-        
-        //print(EmojiMemoryGame.currentTheme)
     }
     @EnvironmentObject var store: ThemeStore
-   // @Binding var theme: Theme
     
     typealias Card = MemoryGame<String>.Card
 
@@ -37,14 +30,8 @@ class EmojiMemoryGame: ObservableObject {
     //any changes to this are published
     @Published private var model: MemoryGame<String>
     
-//    static private var myThemes: [Theme] = [
-//            Theme(title:  "I like to see people", emojis:  ["I", "like", "to", "see", "people"]),
-//            Theme(title: "We look at the children", emojis: ["We", "look", "at", "the", "children"]),
-//            Theme(title: "Can you go for help?", emojis: ["can", "you", "go", "for", "help?"])
-//        ]
     
     var currentTheme: Theme
-    //= myThemes.randomElement() ?? Theme(title: "Test", emojis: ["Hello"])
    
     
     var cards: Array<Card> {
@@ -85,12 +72,17 @@ class EmojiMemoryGame: ObservableObject {
     }
     
     func shuffle () {
-        model.shuffle()
+        withAnimation(Animation.easeInOut.delay(3)) {
+            model.shuffle()
+        }
     }
     
     func restart() {
-        model = EmojiMemoryGame.createMemoryGame(currentTheme)
-        }
+        //withAnimation(Animation.easeInOut.delay(3)) {
+            model = EmojiMemoryGame.createMemoryGame(currentTheme)
+       // }
+           
+    }
     
     func gameCompleted() {
         withAnimation(Animation.easeInOut.delay(3)) {
