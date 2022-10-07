@@ -15,7 +15,7 @@ struct EmojiMemoryGameView: View {
     
     @EnvironmentObject var store: ThemeStore
     
-//    let restartableSentenceScores = [5, 15, 25, 35, 45, 55]
+    //    let restartableSentenceScores = [5, 15, 25, 35, 45, 55]
     @State private var showBlurAndTick = false
     
     @State private var isMuted = false
@@ -23,8 +23,6 @@ struct EmojiMemoryGameView: View {
     @ObservedObject var game: EmojiMemoryGame
     
     @State private var audioPlayer: AVAudioPlayer!
-    
-    @State private var audioPlayer1: AVAudioPlayer!
     
     @Namespace private var dealingNamespace
     
@@ -37,31 +35,31 @@ struct EmojiMemoryGameView: View {
     @State private var sentencesDone = 0
     
     @State private var blurAmount = 0
-
+    
     
     var body: some View {
         ZStack(alignment: .center) {
-//            Color(red: 228/255, green: 195/255, blue: 76/255)
-//                .ignoresSafeArea()
+            //            Color(red: 228/255, green: 195/255, blue: 76/255)
+            //                .ignoresSafeArea()
             GeometryReader { geo in
-            VStack(spacing: 15) {
+                VStack(spacing: 15) {
                     TopTargetSentence(showTitle: showTitle, geo: geo, game: game)
                     
                     gameBody
-                    .blur(radius: CGFloat(blurAmount))
-                
+                        .blur(radius: CGFloat(blurAmount))
+                    
                     //shows either progress bar or deck of cards
-                  if showTitle {
-                    ProgressBar(
-                        width: geo.size.width, height: 15, percent: CGFloat(Double(score) * 10), color1: Color(#colorLiteral(red: 0, green: 0.2657890916, blue: 0, alpha: 1)) , color2: Color(#colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)), showTitle: showTitle
-                    )
+                    if showTitle {
+                        ProgressBar(
+                            width: geo.size.width, height: 15, percent: CGFloat(game.matchedCardCount * 10), color1: Color(#colorLiteral(red: 0, green: 0.2657890916, blue: 0, alpha: 1)) , color2: Color(#colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)), showTitle: showTitle
+                        )
                         .animation(.easeInOut(duration: 1))
-                } else {
-                    deckBody                }
+                    } else {
+                        deckBody                }
                     
                 }
-            .frame(width: geo.size.width, height: geo.size.height / 1.05)
-            .navigationTitle("Match the words")
+                .frame(width: geo.size.width, height: geo.size.height / 1.05)
+                .navigationTitle("Match the words")
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarItems(trailing: MyScore(score: score))
                 .navigationBarItems(trailing: Button(action: {isMuted.toggle()}, label: {isMuted ? Image(systemName: "speaker.slash").font(.footnote) : Image(systemName: "speaker.wave.2").font(.callout)}))
@@ -69,19 +67,13 @@ struct EmojiMemoryGameView: View {
             }
             
             if showBlurAndTick {
-                BlurView(style: .systemMaterialLight)
-                
                 SuccessTickView()
-               
-                
             }
         }
-      //  .onAppear(perform: flip )
         .onAppear(perform: autoDeal)
         .onDisappear(perform: game.restart)
         .onDisappear(perform: stopSound)
         .onDisappear(perform: game.gameCompleted)
-        .onDisappear(perform: toggleReturningFromDetail)
         .padding()
     }
     
@@ -109,24 +101,19 @@ struct EmojiMemoryGameView: View {
     }
     
     private func showBlurView() {
-       
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             print("This is just before the tick")
-            makeAnotherSound(for: "SuccessTickSound1")
             withAnimation {
                 showBlurAndTick = true
                 blurAmount = 8
             }
-        
+            
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            withAnimation {
-                blurAmount = 0
-                showBlurAndTick = false
-            }
-                
-  
+            blurAmount = 0
+            showBlurAndTick = false
         }
     }
     
@@ -172,10 +159,10 @@ struct EmojiMemoryGameView: View {
         .foregroundColor(CardConstants.color)
     }
     
-//    func cardForView(card: EmojiMemoryGame.Card) -> CardView {
-//        var i = 0
-//        return CardView(card: card, animalForCard: store.animals[i])
-//    }
+    //    func cardForView(card: EmojiMemoryGame.Card) -> CardView {
+    //        var i = 0
+    //        return CardView(card: card, animalForCard: store.animals[i])
+    //    }
     
     //run this if there's been a succesful match:
     func wordScaleAndSoundTrigger(card: EmojiMemoryGame.Card) {
@@ -192,11 +179,11 @@ struct EmojiMemoryGameView: View {
                 sentencesDone += 1
                 showBlurView()
                 
-            //read the whole sentence
+                //read the whole sentence
                 makeSound(for: game.mainTitle.joined(separator: " "), afterDelay: 1.5)
                 game.gameCompleted()
                 
-            // after the first sentence shuffle the cards
+                // after the first sentence is completed shuffle the cards
                 withAnimation {
                     if game.cards.allSatisfy({ $0.isMatched == true }) {
                     } else {
@@ -204,7 +191,7 @@ struct EmojiMemoryGameView: View {
                     }
                 }
                 
-            //if all the cards in the game restart the game
+                //if all the cards in the game restart the game
                 if game.cards.allSatisfy({ $0.isMatched == true }) {
                     
                     DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
@@ -220,7 +207,7 @@ struct EmojiMemoryGameView: View {
     }
     
     
-     func makeSound(for sound: String, afterDelay: Double) {
+    func makeSound(for sound: String, afterDelay: Double) {
         if !isMuted {
             DispatchQueue.main.asyncAfter(deadline: .now() + afterDelay) {
                 if let path = Bundle.main.path(forResource: sound, ofType: "mp3") {
@@ -231,9 +218,9 @@ struct EmojiMemoryGameView: View {
         }
     }
     
-    func toggleReturningFromDetail() {
-        store.returningFromDetail = true
-    }
+    //    func toggleReturningFromDetail() {
+    //        store.returningFromDetail = true
+    //    }
     
     func stopSound() {
         if let myAudioPlayer = audioPlayer {
@@ -241,14 +228,8 @@ struct EmojiMemoryGameView: View {
         }
     }
     
-    func makeAnotherSound(for sound: String) {
-            if let path = Bundle.main.path(forResource: sound, ofType: "mp3") {
-                self.audioPlayer1 = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
-                self.audioPlayer1.play()
-            }
-    }
-    
     func autoDeal() {
+        store.returningFromDetail = true
         for card in game.cards {
             withAnimation(dealAnimation(for: card)) {
                 deal(card)
@@ -257,6 +238,7 @@ struct EmojiMemoryGameView: View {
         if sentencesDone < 1 {
             showTheTitle()
         }
+        
     }
     
     func alreadyMatchedVibration() {
@@ -282,12 +264,11 @@ struct EmojiMemoryGameView: View {
     }
     
     func restart() {
-       
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            withAnimation {
-                showTitle = false
-            }
+            showTitle = false
             game.restart()
+            
             autoDeal()
             game.gameCompleted()
         }
@@ -305,9 +286,9 @@ struct EmojiMemoryGameView: View {
 
 struct Animals {
     var animalImageNames = ["panda", "bear", "chick", "bear","chicken", "crocodile", "cow", "elephant", "duck", "giraffe", "hippo", "gorilla", "sloth", "goat", "narwhal", "parrot", "owl", "penguin", "moose", "pig", "snake", "rhino", "walrus", "penguin", "whale", "rabbit", "zebra", "sloth", "snake", "walrus", "whale", "zebra"]
-//   these are the sentences she wants: var animalImageNames = ["buffalo", "chick", "chicken", "cow", "crocodile", "elephant", "giraffe", "gorilla", "hippo", "horse", "narwhal", "owl", "parrot", "penguin", "pig", "rhino", "snake", "walrus", "whale", "zebra"]
+    //   these are the sentences she wants: var animalImageNames = ["buffalo", "chick", "chicken", "cow", "crocodile", "elephant", "giraffe", "gorilla", "hippo", "horse", "narwhal", "owl", "parrot", "penguin", "pig", "rhino", "snake", "walrus", "whale", "zebra"]
 }
-    
+
 
 
 struct DrawingConstants {
@@ -337,7 +318,7 @@ struct MyScore: View {
         .background(Color.green)
         .clipShape(RoundedRectangle(cornerRadius: 5))
         .shadow(color: Color.gray.opacity(0.5), radius: 2, x: CGFloat(3),y: CGFloat(4))
-      //  .animation(.easeInOut(duration: 3))
+        //  .animation(.easeInOut(duration: 3))
     }
 }
 

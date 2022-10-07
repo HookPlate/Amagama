@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TopTargetSentence: View {
     
-    var wordscaleAmount = 1.4
+    var wordscaleAmount = 1.3
     var showTitle : Bool
     var geo : GeometryProxy
     var game: EmojiMemoryGame

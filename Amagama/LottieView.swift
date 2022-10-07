@@ -14,7 +14,12 @@ struct LottieView: UIViewRepresentable {
     typealias UIViewType = UIView
     var fileName: String
     
-    @State private var audioPlayer: AVAudioPlayer!
+    var audioPlayer: AVAudioPlayer!
+    
+    init(fileName: String) {
+        self.fileName = fileName
+        makeAnotherSound(for: "SuccessTickSound1")
+    }
     
     func makeUIView(context: UIViewRepresentableContext<LottieView>) -> UIView {
         let view = UIView(frame: .zero)
@@ -38,6 +43,14 @@ struct LottieView: UIViewRepresentable {
         
         
         return view
+    }
+    
+    
+    mutating func makeAnotherSound(for sound: String) {
+            if let path = Bundle.main.path(forResource: sound, ofType: "mp3") {
+                self.audioPlayer = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
+                self.audioPlayer.play()
+            }
     }
     
     func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<LottieView>) {
