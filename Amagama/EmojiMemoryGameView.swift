@@ -39,8 +39,6 @@ struct EmojiMemoryGameView: View {
     
     var body: some View {
         ZStack(alignment: .center) {
-            //            Color(red: 228/255, green: 195/255, blue: 76/255)
-            //                .ignoresSafeArea()
             GeometryReader { geo in
                 VStack(spacing: 15) {
                     TopTargetSentence(showTitle: showTitle, geo: geo, game: game)

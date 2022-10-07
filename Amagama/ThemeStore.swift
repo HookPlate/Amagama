@@ -70,12 +70,11 @@ class ThemeStore: ObservableObject{
         }
     }
     
-    //var isMuted = false
     
     @Published var isSoundtrackPlaying = false
     @Published var returningFromDetail = false
     
-    //keeps track of which meditations the user has purchased
+    //keeps track of which sentences the user has purchased
     @Published var userPurchases = ["FreeSentence": true]
     
     func makePurchase(theme: Theme) {

@@ -12,9 +12,6 @@ struct CardView: View {
     let card: EmojiMemoryGame.Card
 
     let shuffledAnimals: Animals
-//    @State private var animationAmount: CGFloat = 1
-   // @Binding var isPastFirstSentnce: Bool
-    
     
     var body: some View {
         GeometryReader { geometry in
