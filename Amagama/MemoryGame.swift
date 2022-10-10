@@ -111,11 +111,10 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
             matchCardCount = 0
             wordJustMatched = false
             alreadyMatchedWordJustMatched = false
-        //    score = 10
-          //  gameNumber = sentenceNumber
         for pairIndex in 0..<numberOfPairsOfCards {
             //the above pairIndex int is passed to anyone who makes a MemoryGame (below), which then passes back a string
             let content = createCardContent(pairIndex)
+            
             var myClampedInt = 0
             var magicNumber : Int {
                 get { cards.count}
@@ -131,7 +130,7 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
           //  print(pairIndex+myClampedInt)
             cards.append(Card(content: content, id: pairIndex*5+1, backOfCardIndex: pairIndex+magicNumber+1))
             cards.append(Card(content: content, id: pairIndex*5+3, backOfCardIndex: pairIndex+magicNumber+2))
-            cards.append(Card(content: content, id: pairIndex*5+4, backOfCardIndex: pairIndex+magicNumber+3))
+            cards.append(Card(content: content, id: pairIndex*5+4,  backOfCardIndex: pairIndex+magicNumber+3))
         
         }
         
@@ -147,7 +146,7 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         print(mainTitle)
     }
     
-    struct Card: Identifiable {
+    struct Card: Identifiable, Equatable {
         var isFaceUp = false
         var isMatched = false
         let content: CardContent

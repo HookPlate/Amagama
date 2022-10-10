@@ -41,7 +41,8 @@ class ThemeStore: ObservableObject{
                      "Your friends went into school",
                      "Don't come down from there"]
     
-    let animals =  ["buffalo", "chick", "chicken", "cow", "crocodile", "elephant", "giraffe", "gorilla", "hippo", "horse", "narwhal", "owl", "parrot", "penguin", "pig", "rhino", "snake", "walrus", "whale", "zebra"]
+//    let animals =  ["buffalo", "chick", "chicken", "cow", "crocodile", "elephant", "giraffe", "gorilla", "hippo", "horse", "narwhal", "owl", "parrot", "penguin", "pig", "rhino", "snake", "walrus", "whale", "zebra"]
+    let animals = ["panda", "bear", "chick", "bear","chicken", "crocodile", "cow", "elephant", "duck", "giraffe", "hippo", "gorilla", "sloth", "goat", "narwhal", "parrot", "owl", "penguin", "moose", "pig", "snake", "rhino", "walrus", "penguin", "whale", "rabbit", "zebra", "sloth", "snake", "walrus", "whale", "zebra"]
     
     init() {
         restoreFromUserDefaults()
@@ -100,6 +101,7 @@ class ThemeStore: ObservableObject{
     
     private func storeInUserDefaults() {
         UserDefaults.standard.set(try? JSONEncoder().encode(themes), forKey: "ThemeStore")
+        UserDefaults.standard.set(try? JSONEncoder().encode(isSoundtrackPlaying), forKey: "SoundTrack")
         
     }
     
@@ -113,10 +115,15 @@ class ThemeStore: ObservableObject{
             themes = decodedThemes
         }
         
+        
         if let jsonData = UserDefaults.standard.data(forKey: "userPurchases"),
            let decodedUserPurchases = try? JSONDecoder().decode([String: Bool].self, from: jsonData) {
             userPurchases = decodedUserPurchases
         }
+        
+//        if let jsonData = UserDefaults.standard.data(forKey: "SoundTrack"), let decodedSoundTrack = try? JSONDecoder().decode(Bool.self, from: jsonData) {
+//            isSoundtrackPlaying = decodedSoundTrack
+//        }
     }
 
     

@@ -9,9 +9,9 @@ import SwiftUI
 
 struct CardView: View {
     
+    @EnvironmentObject var store: ThemeStore
+    
     let card: EmojiMemoryGame.Card
-
-    let shuffledAnimals: Animals
     
     var body: some View {
         GeometryReader { geometry in
@@ -28,7 +28,7 @@ struct CardView: View {
                 
                     
             }
-            .cardify(isFaceUp: card.isFaceUp, animal: shuffledAnimals.animalImageNames[card.backOfCardIndex] )
+            .cardify(isFaceUp: card.isFaceUp, animal: store.animals[card.backOfCardIndex])
          //   .cardify(isFaceUp: card.isFaceUp, animal: animalForCard)
             .foregroundColor(card.isMatched ? Color.green : Color.red)
         }
@@ -40,10 +40,5 @@ struct CardView: View {
     
 }
 
-//struct CardView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CardView()
-//    }
-//}
 
 

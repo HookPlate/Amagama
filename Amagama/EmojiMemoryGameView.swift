@@ -14,8 +14,7 @@ import MediaPlayer
 struct EmojiMemoryGameView: View {
     
     @EnvironmentObject var store: ThemeStore
-    
-    //    let restartableSentenceScores = [5, 15, 25, 35, 45, 55]
+
     @State private var showBlurAndTick = false
     
     @State private var isMuted = false
@@ -27,9 +26,7 @@ struct EmojiMemoryGameView: View {
     @Namespace private var dealingNamespace
     
     @State private var showTitle = false
-    
-    let myShuffledAnimals = Animals()
-    
+
     @Binding var score: Int
     
     @State private var sentencesDone = 0
@@ -117,12 +114,13 @@ struct EmojiMemoryGameView: View {
     
     
     var gameBody: some View {//the below passes each card into its arg with { card in, it's the content arg of
+        //var cardINdex = 0
         AspectVGrid(items:game.cards, aspectRatio: 2.5/3) { card in
             if isUnDealt(card) || (card.isMatched && !card.isFaceUp) {
                 //this is the empty space for when a card has been matched.
                 Color.clear
             } else {
-                CardView(card: card, shuffledAnimals: myShuffledAnimals)
+                CardView(card: card)
                     .matchedGeometryEffect(id: card.id, in: dealingNamespace)
                     .padding(4)
                     .transition(AnyTransition.asymmetric(insertion: .identity, removal: .scale))
@@ -147,7 +145,7 @@ struct EmojiMemoryGameView: View {
     var deckBody: some View {
         ZStack {
             ForEach(game.cards.filter(isUnDealt)) { card in
-                CardView(card: card, shuffledAnimals: myShuffledAnimals)
+                CardView(card: card)
                     .matchedGeometryEffect(id: card.id, in: dealingNamespace)
                     .transition(AnyTransition.asymmetric(insertion: .opacity, removal: .identity))
                     .zIndex(zIndex(of: card))
@@ -282,11 +280,6 @@ struct EmojiMemoryGameView: View {
     }
 }
 
-struct Animals {
-    var animalImageNames = ["panda", "bear", "chick", "bear","chicken", "crocodile", "cow", "elephant", "duck", "giraffe", "hippo", "gorilla", "sloth", "goat", "narwhal", "parrot", "owl", "penguin", "moose", "pig", "snake", "rhino", "walrus", "penguin", "whale", "rabbit", "zebra", "sloth", "snake", "walrus", "whale", "zebra"]
-    //   these are the sentences she wants: var animalImageNames = ["buffalo", "chick", "chicken", "cow", "crocodile", "elephant", "giraffe", "gorilla", "hippo", "horse", "narwhal", "owl", "parrot", "penguin", "pig", "rhino", "snake", "walrus", "whale", "zebra"]
-}
-
 
 
 struct DrawingConstants {
@@ -316,7 +309,6 @@ struct MyScore: View {
         .background(Color.green)
         .clipShape(RoundedRectangle(cornerRadius: 5))
         .shadow(color: Color.gray.opacity(0.5), radius: 2, x: CGFloat(3),y: CGFloat(4))
-        //  .animation(.easeInOut(duration: 3))
     }
 }
 

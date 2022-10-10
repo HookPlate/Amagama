@@ -10,12 +10,12 @@ import SwiftUI
 struct Cardify: AnimatableModifier {
     
     var animal = String()
+    
     @State private var animationAmount: CGFloat = 1
 
     init(isFaceUp: Bool, animal: String) {
         rotation = isFaceUp ? 0 : 180
         self.animal = animal
-      // self.isPastFirstSentence = isPastFirstSentence
     }
    var isPastFirstSentence = false 
     

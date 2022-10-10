@@ -18,9 +18,6 @@ struct GameChooserView: View {
     
     @State var isSoundtrackPlaying = true
     
-    
-   // @Binding var sentencesDone : Int
-    
     var body: some View {
         
         NavigationView {
@@ -31,12 +28,9 @@ struct GameChooserView: View {
                     .ignoresSafeArea()
                 //the diagonal rectangle on top of it
                 Rectangle()
-                    //.frame(width: 300, height: 2000)
                     .foregroundColor(Color(red: 228/255, green: 195/255, blue: 76/255))
                     .rotationEffect(Angle(degrees: 45))
                     .edgesIgnoringSafeArea(.all)
-                    //.offset(x: -25, y: 0)
-                
                 
                 VStack(spacing: 13) {
                     //The title
@@ -63,18 +57,13 @@ struct GameChooserView: View {
                         ForEach(store.themes, id: \.self.id) { theme in
                                 if let game = game(for: theme) {
                                     NavLinkView(game: game, geoReader: geometry, themeScore: $store.themes[store.themes.index(matching: theme) ?? 0].score , imageName: theme.imageName, sentence: theme.title, viewOpacity: theme.productId == "19BuyableSentences" ? 0.5 : 1, productId: theme.productId)
-                                     //   .animation(.spring(response: 1, dampingFraction: 0.5))
                                 }
                             }
                     }
-                  //  .alignmentGuide(HorizontalAlignment.leading) { _ in 40 }
                     .padding(.top)
     
                     //The Global score
                     HStack {
-//                        Button(action: {$store.isMuted}, label: {store.isMuted ? Image(systemName: "speaker.slash").font(.title) : Image(systemName: "speaker.wave.2").font(.title)})
-                
-                      //  VStack(alignment: .leading) {
                         Button(action: {toggleSoundTrack()}, label: {store.isSoundtrackPlaying ? Image(systemName: "speaker.wave.2").font(.title) : Image(systemName: "speaker.slash").font(.title)})
                             .padding(.leading, 55)
                             .offset(x: -20, y: 0)
@@ -91,8 +80,6 @@ struct GameChooserView: View {
                         
                         Spacer()
                         if store.userPurchases["19BuyableSentences"] ==  nil {
-//                            Spacer()
-//                                .frame(width: 20)
                             Button(action: {
                                 store.makePurchase(theme: store.themes[1])
                             } , label: {
@@ -104,15 +91,12 @@ struct GameChooserView: View {
                                     .background(Color.green.opacity(0.7))
                                     .cornerRadius(15)
                                     .padding(.bottom, 5)
-                                   // .transition(AnyTransition.move(edge: .trailing).animation(.linear(duration: 2)))
-                                    //.transition(AnyTransition.opacity.animation(.linear(duration: 20)))
-                                    //.animation(.default, value: store.userPurchases["19BuyableSentences"] ==  nil)
                             })
                             .padding(.trailing, 20)
                         } else {
                             //put code for reset button here that calls a reset score function.
                             Button(action: {
-                                store.resetThemeScores()
+                                
                             } , label: {
                                 Image(systemName: "arrow.clockwise.circle")
                                     .font(.title)
@@ -122,9 +106,7 @@ struct GameChooserView: View {
                             
                         }
                     }
-                    .onAppear{ playFromBeginning()}
                     .animation(.default, value: store.isSoundtrackPlaying)
-                 // .transition(AnyTransition.move(edge: .trailing).animation(.linear(duration: 10)))
                 }
             }
             .navigationBarHidden(true)
@@ -173,25 +155,6 @@ struct GameChooserView: View {
     }
 }
 
-//struct Sentence_list_view_Previews: PreviewProvider {
-//    static var previews: some View {
-//        GameChooserView()
-//    }
-//}
-//
-//struct TeamVerticalHeaderView: View {
-//
-//    var body: some View {
-//        HStack {
-//            Text("Team")
-//                .font(.largeTitle)
-//            Image(systemName: team.imageName)
-//                .font(.largeTitle)
-//        }
-//        .frame(width: 300, height: 75)
-//        .background(Rectangle().fill(Color.yellow).opacity(0.9))
-//    }
-//}
 extension Collection where Element: Identifiable {
     func index(matching element: Element) -> Self.Index? {
         firstIndex(where: { $0.id == element.id })
