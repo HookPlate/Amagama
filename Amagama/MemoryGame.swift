@@ -141,7 +141,7 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
          
         }
         
-      //  cards.shuffle()
+       cards.shuffle()
 
         print(mainTitle)
     }

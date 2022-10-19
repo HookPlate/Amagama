@@ -24,10 +24,12 @@ struct GameChooserView: View {
             GeometryReader { geometry in
                 //The background
             ZStack() {
-                Color(red: 200/255, green: 143/255, blue: 32/255)
+                Color(red: 251/255, green: 219/255, blue: 101/255)
+                //Color(red: 200/255, green: 143/255, blue: 32/255)
                     .ignoresSafeArea()
                 //the diagonal rectangle on top of it
                 Rectangle()
+                   // .foregroundColor(Color(red: 255/255, green: 255/255, blue: 255/255))
                     .foregroundColor(Color(red: 228/255, green: 195/255, blue: 76/255))
                     .rotationEffect(Angle(degrees: 45))
                     .edgesIgnoringSafeArea(.all)
@@ -83,9 +85,9 @@ struct GameChooserView: View {
                             Button(action: {
                                 store.makePurchase(theme: store.themes[1])
                             } , label: {
-                                Text("Buy")
+                                Text("Unlock")
                                     .foregroundColor(.black)
-                                    .font(.title)
+                                    .font(.caption)
                                     .fontWeight(.semibold)
                                     .padding(.all, 10)
                                     .background(Color.green.opacity(0.7))
@@ -96,7 +98,7 @@ struct GameChooserView: View {
                         } else {
                             //put code for reset button here that calls a reset score function.
                             Button(action: {
-                                
+                                store.resetThemeScores()
                             } , label: {
                                 Image(systemName: "arrow.clockwise.circle")
                                     .font(.title)
@@ -122,7 +124,7 @@ struct GameChooserView: View {
     
     func playFromBeginning() {
         if !store.isSoundtrackPlaying && !store.returningFromDetail {
-            let soundTrack = "Amagama track longer"
+            let soundTrack = "Amagama track new"
             if let path = Bundle.main.path(forResource: soundTrack, ofType: "mp3") {
                 self.audioPlayer = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
                 self.audioPlayer.play()
@@ -143,7 +145,7 @@ struct GameChooserView: View {
             self.audioPlayer.stop()
             store.isSoundtrackPlaying.toggle()
         } else {
-            let soundTrack = "Amagama track longer"
+            let soundTrack = "Amagama track new"
             if let path = Bundle.main.path(forResource: soundTrack, ofType: "mp3") {
                 self.audioPlayer = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
                 self.audioPlayer.play()

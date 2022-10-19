@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+//the animal image card within the navlinkview and hte title of gamechooserview
 struct ChooserViewCard: View {
     var imageName: String
     var body: some View {
@@ -21,7 +21,6 @@ struct ChooserViewCard: View {
                 .aspectRatio(contentMode: .fit)
                 .clipShape(RoundedRectangle(cornerRadius: 2))
                 .frame(width: 20, height: 20)
-                //.shadow(color: Color.gray, radius: 2, x: 2, y: 2)
         }
     }
 }
