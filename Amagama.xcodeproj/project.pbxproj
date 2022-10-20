@@ -134,6 +134,7 @@
 		F1C3482E28D2622B001EACD7 /* friends.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3482828D2622B001EACD7 /* friends.mp3 */; };
 		F1C3482F28D2622B001EACD7 /* went.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3482928D2622B001EACD7 /* went.mp3 */; };
 		F1C3483128D2635D001EACD7 /* Make them out of this.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C3483028D2635D001EACD7 /* Make them out of this.mp3 */; };
+		F1E258632901467E00B276D7 /* CarlaYeahTrimmed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1E258622901467E00B276D7 /* CarlaYeahTrimmed.mp3 */; };
 		F1E456C02892983C0085C6CB /* AmagamaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E456BF2892983C0085C6CB /* AmagamaApp.swift */; };
 		F1E456C22892983C0085C6CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E456C12892983C0085C6CB /* ContentView.swift */; };
 		F1E456C42892983C0085C6CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1E456C32892983C0085C6CB /* Assets.xcassets */; };
@@ -305,6 +306,7 @@
 		F1C3482828D2622B001EACD7 /* friends.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = friends.mp3; path = "../../../../Sound for Amagama/New 1/Your friends went into school./friends.mp3"; sourceTree = "<group>"; };
 		F1C3482928D2622B001EACD7 /* went.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = went.mp3; path = "../../../../Sound for Amagama/New 1/Your friends went into school./went.mp3"; sourceTree = "<group>"; };
 		F1C3483028D2635D001EACD7 /* Make them out of this.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Make them out of this.mp3"; sourceTree = "<group>"; };
+		F1E258622901467E00B276D7 /* CarlaYeahTrimmed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CarlaYeahTrimmed.mp3; sourceTree = "<group>"; };
 		F1E456BC2892983C0085C6CB /* Amagama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amagama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E456BF2892983C0085C6CB /* AmagamaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmagamaApp.swift; sourceTree = "<group>"; };
 		F1E456C12892983C0085C6CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -741,6 +743,7 @@
 				F1A6635C28992DAF006B772A /* Your friends went into school.. */,
 				F1E4578C28929E470085C6CB /* successTickSound.mp3 */,
 				F1E4578E28929E4D0085C6CB /* SuccessTickSound1.mp3 */,
+				F1E258622901467E00B276D7 /* CarlaYeahTrimmed.mp3 */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -979,6 +982,7 @@
 				F18B07D828CFB16D00F58C15 /* so.mp3 in Resources */,
 				F1C347C328D25CF8001EACD7 /* place.mp3 in Resources */,
 				F18B078328CF96FB00F58C15 /* out.mp3 in Resources */,
+				F1E258632901467E00B276D7 /* CarlaYeahTrimmed.mp3 in Resources */,
 				F1C347E528D25DAF001EACD7 /* called.mp3 in Resources */,
 				F18B078428CF96FB00F58C15 /* them.mp3 in Resources */,
 				F1C3480728D25E40001EACD7 /* came.mp3 in Resources */,

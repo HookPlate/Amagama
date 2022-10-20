@@ -23,6 +23,8 @@ struct EmojiMemoryGameView: View {
     
     @State private var audioPlayer: AVAudioPlayer!
     
+    @State private var audioPlayer1: AVAudioPlayer!
+    
     @Namespace private var dealingNamespace
     
     @State private var showTitle = false
@@ -138,7 +140,6 @@ struct EmojiMemoryGameView: View {
                     }
             }
         }
-        
         .foregroundColor(CardConstants.color)
     }
     
@@ -169,6 +170,7 @@ struct EmojiMemoryGameView: View {
             }
             //makes sound for the word and scale the word in and out
             makeSound(for: card.content, afterDelay: 0)
+            //makeSound(for: "CarlaYeahTrimmed", afterDelay: 0)
             
             //run this if the sentence has been completed.
             if game.matchedCards.count == game.mainTitle.count {
@@ -205,13 +207,35 @@ struct EmojiMemoryGameView: View {
     
     func makeSound(for sound: String, afterDelay: Double) {
         if !isMuted {
-            DispatchQueue.main.asyncAfter(deadline: .now() + afterDelay) {
-                if let path = Bundle.main.path(forResource: sound, ofType: "mp3") {
+            let myRandNum = Int.random(in: 0...20)
+            if (myRandNum % 2 == 0) && (game.matchedCards.count != game.mainTitle.count) {
+                if let path = Bundle.main.path(forResource: "CarlaYeahTrimmed", ofType: "mp3") {
                     self.audioPlayer = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
                     self.audioPlayer.play()
                 }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    if let path = Bundle.main.path(forResource: sound, ofType: "mp3") {
+                        self.audioPlayer1 = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
+                        self.audioPlayer1.play()
+                    }
+                }
+            } else {
+                DispatchQueue.main.asyncAfter(deadline: .now() + afterDelay) {
+                    if let path = Bundle.main.path(forResource: sound, ofType: "mp3") {
+                        self.audioPlayer = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
+                        self.audioPlayer.play()
+                    }
+                }
             }
+            
         }
+    }
+    
+    func makeAnotherSound(for sound: String) {
+            if let path = Bundle.main.path(forResource: sound, ofType: "m4a") {
+                self.audioPlayer1 = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
+                self.audioPlayer1.play()
+            }
     }
     
     //    func toggleReturningFromDetail() {
