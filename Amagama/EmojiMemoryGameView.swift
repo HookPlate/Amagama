@@ -19,11 +19,15 @@ struct EmojiMemoryGameView: View {
     
     @State private var isMuted = false
     
+    @State private var playCelebration = false
+    
     @ObservedObject var game: EmojiMemoryGame
     
-    @State private var audioPlayer: AVAudioPlayer!
+    @State private var audioPlayer0: AVAudioPlayer!
     
     @State private var audioPlayer1: AVAudioPlayer!
+    
+    @State private var audioPlayer2: AVAudioPlayer!
     
     @Namespace private var dealingNamespace
     
@@ -169,16 +173,18 @@ struct EmojiMemoryGameView: View {
                 score += 1
             }
             //makes sound for the word and scale the word in and out
-            makeSound(for: card.content, afterDelay: 0)
+            makeSound(for: card.content, afterDelay: 0, playCelebration: playCelebration)
             //makeSound(for: "CarlaYeahTrimmed", afterDelay: 0)
             
             //run this if the sentence has been completed.
             if game.matchedCards.count == game.mainTitle.count {
+                playCelebration.toggle()
                 sentencesDone += 1
                 showBlurView()
                 
                 //read the whole sentence
-                makeSound(for: game.mainTitle.joined(separator: " "), afterDelay: 1.5)
+                
+                makeSound(for: game.mainTitle.joined(separator: " "), afterDelay: 2, playCelebration: playCelebration )
                 game.gameCompleted()
                 
                 // after the first sentence is completed shuffle the cards
@@ -205,15 +211,27 @@ struct EmojiMemoryGameView: View {
     }
     
     
-    func makeSound(for sound: String, afterDelay: Double) {
+    func makeSound(for sound: String, afterDelay: Double, playCelebration: Bool) {
+       // let myCelebrationSoundStrings = ["CarlaYeahTrimmed", "CarlaYeahs"]
         if !isMuted {
-            let myRandNum = Int.random(in: 0...20)
-            if (myRandNum % 2 == 0) && (game.matchedCards.count != game.mainTitle.count) {
-                if let path = Bundle.main.path(forResource: "CarlaYeahTrimmed", ofType: "mp3") {
-                    self.audioPlayer = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
-                    self.audioPlayer.play()
-                }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//            let myRandNum = Int.random(in: 0...20)
+//            if (myRandNum % 3 == 0) && (game.matchedCards.count != game.mainTitle.count) {
+//                if let path = Bundle.main.path(forResource:myCelebrationSoundStrings.randomElement(), ofType: "mp3") {
+//                    self.audioPlayer = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
+//                  //  self.audioPlayer.volume = 0.1
+//                    self.audioPlayer.play()
+//                }
+                if playCelebration {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        if let path1 = Bundle.main.path(forResource: "CarlaYeahs", ofType: "mp3") {
+                            self.audioPlayer2 = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path1))
+                            //  self.audioPlayer.volume = 0.1
+                            print(playCelebration)
+                            self.audioPlayer2.play()
+                            self.playCelebration.toggle()
+                        }
+                    }
+                DispatchQueue.main.asyncAfter(deadline: .now() + afterDelay) {
                     if let path = Bundle.main.path(forResource: sound, ofType: "mp3") {
                         self.audioPlayer1 = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
                         self.audioPlayer1.play()
@@ -222,8 +240,8 @@ struct EmojiMemoryGameView: View {
             } else {
                 DispatchQueue.main.asyncAfter(deadline: .now() + afterDelay) {
                     if let path = Bundle.main.path(forResource: sound, ofType: "mp3") {
-                        self.audioPlayer = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
-                        self.audioPlayer.play()
+                        self.audioPlayer0 = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
+                        self.audioPlayer0.play()
                     }
                 }
             }
@@ -231,19 +249,19 @@ struct EmojiMemoryGameView: View {
         }
     }
     
-    func makeAnotherSound(for sound: String) {
-            if let path = Bundle.main.path(forResource: sound, ofType: "m4a") {
-                self.audioPlayer1 = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
-                self.audioPlayer1.play()
-            }
-    }
+//    func makeAnotherSound(for sound: String) {
+//            if let path = Bundle.main.path(forResource: sound, ofType: "m4a") {
+//                self.audioPlayer1 = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
+//                self.audioPlayer1.play()
+//            }
+//    }
     
     //    func toggleReturningFromDetail() {
     //        store.returningFromDetail = true
     //    }
     
     func stopSound() {
-        if let myAudioPlayer = audioPlayer {
+        if let myAudioPlayer = audioPlayer1 {
             myAudioPlayer.stop()
         }
     }
@@ -270,15 +288,6 @@ struct EmojiMemoryGameView: View {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             withAnimation {
                 showTitle.toggle()
-            }
-        }
-    }
-    
-    
-    var shuffle: some View {
-        Button("Shuffle") {
-            withAnimation {
-                game.shuffle()
             }
         }
     }

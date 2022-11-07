@@ -74,6 +74,7 @@
 		F1A156C028D9D39800743998 /* Amagama track.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A156BF28D9D39800743998 /* Amagama track.mp3 */; };
 		F1A156C228D9DA7800743998 /* Amagama track longer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A156C128D9DA7800743998 /* Amagama track longer.mp3 */; };
 		F1A17FE828C36A2600EF81A6 /* PurchaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A17FE728C36A2600EF81A6 /* PurchaseService.swift */; };
+		F1A4816A2912821100557927 /* CarlaYeahs.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1A481692912821100557927 /* CarlaYeahs.mp3 */; };
 		F1C347B328D25CB2001EACD7 /* Mr and Mrs made food.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347AE28D25CB2001EACD7 /* Mr and Mrs made food.mp3 */; };
 		F1C347B428D25CB2001EACD7 /* food.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347AF28D25CB2001EACD7 /* food.mp3 */; };
 		F1C347B528D25CB2001EACD7 /* Mr.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1C347B028D25CB2001EACD7 /* Mr.mp3 */; };
@@ -246,6 +247,7 @@
 		F1A156BF28D9D39800743998 /* Amagama track.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Amagama track.mp3"; sourceTree = "<group>"; };
 		F1A156C128D9DA7800743998 /* Amagama track longer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Amagama track longer.mp3"; sourceTree = "<group>"; };
 		F1A17FE728C36A2600EF81A6 /* PurchaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseService.swift; sourceTree = "<group>"; };
+		F1A481692912821100557927 /* CarlaYeahs.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CarlaYeahs.mp3; sourceTree = "<group>"; };
 		F1C347AE28D25CB2001EACD7 /* Mr and Mrs made food.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mr and Mrs made food.mp3"; sourceTree = "<group>"; };
 		F1C347AF28D25CB2001EACD7 /* food.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = food.mp3; sourceTree = "<group>"; };
 		F1C347B028D25CB2001EACD7 /* Mr.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mr.mp3; sourceTree = "<group>"; };
@@ -742,6 +744,7 @@
 				F1A662F328992DAE006B772A /* We look at the children.. */,
 				F1A6635C28992DAF006B772A /* Your friends went into school.. */,
 				F1E4578C28929E470085C6CB /* successTickSound.mp3 */,
+				F1A481692912821100557927 /* CarlaYeahs.mp3 */,
 				F1E4578E28929E4D0085C6CB /* SuccessTickSound1.mp3 */,
 				F1E258622901467E00B276D7 /* CarlaYeahTrimmed.mp3 */,
 			);
@@ -879,6 +882,7 @@
 				F18B080228CFB27400F58C15 /* the.mp3 in Resources */,
 				F1C347CD28D25D31001EACD7 /* then?.mp3 in Resources */,
 				F18B079D28CFA32100F58C15 /* like.mp3 in Resources */,
+				F1A4816A2912821100557927 /* CarlaYeahs.mp3 in Resources */,
 				F18B07CD28CFB13500F58C15 /* me.mp3 in Resources */,
 				F18B07FD28CFB1EF00F58C15 /* We.mp3 in Resources */,
 				F18B080528CFB33800F58C15 /* her.mp3 in Resources */,

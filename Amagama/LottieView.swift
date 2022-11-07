@@ -14,7 +14,7 @@ struct LottieView: UIViewRepresentable {
     typealias UIViewType = UIView
     var fileName: String
     
-    var audioPlayer: AVAudioPlayer!
+    var audioPlayer2: AVAudioPlayer!
     
     init(fileName: String) {
         self.fileName = fileName
@@ -48,8 +48,8 @@ struct LottieView: UIViewRepresentable {
     
     mutating func makeAnotherSound(for sound: String) {
             if let path = Bundle.main.path(forResource: sound, ofType: "mp3") {
-                self.audioPlayer = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
-                self.audioPlayer.play()
+                self.audioPlayer2 = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
+                self.audioPlayer2.play()
             }
     }
     
