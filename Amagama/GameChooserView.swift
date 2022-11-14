@@ -73,7 +73,7 @@ struct GameChooserView: View {
                      Spacer()
                         Text("Score: \(String(store.sentencesComplete))")
                             .foregroundColor(.black)
-                            .font(.title)
+                            .font(.headline)
                             .fontWeight(.semibold)
                             .padding(.all, 10)
                             .background(Color.white.opacity(0.7))
