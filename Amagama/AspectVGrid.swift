@@ -6,14 +6,13 @@
 //
 
 import SwiftUI
-//So this is just the Grid, the actual card that is passed into the content is still in the View.
 struct AspectVGrid<Item, ItemView>: View where ItemView: View, Item: Identifiable {
     
     var items: [Item]
     var aspectRatio: CGFloat
     var content: (Item) -> ItemView
     
-    init(items: [Item], aspectRatio: CGFloat, @ViewBuilder content: @escaping (Item) -> ItemView ) {//pg74
+    init(items: [Item], aspectRatio: CGFloat, @ViewBuilder content: @escaping (Item) -> ItemView ) {
         self.items = items
         self.aspectRatio = aspectRatio
         self.content = content

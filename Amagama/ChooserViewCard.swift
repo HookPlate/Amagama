@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-//the animal image card within the navlinkview and hte title of gamechooserview
+//the animal image card within the navlinkview and the title of gamechooserview
 struct ChooserViewCard: View {
     var imageName: String
     var body: some View {

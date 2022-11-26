@@ -120,7 +120,6 @@ struct EmojiMemoryGameView: View {
     
     
     var gameBody: some View {//the below passes each card into its arg with { card in, it's the content arg of
-        //var cardINdex = 0
         AspectVGrid(items:game.cards, aspectRatio: 2.5/3) { card in
             if isUnDealt(card) || (card.isMatched && !card.isFaceUp) {
                 //this is the empty space for when a card has been matched.
@@ -160,11 +159,6 @@ struct EmojiMemoryGameView: View {
         .foregroundColor(CardConstants.color)
     }
     
-    //    func cardForView(card: EmojiMemoryGame.Card) -> CardView {
-    //        var i = 0
-    //        return CardView(card: card, animalForCard: store.animals[i])
-    //    }
-    
     //run this if there's been a succesful match:
     func wordScaleAndSoundTrigger(card: EmojiMemoryGame.Card) {
         
@@ -174,7 +168,6 @@ struct EmojiMemoryGameView: View {
             }
             //makes sound for the word and scale the word in and out
             makeSound(for: card.content, afterDelay: 0, playCelebration: playCelebration)
-            //makeSound(for: "CarlaYeahTrimmed", afterDelay: 0)
             
             //run this if the sentence has been completed.
             if game.matchedCards.count == game.mainTitle.count {
@@ -183,7 +176,6 @@ struct EmojiMemoryGameView: View {
                 showBlurView()
                 
                 //read the whole sentence
-                
                 makeSound(for: game.mainTitle.joined(separator: " "), afterDelay: 2, playCelebration: playCelebration )
                 game.gameCompleted()
                 
@@ -212,15 +204,7 @@ struct EmojiMemoryGameView: View {
     
     
     func makeSound(for sound: String, afterDelay: Double, playCelebration: Bool) {
-       // let myCelebrationSoundStrings = ["CarlaYeahTrimmed", "CarlaYeahs"]
         if !isMuted {
-//            let myRandNum = Int.random(in: 0...20)
-//            if (myRandNum % 3 == 0) && (game.matchedCards.count != game.mainTitle.count) {
-//                if let path = Bundle.main.path(forResource:myCelebrationSoundStrings.randomElement(), ofType: "mp3") {
-//                    self.audioPlayer = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
-//                  //  self.audioPlayer.volume = 0.1
-//                    self.audioPlayer.play()
-//                }
                 if playCelebration {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                         if let path1 = Bundle.main.path(forResource: "CarlaYeahs", ofType: "mp3") {
@@ -248,17 +232,6 @@ struct EmojiMemoryGameView: View {
             
         }
     }
-    
-//    func makeAnotherSound(for sound: String) {
-//            if let path = Bundle.main.path(forResource: sound, ofType: "m4a") {
-//                self.audioPlayer1 = try? AVAudioPlayer(contentsOf:  URL(fileURLWithPath: path))
-//                self.audioPlayer1.play()
-//            }
-//    }
-    
-    //    func toggleReturningFromDetail() {
-    //        store.returningFromDetail = true
-    //    }
     
     func stopSound() {
         if let myAudioPlayer = audioPlayer1 {

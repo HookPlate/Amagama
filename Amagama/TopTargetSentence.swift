@@ -30,7 +30,6 @@ struct TopTargetSentence: View {
                             .scaledToFit()
                             
                             .scaleEffect(game.matchedCards.last == word ? wordscaleAmount : 1)
-                           // .scaleEffect(sentenceComplete ? wordscaleAmount : 0.7)
                             .animation(.spring(response: 1, dampingFraction: 0.3), value: game.wordJustMatched)
                             .foregroundColor(game.matchedCards.contains(word) ? Color(#colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)) : Color.black)
                             .minimumScaleFactor(0.5)

@@ -18,14 +18,10 @@ struct AmagamaApp: App {
         Purchases.configure(withAPIKey: "appl_fxkizrkkedMKxSnKQMxhhbogmVk")
     }
     
-    
-    //    private let game = EmojiMemoryGame(theme: Theme(title: "We look at the children", emojis: ["We", "look", "at", "the", "children"]))
-        //private let themes = ThemeStore()
         @StateObject var themeStore = ThemeStore()
          
          var body: some Scene {
              WindowGroup {
-                // EmojiMemoryGameView(game: game)
                  GameChooserView()
                      .environmentObject(themeStore)
              }

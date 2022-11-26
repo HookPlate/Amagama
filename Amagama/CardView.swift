@@ -16,11 +16,8 @@ struct CardView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                //Color.green
                 Text(card.content)
-                   // .scaleEffect(1)
                     .rotationEffect(Angle.degrees(card.isMatched ? 360 : 0))
-                  //  .animation(Animation.interpolatingSpring(stiffness: 10, damping: 4, initialVelocity: 8))
                     .font(.custom("MarkerFelt", size: DrawingConstants.fontSize))
                     .scaleEffect(scale(thatFits: geometry.size))
                     .lineLimit(1)
@@ -29,7 +26,6 @@ struct CardView: View {
                     
             }
             .cardify(isFaceUp: card.isFaceUp, animal: store.animals[card.backOfCardIndex])
-         //   .cardify(isFaceUp: card.isFaceUp, animal: animalForCard)
             .foregroundColor(card.isMatched ? Color.green : Color.red)
         }
     }

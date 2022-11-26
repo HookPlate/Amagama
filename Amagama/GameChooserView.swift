@@ -25,11 +25,9 @@ struct GameChooserView: View {
                 //The background
             ZStack() {
                 Color(red: 251/255, green: 219/255, blue: 101/255)
-                //Color(red: 200/255, green: 143/255, blue: 32/255)
                     .ignoresSafeArea()
                 //the diagonal rectangle on top of it
                 Rectangle()
-                   // .foregroundColor(Color(red: 255/255, green: 255/255, blue: 255/255))
                     .foregroundColor(Color(red: 228/255, green: 195/255, blue: 76/255))
                     .rotationEffect(Angle(degrees: 45))
                     .edgesIgnoringSafeArea(.all)
@@ -82,19 +80,35 @@ struct GameChooserView: View {
                         
                         Spacer()
                         if store.userPurchases["19BuyableSentences"] ==  nil {
-                            Button(action: {
-                                store.makePurchase(theme: store.themes[1])
-                            } , label: {
-                                Text("Unlock")
-                                    .foregroundColor(.black)
-                                    .font(.caption)
-                                    .fontWeight(.semibold)
-                                    .padding(.all, 10)
-                                    .background(Color.green.opacity(0.7))
-                                    .cornerRadius(15)
-                                    .padding(.bottom, 5)
-                            })
-                            .padding(.trailing, 20)
+                            HStack {
+                                Button(action: {
+                                    store.makePurchase(theme: store.themes[1])
+                                } , label: {
+                                    Text("Buy")
+                                        .foregroundColor(.black)
+                                        .font(.caption)
+                                        .fontWeight(.semibold)
+                                        .padding(.all, 10)
+                                        .background(Color.green.opacity(0.7))
+                                        .cornerRadius(15)
+                                        .padding(.bottom, 5)
+                                })
+                                .padding(.trailing, 20)
+                                
+                                Button(action: {
+                                    store.restorePurchase(theme: store.themes[1])
+                                } , label: {
+                                    Text("Restore")
+                                        .foregroundColor(.black)
+                                        .font(.caption)
+                                        .fontWeight(.semibold)
+                                        .padding(.all, 10)
+                                        .background(Color.green.opacity(0.7))
+                                        .cornerRadius(15)
+                                        .padding(.bottom, 5)
+                                })
+                                .padding(.trailing, 20)
+                            }
                         } else {
                             //put code for reset button here that calls a reset score function.
                             Button(action: {

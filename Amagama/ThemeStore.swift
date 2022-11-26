@@ -41,7 +41,6 @@ class ThemeStore: ObservableObject{
                      "Your friends went into school",
                      "Don't come down from there"]
     
-//    let animals =  ["buffalo", "chick", "chicken", "cow", "crocodile", "elephant", "giraffe", "gorilla", "hippo", "horse", "narwhal", "owl", "parrot", "penguin", "pig", "rhino", "snake", "walrus", "whale", "zebra"]
     let animals = ["panda", "bear", "chick", "bear","chicken", "crocodile", "cow", "elephant", "duck", "giraffe", "hippo", "gorilla", "sloth", "goat", "narwhal", "parrot", "owl", "penguin", "moose", "pig", "snake", "rhino", "walrus", "penguin", "whale", "rabbit", "zebra", "sloth", "snake", "walrus", "whale", "zebra"]
     
     init() {
@@ -92,6 +91,16 @@ class ThemeStore: ObservableObject{
         }
     }
     
+    func restorePurchase(theme: Theme) {
+        PurchaseService.restore(productId: theme.productId) {
+            if theme.productId != nil {
+                self.userPurchases[theme.productId!] = true
+                self.storePurchasesInUserDefaults()
+            }
+        }
+    }
+    
+    
     func resetThemeScores() {
         for index in themes.indices {
             themes[index].score = 0
@@ -120,12 +129,8 @@ class ThemeStore: ObservableObject{
            let decodedUserPurchases = try? JSONDecoder().decode([String: Bool].self, from: jsonData) {
             userPurchases = decodedUserPurchases
         }
-        
-//        if let jsonData = UserDefaults.standard.data(forKey: "SoundTrack"), let decodedSoundTrack = try? JSONDecoder().decode(Bool.self, from: jsonData) {
-//            isSoundtrackPlaying = decodedSoundTrack
-//        }
     }
-
+    
     
     var sentencesComplete : Int {
         var myTotalScore = 0

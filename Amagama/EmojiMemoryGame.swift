@@ -21,9 +21,6 @@ class EmojiMemoryGame: ObservableObject {
     typealias Card = MemoryGame<String>.Card
 
     static func createMemoryGame(_ theme: Theme) -> MemoryGame<String> {
-        //Our Model is a struct so a fresh one is made here, <String> sets the generic which is in turn used in the init.
-        //for the below look at the init on the Model. pairIndex catches the int passed back into the function, then passes back some content for it, in this case a String.
-        
         return MemoryGame<String>(numberOfPairsOfCards: theme.emojis.count ) { pairIndex in
             theme.emojis[pairIndex]}
     }
@@ -78,10 +75,7 @@ class EmojiMemoryGame: ObservableObject {
     }
     
     func restart() {
-        //withAnimation(Animation.easeInOut.delay(3)) {
             model = EmojiMemoryGame.createMemoryGame(currentTheme)
-       // }
-           
     }
     
     func gameCompleted() {

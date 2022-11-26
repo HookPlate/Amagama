@@ -23,10 +23,6 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
     
     private(set) var alreadyMatchedWordJustMatched: Bool
     
-   // private(set)  var score : Int
-    
-   // private(set) var sentenceNumber : Int
-    
     private var indexOfTheOneAndOnlyFaceUpCard: Int? {
         get {cards.indices.filter({cards[$0].isFaceUp}).oneAndOnly}
         set {cards.indices.forEach{cards[$0].isFaceUp = ($0 == newValue)}}
@@ -37,10 +33,6 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
             cards[cardIndex].isFaceUp = false
         }
     }
-    
-//    mutating func startAgain() {
-//            matchedCards = []
-//    }
     
     mutating func choose(_ card: Card) {
         alreadyMatchedWordJustMatched = false
@@ -127,7 +119,6 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
             }
             //it then makes four cards for each content passed back
             cards.append(Card(content: content, id: pairIndex*5, backOfCardIndex: pairIndex+magicNumber))
-          //  print(pairIndex+myClampedInt)
             cards.append(Card(content: content, id: pairIndex*5+1, backOfCardIndex: pairIndex+magicNumber+1))
             cards.append(Card(content: content, id: pairIndex*5+3, backOfCardIndex: pairIndex+magicNumber+2))
             cards.append(Card(content: content, id: pairIndex*5+4,  backOfCardIndex: pairIndex+magicNumber+3))

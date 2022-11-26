@@ -10,8 +10,6 @@ import SwiftUI
 struct NavLinkView: View {
     @EnvironmentObject var store: ThemeStore
     @ObservedObject var game: EmojiMemoryGame
-  //  @ObservedObject var themeStore: ThemeStore
-  //  @Binding var sentencesDone: Int
     var geoReader: GeometryProxy
     @Binding var themeScore: Int
     var imageName: String
@@ -33,8 +31,6 @@ struct NavLinkView: View {
                                 .font(.custom("SF Pro", size: 24, relativeTo: .headline))
                                 .lineLimit(1)
                                 .minimumScaleFactor(0.5)
-                              //  .blur(radius: store.userPurchases["19BuyableSentences"] == nil ? 5 : 0)
-                             
                         Spacer()
                             Image(systemName: "\(themeScore).circle.fill")
                                 .padding(.trailing, 5)
