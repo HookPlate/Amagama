@@ -10,6 +10,8 @@ import RevenueCat
 
 class PurchaseService {
     
+    //@EnvironmentObject var store: ThemeStore
+    
     static func purchase(productId: String?, successfulPurchase: @escaping () -> Void) {
         
         guard productId != nil else {
@@ -38,23 +40,48 @@ class PurchaseService {
         
     }
     
-    static func restore(productId: String?, successfullRestore: @escaping () -> Void) {
+    static func restore(productId: String?, restore: @escaping (Bool) -> Void) {
+        var myErrorString = ""
+        guard productId != nil else {
+            return 
+        }
         
         Purchases.shared.restorePurchases { customerInfo, error in
             
             if let e = error {
-                   // showErrorAlert(message: e.localizedDescription)
-                    return
+                print(e)
+                return
+            }
+            print(customerInfo?.allPurchasedProductIdentifiers)
+            
+          //  if customerInfo?.entitlements["basic"]?.isActive != true {
+            
+            guard let possibleSet = customerInfo?.allPurchasedProductIdentifiers else { return }
+            
+            if possibleSet.contains("19BuyableSentences") {
+                print("we succesfully restored")
+                restore(true)
+            } else {
+                print("we couldn't restored")
+                restore(false)
             }
             
-            if customerInfo?.entitlements["basic"]?.isActive != true {
-                 //   showErrorAlert(title: "Nothing found to restore 🧐", message: "We couldn't find any active subscriptions to restore. Make sure you're signed in with the correct Apple account and try again.")
-                    return
-                } else {
-                //    showSuccess(title: "Subscription restored 👍", message: nil)
-                    print("we're restoring")
-                    successfullRestore()
-                }
+            
+            
+            
+//            if let p = customerInfo?.allPurchasedProductIdentifiers {
+//                if p.contains("19BuyableSentences") {
+//                    print("we succesfully restored")
+//                    restore(true)
+//                    return
+//                } else {
+//                    print("we couldn't restored")
+//                    restore(false)
+//                    return
+//                }
+//            }
+                
+        
         }
     }
 }

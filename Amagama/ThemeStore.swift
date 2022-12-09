@@ -90,12 +90,30 @@ class ThemeStore: ObservableObject{
             
         }
     }
+    //this goes through as part of the store @EnvironmentObject in GameChooserView
+  //  @Published var productUnsuccesfullyRestored = false
+    @Published var toggleRestoreAlert = false
+    @Published var alertTitle = ""
+    @Published var alertMessage = ""
     
     func restorePurchase(theme: Theme) {
-        PurchaseService.restore(productId: theme.productId) {
-            if theme.productId != nil {
-                self.userPurchases[theme.productId!] = true
-                self.storePurchasesInUserDefaults()
+        PurchaseService.restore(productId: theme.productId) { restored in
+            if restored {
+                //run this if the product can be restored
+                self.alertTitle = "Restore successful"
+                self.alertMessage = "Thanks - Happy Learning!"
+                //upon successful restore set the purchase status of the theme
+                if theme.productId != nil {
+                    self.userPurchases[theme.productId!] = true
+                    self.storePurchasesInUserDefaults()
+                }
+                self.toggleRestoreAlert.toggle()
+                return
+            } else {
+                self.alertTitle = "Restore not possible"
+                self.alertMessage = "Please check the Apple Id you are signed in with is correct"
+                self.toggleRestoreAlert.toggle()
+                return
             }
         }
     }

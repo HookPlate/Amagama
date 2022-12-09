@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MediaPlayer
+import RevenueCat
 
 struct GameChooserView: View {
     
@@ -17,6 +18,8 @@ struct GameChooserView: View {
     @State var games: [UUID: EmojiMemoryGame] = [:]
     
     @State var isSoundtrackPlaying = true
+    
+    @State private var showingRestoreConfirm = false
     
     var body: some View {
         
@@ -93,7 +96,7 @@ struct GameChooserView: View {
                                         .cornerRadius(15)
                                         .padding(.bottom, 5)
                                 })
-                                .padding(.trailing, 20)
+                               // .padding(.trailing, 20)
                                 
                                 Button(action: {
                                     store.restorePurchase(theme: store.themes[1])
@@ -126,9 +129,24 @@ struct GameChooserView: View {
                 }
             }
             .navigationBarHidden(true)
+            .alert(isPresented: $store.toggleRestoreAlert) {
+                Alert(title: Text(store.alertTitle), message: Text(store.alertMessage), primaryButton: .default(Text("Okay"), action: toggleRestoreAlert), secondaryButton: .cancel())
+            }
+
+                
             }
         }
     }
+    
+//    func toggleUnssuccesfulStoreValue() {
+//        store.productUnsuccesfullyRestored.toggle()
+//    }
+    
+    func toggleRestoreAlert() {
+        store.toggleRestoreAlert.toggle()
+    }
+    
+    
     func game(for theme: Theme) -> EmojiMemoryGame? {
         if games[theme.id] == nil {
             games[theme.id] = EmojiMemoryGame(theme: theme)
