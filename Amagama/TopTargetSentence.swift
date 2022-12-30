@@ -20,7 +20,7 @@ struct TopTargetSentence: View {
                 Rectangle()
                     .cornerRadius(20)
                     .foregroundColor(Color.yellow)
-                    .frame(height: geo.size.height / 10)
+                    .frame(height: geo.size.height / 12)
                     .shadow(color: Color.gray.opacity(0.5), radius: 2, x: CGFloat(3),y: CGFloat(4))
                 HStack(spacing: 5) {
                     ForEach(game.mainTitle, id: \.self) { word in
@@ -34,8 +34,9 @@ struct TopTargetSentence: View {
                             .foregroundColor(game.matchedCards.contains(word) ? Color(#colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)) : Color.black)
                             .minimumScaleFactor(0.5)
                     }
+                      //  .dynamicTypeSize(...DynamicTypeSize.medium)
                 }
-                .padding(3)
+               // .padding(20)
             }
         }
     }

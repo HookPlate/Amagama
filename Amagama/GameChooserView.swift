@@ -48,6 +48,7 @@ struct GameChooserView: View {
                                 .foregroundColor(.black)
                                 .lineLimit(1)
                                 .minimumScaleFactor(0.5)
+                                //.dynamicTypeSize(...DynamicTypeSize.medium)
                             ChooserViewCard(imageName: "panda")
                         }
                         .frame(width: geometry.size.width / 2.2, height: 40)
@@ -62,6 +63,7 @@ struct GameChooserView: View {
                                     NavLinkView(game: game, geoReader: geometry, themeScore: $store.themes[store.themes.index(matching: theme) ?? 0].score , imageName: theme.imageName, sentence: theme.title, viewOpacity: theme.productId == "19BuyableSentences" ? 0.5 : 1, productId: theme.productId)
                                 }
                             }
+                      //  .dynamicTypeSize(...DynamicTypeSize.medium)
                     }
                     .padding(.top)
     
@@ -70,16 +72,19 @@ struct GameChooserView: View {
                         Button(action: {toggleSoundTrack()}, label: {store.isSoundtrackPlaying ? Image(systemName: "speaker.wave.2").font(.title) : Image(systemName: "speaker.slash").font(.title)})
                             .padding(.leading, 55)
                             .offset(x: -20, y: 0)
+                          //  .dynamicTypeSize(...DynamicTypeSize.medium)
             
                      Spacer()
                         Text("Score: \(String(store.sentencesComplete))")
                             .foregroundColor(.black)
                             .font(.headline)
-                            .fontWeight(.semibold)
+                            .fontWeight(.bold)
                             .padding(.all, 10)
                             .background(Color.white.opacity(0.7))
                             .cornerRadius(15)
                             .padding(.bottom, 5)
+                            .shadow(color: Color.gray, radius: 2, x: 2, y: 2)
+                           // .dynamicTypeSize(...DynamicTypeSize.medium)
                         
                         Spacer()
                         if store.userPurchases["19BuyableSentences"] ==  nil {
@@ -91,12 +96,15 @@ struct GameChooserView: View {
                                         .foregroundColor(.black)
                                         .font(.caption)
                                         .fontWeight(.semibold)
-                                        .padding(.all, 10)
+                                        .padding(.horizontal, 10)
+                                        .padding(.vertical, 13)
                                         .background(Color.green.opacity(0.7))
                                         .cornerRadius(15)
                                         .padding(.bottom, 5)
+                                        .shadow(color: Color.gray, radius: 2, x: 2, y: 2)
+                                      //  .dynamicTypeSize(...DynamicTypeSize.medium)
                                 })
-                               // .padding(.trailing, 20)
+                                .padding(.trailing, 5)
                                 
                                 Button(action: {
                                     store.restorePurchase(theme: store.themes[1])
@@ -105,12 +113,17 @@ struct GameChooserView: View {
                                         .foregroundColor(.black)
                                         .font(.caption)
                                         .fontWeight(.semibold)
-                                        .padding(.all, 10)
-                                        .background(Color.green.opacity(0.7))
+                                        .padding(.horizontal, 4)
+                                        .padding(.vertical, 13)
+                                        .background(Color.orange.opacity(0.7))
                                         .cornerRadius(15)
                                         .padding(.bottom, 5)
+                                        .shadow(color: Color.gray, radius: 2, x: 2, y: 2)
+                                      //  .dynamicTypeSize(...DynamicTypeSize.medium)
+                                        
                                 })
                                 .padding(.trailing, 20)
+                                
                             }
                         } else {
                             //put code for reset button here that calls a reset score function.
@@ -127,6 +140,7 @@ struct GameChooserView: View {
                     }
                     .animation(.default, value: store.isSoundtrackPlaying)
                 }
+                .dynamicTypeSize(...DynamicTypeSize.large)
             }
             .navigationBarHidden(true)
             .alert(isPresented: $store.toggleRestoreAlert) {
@@ -194,4 +208,9 @@ extension Collection where Element: Identifiable {
         firstIndex(where: { $0.id == element.id })
     }
 }
+
+//extension UIView {
+//    var minimumContetnSizeCategory: UIContentSizeCategory
+//    var maximumContetnSizeCategory: UIContentSizeCategory
+//}
 

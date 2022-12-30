@@ -43,7 +43,7 @@ struct EmojiMemoryGameView: View {
     var body: some View {
         ZStack(alignment: .center) {
             GeometryReader { geo in
-                VStack(spacing: 15) {
+                VStack {
                     TopTargetSentence(showTitle: showTitle, geo: geo, game: game)
                     
                     gameBody
@@ -56,26 +56,38 @@ struct EmojiMemoryGameView: View {
                         )
                         .animation(.easeInOut(duration: 1))
                     } else {
-                        deckBody                }
-                    
+                        deckBody
+                    }
+                 //   Spacer()
                 }
-                .frame(width: geo.size.width, height: geo.size.height / 1.05)
-                .navigationTitle("Match the words")
+              //  .frame(width: geo.size.width, height: geo.size.height / 0.9)
+                .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        Text("Match the words").font(.system(size: 16))
+                    }
+                }
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarItems(trailing: MyScore(score: score))
                 .navigationBarItems(trailing: Button(action: {isMuted.toggle()}, label: {isMuted ? Image(systemName: "speaker.slash").font(.footnote) : Image(systemName: "speaker.wave.2").font(.callout)}))
-                Spacer(minLength: 0)
+                
             }
             
             if showBlurAndTick {
                 SuccessTickView()
             }
         }
+        .dynamicTypeSize(...DynamicTypeSize.large)
         .onAppear(perform: autoDeal)
         .onDisappear(perform: game.restart)
         .onDisappear(perform: stopSound)
         .onDisappear(perform: game.gameCompleted)
         .padding()
+//        .padding(.leading, 3)
+//        .padding(.trailing, 3)
+    }
+    
+    private func scale(thatFits size: CGSize) -> CGFloat {
+        return min(size.width, size.height) / (DrawingConstants.fontSize / DrawingConstants.fontScale)
     }
     
     

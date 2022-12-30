@@ -22,6 +22,7 @@ struct CardView: View {
                     .scaleEffect(scale(thatFits: geometry.size))
                     .lineLimit(1)
                     .minimumScaleFactor(0.5)
+                   // .dynamicTypeSize(...DynamicTypeSize.large)
                 
                     
             }
